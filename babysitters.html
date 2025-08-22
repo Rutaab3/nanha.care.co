@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="icon" href="./images/favricon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Babysitters | NanhaCare - Trusted Babysitters in Pakistan</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sky-blue: #7EB8DA;
+            --baby-pink: #F8B1C8;
+            --mint-green: #C6F3D3;
+            --off-white: #FFF9F2;
+            --sunshine-yellow: #FFE97F;
+            --slate-grey: #AAAAAA;
+            --dark-text: #555555;
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: var(--off-white);
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(var(--sky-blue), var(--baby-pink));
+            border-radius: 10px;
+            border: 3px solid var(--off-white);
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(var(--baby-pink), var(--sky-blue));
+        }
+        
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: var(--off-white);
+            color: var(--dark-text);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        
+        /* Scroll Reveal Animation Classes */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Delay classes for staggered animations */
+        .delay-1 { transition-delay: 0.1s; }
+        .delay-2 { transition-delay: 0.2s; }
+        .delay-3 { transition-delay: 0.3s; }
+        .delay-4 { transition-delay: 0.4s; }
+        .delay-5 { transition-delay: 0.5s; }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: #4A4A6A;
+        }
+        
+        .navbar {
+            background: linear-gradient(135deg, var(--sky-blue), var(--baby-pink));
+            padding: 15px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            padding: 0;
+        }
+
+        .navbar-brand img {
+            height: 55px;
+            width: auto;
+            margin-right: 10px;
+        }
+
+        .navbar .btn-primary {
+            padding: 12px 24px;
+            margin-left: 10px;
+            box-shadow: none;
+        }
+
+        .navbar .btn-primary:hover {
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .nav-link {
+            color: white !important;
+            margin: 0 5px;
+            padding: 8px 2px;
+            position: relative;
+            display: inline-block;
+            transition: all 0.3s ease;
+            font-size: large;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 4px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: white;
+            transform: translateX(-50%);
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 60%;
+        }
+
+        .nav-link.active::after {
+            width: 60%;
+            height: 2px;
+            background-color: white;
+        }
+        
+        .navbar-toggler {
+            border: none;
+            color: white;
+        }
+        
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }   
+        
+        .btn-primary {
+            background-color: var(--sunshine-yellow);
+            color: #5a4a2a;
+            border: none;
+            padding: 14px 32px;
+            font-weight: 700;
+            border-radius: 50px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(255, 233, 127, 0.3);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--mint-green);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(198, 243, 211, 0.4);
+            color: #2c5a3a;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--sky-blue), var(--baby-pink));
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            border-radius: 0 0 30px 30px;
+            overflow: hidden;
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        .feature-card {
+            background-color: white;
+            border-radius: 20px;
+            padding: 30px;
+            height: 100%;
+            transition: all 0.3s;
+            box-shadow: 0 8px 20px rgba(167, 211, 242, 0.15);
+            border: 1px solid rgba(252, 214, 226, 0.3);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(167, 211, 242, 0.25);
+        }
+        
+        .icon-container {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: var(--baby-pink);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 60px;
+            display: inline-block;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(to right, var(--sky-blue), var(--baby-pink));
+            border-radius: 10px;
+        }
+        
+        .babysitter-card {
+            background-color: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(167, 211, 242, 0.15);
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+            position: relative;
+            transform-style: preserve-3d;
+        }
+        
+        .babysitter-card:hover {
+             transform: translateY(-10px) translateZ(0);
+            box-shadow: 0 15px 30px rgba(167, 211, 242, 0.25);
+        }
+        
+        /* Verified Badge */
+        .babysitter-card .verified-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: linear-gradient(135deg, var(--sky-blue), var(--baby-pink));
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 2;
+        }
+
+        .babysitter-card:hover .verified-badge {
+            opacity: 1;
+        }
+        
+        .babysitter-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        .babysitter-info {
+            padding: 20px;
+        }
+        
+        .rating {
+            color: var(--sunshine-yellow);
+        }
+        
+        .emergency-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #ff4d4d;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 4px 15px rgba(255, 77, 77, 0.4);
+            z-index: 100;
+            animation: pulse 2s infinite;
+            cursor: pointer;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .language-selector {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 100;
+        }
+        
+        .language-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            cursor: pointer;
+        }
+
+        .video-modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+        }
+        
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 800px;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .highlight {
+            color: var(--sky-blue);
+            font-weight: 700;
+        }
+
+        .cartoon-shape {
+            position: absolute;
+            z-index: 0;
+            opacity: 0.15;
+        }
+        
+        .rounded-section {
+            border-radius: 30px;
+        }
+        
+        .soft-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        
+        footer {
+            background: linear-gradient(135deg, var(--sky-blue), var(--baby-pink));
+            padding: 60px 0 30px;
+            color: #5a4a6a;
+            border-radius: 30px 30px 0 0;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: white;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 8px;
+            transition: all 0.3s;
+            color: var(--sky-blue);
+            box-shadow: 0 4px 8px rgba(167, 211, 242, 0.3);
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-5px);
+            background-color: var(--mint-green);
+            color: #2c5a3a;
+        }
+        
+        .footer-links a {
+            color: #5a4a6a;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .footer-links a:hover {
+            color: #fff;
+            transform: translateX(5px);
+        }
+        
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.3);
+            padding-top: 20px;
+            color: #5a4a6a;
+        }
+
+        .footer-legal-link {
+            color: white !important;
+            text-decoration: none !important;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 2px;
+        }
+        .footer-legal-link:hover {
+            color: white !important;
+        }
+        .footer-legal-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: white;
+            transition: width 0.3s ease;
+        }
+        .footer-legal-link:hover::after {
+            width: 100%;
+        }
+        
+        .copyright .text-white.mx-2 {
+            color: white !important;
+        }
+
+        /* Filter Section Styles */
+        .filter-section {
+            background-color: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 20px rgba(167, 211, 242, 0.15);
+            margin-bottom: 40px;
+        }
+
+        .filter-title {
+            color: var(--sky-blue);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .filter-group {
+            margin-bottom: 20px;
+        }
+
+        .filter-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark-text);
+        }
+
+        .filter-select {
+            width: 100%;
+            padding: 10px 15px;
+            border-radius: 10px;
+            border: 1px solid var(--sky-blue);
+            background-color: rgba(255,255,255,0.8);
+            color: var(--dark-text);
+        }
+
+        .filter-select:focus {
+            outline: none;
+            border-color: var(--baby-pink);
+            box-shadow: 0 0 0 0.25rem rgba(252, 214, 226, 0.25);
+        }
+
+        .filter-btn {
+            background: linear-gradient(135deg, var(--sky-blue), var(--baby-pink));
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: all 0.3s;
+        }
+
+        .filter-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(126, 184, 218, 0.3);
+        }
+
+        /* Babysitter ID Badge */
+        .babysitter-id {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(255,255,255,0.9);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            color: var(--dark-text);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 2;
+            transform: translateZ(20px);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .filter-section {
+                padding: 20px;
+            }
+            
+            .babysitter-img {
+                height: 250px;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .btn-primary:focus,
+        .btn-primary:active,
+        .btn-primary:focus:active {
+         background-color: var(--mint-green) !important;
+         color: #5a4a2a !important;
+         box-shadow: 0 4px 12px rgba(255, 233, 127, 0.3) !important;
+        }
+
+        /* Tablet-specific fixes (1024px width) */
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+    .navbar-nav {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+    
+    .nav-item {
+        margin: 0 8px 8px 0;
+    }
+    
+    .btn-nav {
+        margin-left: 0 !important;
+        margin-top: 0;
+    }
+    
+    .navbar-brand img {
+        height: 45px; /* Slightly smaller logo */
+    }
+    
+    .nav-link {
+        font-size: 15px; /* Slightly smaller font */
+        padding: 6px 0;
+    }
+}
+
+    /* Ensure button stays properly aligned */
+    .btn-nav {
+        white-space: nowrap;
+        padding: 10px 20px;
+    }
+
+    </style>
+</head>
+<body>
+    <!-- Decorative shapes -->
+    <div class="cartoon-shape circle" style="top: 10%; left: 5%;"></div>
+    <div class="cartoon-shape triangle" style="top: 15%; right: 8%;"></div>
+    <div class="cartoon-shape circle" style="bottom: 20%; right: 7%; width: 80px; height: 80px;"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="./images/logo4.png" alt="NanhaCare Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="babysitters.html">Babysitters</a></li>
+                <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="faq.html">FAQs</a></li>
+                <li class="nav-item ms-lg-3">
+                    <a class="btn btn-primary btn-nav" href="pricing.html">
+                        <i class="fas fa-crown me-2"></i>Pricing
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4 text-white">Find Your Perfect <span class="text-white">Babysitter</span></h1>
+                    <p class="lead mb-5 text-white">Browse our verified babysitters and find the perfect match for your family's needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="filter-section scroll-reveal">
+                <h3 class="filter-title"><i class="fas fa-filter me-2"></i>Filter Babysitters</h3>
+                <div class="row">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="filter-group">
+                            <label class="filter-label">City</label>
+                            <select class="filter-select" id="cityFilter">
+                                <option value="">All Cities</option>
+                                <option value="karachi">Karachi</option>
+                                <option value="lahore">Lahore</option>
+                                <option value="islamabad">Islamabad</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="filter-group">
+                            <label class="filter-label">Service Type</label>
+                            <select class="filter-select" id="typeFilter">
+                                <option value="">All Types</option>
+                                <option value="at-home">At Home</option>
+                                <option value="on-site">On-Site</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="filter-group">
+                            <label class="filter-label">Age Group</label>
+                            <select class="filter-select" id="ageFilter">
+                                <option value="">All Ages</option>
+                                <option value="infants">Infants (0-12 months)</option>
+                                <option value="toddlers">Toddlers (1-3 years)</option>
+                                <option value="preschoolers">Preschoolers (3-5 years)</option>
+                                <option value="school-age">School Age (5-10 years)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="filter-group">
+                            <label class="filter-label">Language</label>
+                            <select class="filter-select" id="languageFilter">
+                                <option value="">All Languages</option>
+                                <option value="urdu">Urdu</option>
+                                <option value="english">English</option>
+                                <option value="bilingual">Bilingual</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <button class="filter-btn" id="applyFilters">
+                        <i class="fas fa-search me-2"></i> Apply Filters
+                    </button>
+                    <button class="btn btn-outline-primary ms-3" id="resetFilters">
+                        <i class="fas fa-undo me-2"></i> Reset
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Babysitters Section -->
+    <section class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center mb-5 scroll-reveal">
+                <h2 class="section-title">Available <span class="highlight">Babysitters</span></h2>
+                <p class="lead">Verified and trusted caregivers in your area</p>
+            </div>
+            
+            <div class="row" id="babysittersContainer">
+                <!-- Karachi Babysitters -->
+                <div class="col-md-6 col-lg-4 scroll-reveal delay-1" data-city="karachi" data-type="at-home" data-age="infants,toddlers" data-language="urdu">
+                    <div class="babysitter-card">
+                        <div class="babysitter-id">NC-KHI-001</div>
+                        <div class="verified-badge">Verified</div>
+                        <img src="./images/fatima.jpeg" class="babysitter-img" alt="Babysitter">
+                        <div class="babysitter-info">
+                            <h4>Fatima Khan</h4>
+                            <p class="text-muted">Karachi • 5 years experience</p>
+                            <div class="rating mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="text-dark ms-2">5.0 (45 reviews)</span>
+                            </div>
+                            <p>Specializes in newborn care and early childhood education. Fluent in Urdu. CPR certified.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <a href="./profiles/fatima.html" class="btn btn-primary">View Profile</a>
+                                <span class="fw-bold">Rs 500/hour</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 scroll-reveal delay-2" data-city="karachi" data-type="on-site" data-age="toddlers,preschoolers" data-language="urdu,english">
+                    <div class="babysitter-card">
+                        <div class="babysitter-id">NC-KHI-002</div>
+                        <div class="verified-badge">Verified</div>
+                        <img src="./images/ayesha.jpeg" class="babysitter-img" alt="Babysitter">
+                        <div class="babysitter-info">
+                            <h4>Ayesha Malik</h4>
+                            <p class="text-muted">Karachi • 3 years experience</p>
+                            <div class="rating mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="text-dark ms-2">5.0 (18 reviews)</span>
+                            </div>
+                            <p>Special needs childcare specialist. Certified in first aid and CPR. Speaks Urdu and English.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <a href="./profiles/ayesha.html" class="btn btn-primary">View Profile</a>
+                                <span class="fw-bold">Rs 400/hour</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 scroll-reveal delay-3" data-city="karachi" data-type="at-home" data-age="school-age" data-language="english">
+                    <div class="babysitter-card">
+                        <div class="babysitter-id">NC-KHI-003</div>
+                        <div class="verified-badge">Verified</div>
+                        <img src="./images/sana.jpeg" class="babysitter-img" alt="Babysitter">
+                        <div class="babysitter-info">
+                            <h4>Sana Ahmed</h4>
+                            <p class="text-muted">Karachi • 4 years experience</p>
+                            <div class="rating mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="text-dark ms-2">4.9 (27 reviews)</span>
+                            </div>
+                            <p>Montessori-trained with expertise in child development. Speaks fluent English.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <a href="./profiles/sana.html" class="btn btn-primary">View Profile</a>
+                                <span class="fw-bold">Rs 450/hour</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 scroll-reveal delay-4" data-city="karachi" data-type="on-site" data-age="infants,toddlers" data-language="urdu">
+                    <div class="babysitter-card">
+                        <div class="babysitter-id">NC-KHI-004</div>
+                        <div class="verified-badge">Verified</div>
+                        <img src="./images/zara.png" class="babysitter-img" alt="Babysitter">
+                        <div class="babysitter-info">
+                            <h4>Zara Khan</h4>
+                            <p class="text-muted">Karachi • 2 years experience</p>
+                            <div class="rating mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="text-dark ms-2">4.2 (14 reviews)</span>
+                            </div>
+                            <p>Specializes in infant care with gentle parenting approach. Fluent in Urdu.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <a href="./profiles/zara.html" class="btn btn-primary">View Profile</a>
+                                <span class="fw-bold">Rs 300/hour</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 scroll-reveal delay-1" data-city="karachi" data-type="at-home" data-age="infants,toddlers" data-language="urdu,english">
+                    <div class="babysitter-card">
+                        <div class="babysitter-id">NC-KHI-005</div>
+                        <div class="verified-badge">Verified</div>
+                        <img src="./images/rabia.jpg" class="babysitter-img" alt="Babysitter">
+                        <div class="babysitter-info">
+                            <h4>Rabia Khan</h4>
+                            <p class="text-muted">Karachi • 4 years experience</p>
+                            <div class="rating mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="text-dark ms-2">4.6 (28 reviews)</span>
+                            </div>
+                            <p>Specializes in infant nutrition and early development. Fluent in Urdu and English.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <a href="./profiles/rabia.html" class="btn btn-primary">View Profile</a>
+                                <span class="fw-bold">Rs 420/hour</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 scroll-reveal delay-2" data-city="karachi" data-type="on-site" data-age="toddlers,preschoolers" data-language="english">
+                    <div class="babysitter-card">
+                        <div class="babysitter-id">NC-KHI-006</div>
+                        <div class="verified-badge">Verified</div>
+                        <img src="./images/nadia.png" class="babysitter-img" alt="Babysitter">
+                        <div class="babysitter-info">
+                            <h4>Nadia Hussain</h4>
+                            <p class="text-muted">Karachi • 5 years experience</p>
+                            <div class="rating mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="text-dark ms-2">4.0 (35 reviews)</span>
+                            </div>
+                            <p>Creative learning specialist with focus on preschool activities. Fluent in English.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <a href="./profiles/nadia.html" class="btn btn-primary">View Profile</a>
+                                <span class="fw-bold">Rs 380/hour</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 scroll-reveal delay-3" data-city="karachi" data-type="at-home" data-age="infants" data-language="urdu">
+                    <div class="babysitter-card">
+                        <div class="babysitter-id">NC-KHI-007</div>
+                        <div class="verified-badge">Verified</div>
+                        <img src="./images/samina.jpg" class="babysitter-img" alt="Babysitter">
+                        <div class="babysitter-info">
+                            <h4>Samina Ali</h4>
+                            <p class="text-muted">Karachi • 3 years experience</p>
+                            <div class="rating mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                                <span class="text-dark ms-2">3.8 (22 reviews)</span>
+                            </div>
+                            <p>Newborn care expert with gentle parenting approach. Speaks Urdu.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <a href="./profiles/samina.html" class="btn btn-primary">View Profile</a>
+                                <span class="fw-bold">Rs 350/hour</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Lahore Babysitters -->
+                <div class="col-md-6 col-lg-4 scroll-reveal delay-1" data-city="lahore" data-type="at-home" data-age="toddlers,preschoolers" data-language="urdu,english">
+                    <div class="babysitter-card">
+                        <div class="babysitter-id">NC-LHR-001</div>
+                        <div class="verified-badge">Verified</div>
+                        <img src="./images/hina.jpg" class="babysitter-img" alt="Babysitter">
+                        <div class="babysitter-info">
+                            <h4>Hina Shah</h4>
+                            <p class="text-muted">Lahore • 6 years experience</p>
+                            <div class="rating mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="text-dark ms-2">4.8 (41 reviews)</span>
+                            </div>
+                            <p>Early childhood educator with Montessori training. Speaks Urdu and English.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <a href="./profiles/hina.html" class="btn btn-primary">View Profile</a>
+                                <span class="fw-bold">Rs 400/hour</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 scroll-reveal delay-2" data-city="lahore" data-type="on-site" data-age="school-age" data-language="english">
+                    <div class="babysitter-card">
+                        <div class="babysitter-id">NC-LHR-002</div>
+                        <div class="verified-badge">Verified</div>
+                        <img src="./images/mehak.jpeg" class="babysitter-img" alt="Babysitter">
+                        <div class="babysitter-info">
+                            <h4>Mehak Ali</h4>
+                            <p class="text-muted">Lahore • 4 years experience</p>
+                            <div class="rating mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="text-dark ms-2">5.0 (23 reviews)</span>
+                            </div>
+                            <p>Specializes in school-age children with creative learning activities. Fluent in English.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <a href="./profiles/mehak.html" class="btn btn-primary">View Profile</a>
+                                <span class="fw-bold">Rs 450/hour</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 scroll-reveal delay-3" data-city="lahore" data-type="at-home" data-age="infants" data-language="urdu">
+                    <div class="babysitter-card">
+                        <div class="babysitter-id">NC-LHR-003</div>
+                        <div class="verified-badge">Verified</div>
+                        <img src="./images/sadia.jpeg" class="babysitter-img" alt="Babysitter">
+                        <div class="babysitter-info">
+                            <h4>Sadia Riaz</h4>
+                            <p class="text-muted">Lahore • 5 years experience</p>
+                            <div class="rating mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="text-dark ms-2">4.1 (19 reviews)</span>
+                            </div>
+                            <p>Newborn care specialist with extensive experience. Speaks Urdu.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <a href="./profiles/sadia.html" class="btn btn-primary">View Profile</a>
+                                <span class="fw-bold">Rs 380/hour</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 scroll-reveal delay-4" data-city="lahore" data-type="on-site" data-age="preschoolers" data-language="urdu,english">
+                    <div class="babysitter-card">
+                        <div class="babysitter-id">NC-LHR-004</div>
+                        <div class="verified-badge">Verified</div>
+                        <img src="./images/zainab.jpeg" class="babysitter-img" alt="Babysitter">
+                        <div class="babysitter-info">
+                            <h4>Zainab Khan</h4>
+                            <p class="text-muted">Lahore • 3 years experience</p>
+                            <div class="rating mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="text-dark ms-2">4.6 (15 reviews)</span>
+                            </div>
+                            <p>Preschool activities specialist with creative learning approach. Speaks Urdu and English.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <a href="./profiles/zainab.html" class="btn btn-primary">View Profile</a>
+                                <span class="fw-bold">Rs 350/hour</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 scroll-reveal delay-1" data-city="lahore" data-type="on-site" data-age="school-age" data-language="urdu,english">
+                    <div class="babysitter-card">
+                        <div class="babysitter-id">NC-LHR-005</div>
+                        <div class="verified-badge">Verified</div>
+                        <img src="./images/fariha.jpeg" class="babysitter-img" alt="Babysitter">
+                        <div class="babysitter-info">
+                            <h4>Fariha Iqbal</h4>
+                            <p class="text-muted">Lahore • 4 years experience</p>
+                            <div class="rating mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="text-dark ms-2">5.0 (19 reviews)</span>
+                            </div>
+                            <p>Homework assistance and educational support specialist. Speaks Urdu and English.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <a href="./profiles/fariha.html" class="btn btn-primary">View Profile</a>
+                                <span class="fw-bold">Rs 450/hour</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 scroll-reveal delay-2" data-city="lahore" data-type="at-home" data-age="toddlers" data-language="urdu">
+                    <div class="babysitter-card">
+                        <div class="babysitter-id">NC-LHR-006</div>
+                        <div class="verified-badge">Verified</div>
+                        <img src="./images/bushra.png" class="babysitter-img" alt="Babysitter">
+                        <div class="babysitter-info">
+                            <h4>Bushra Khan</h4>
+                            <p class="text-muted">Lahore • 2 years experience</p>
+                            <div class="rating mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="text-dark ms-2">4.0 (12 reviews)</span>
+                            </div>
+                            <p>Toddler development specialist with focus on language skills. Speaks Urdu.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <a href="./profiles/bushra.html" class="btn btn-primary">View Profile</a>
+                                <span class="fw-bold">Rs 320/hour</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 scroll-reveal delay-3" data-city="lahore" data-type="on-site" data-age="preschoolers,school-age" data-language="english">
+                    <div class="babysitter-card">
+                        <div class="babysitter-id">NC-LHR-007</div>
+                        <div class="verified-badge">Verified</div>
+                        <img src="./images/alina.jpg" class="babysitter-img" alt="Babysitter">
+                        <div class="babysitter-info">
+                            <h4>Alina Shah</h4>
+                            <p class="text-muted">Lahore • 6 years experience</p>
+                            <div class="rating mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="text-dark ms-2">4.7 (42 reviews)</span>
+                            </div>
+                            <p>Montessori-trained educator with creative learning approach. Fluent in English.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <a href="./profiles/alina.html" class="btn btn-primary">View Profile</a>
+                                <span class="fw-bold">Rs 480/hour</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Islamabad Babysitters -->
+                <div class="col-md-6 col-lg-4 scroll-reveal delay-1" data-city="islamabad" data-type="at-home" data-age="infants,toddlers" data-language="english">
+                    <div class="babysitter-card">
+                        <div class="babysitter-id">NC-ISB-001</div>
+                        <div class="verified-badge">Verified</div>
+                        <img src="./images/maria.jpg" class="babysitter-img" alt="Babysitter">
+                        <div class="babysitter-info">
+                            <h4>Maria Khan</h4>
+                            <p class="text-muted">Islamabad • 7 years experience</p>
+                            <div class="rating mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="text-dark ms-2">4.9 (18 reviews)</span>
+                            </div>
+                            <p>Montessori-trained with expertise in toddler development. Speaks fluent English.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <a href="./profiles/maria.html" class="btn btn-primary">View Profile</a>
+                                <span class="fw-bold">Rs 450/hour</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 scroll-reveal delay-2" data-city="islamabad" data-type="on-site" data-age="school-age" data-language="urdu,english">
+                    <div class="babysitter-card">
+                        <div class="babysitter-id">NC-ISB-002</div>
+                        <div class="verified-badge">Verified</div>
+                        <img src="./images/amina.jpg" class="babysitter-img" alt="Babysitter">
+                        <div class="babysitter-info">
+                            <h4>Amina Sheikh</h4>
+                            <p class="text-muted">Islamabad • 4 years experience</p>
+                            <div class="rating mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="text-dark ms-2">4.5 (22 reviews)</span>
+                            </div>
+                            <p>After-school program specialist with homework help. Speaks Urdu and English.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <a href="./profiles/amina.html" class="btn btn-primary">View Profile</a>
+                                <span class="fw-bold">Rs 450/hour</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 scroll-reveal delay-3" data-city="islamabad" data-type="at-home" data-age="toddlers,preschoolers" data-language="urdu">
+                    <div class="babysitter-card">
+                        <div class="babysitter-id">NC-ISB-003</div>
+                        <div class="verified-badge">Verified</div>
+                        <img src="./images/farah.jpeg" class="babysitter-img" alt="Babysitter">
+                        <div class="babysitter-info">
+                            <h4>Farah Malik</h4>
+                            <p class="text-muted">Islamabad • 3 years experience</p>
+                            <div class="rating mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="text-dark ms-2">4.0 (16 reviews)</span>
+                            </div>
+                            <p>Creative play specialist with focus on developmental milestones. Speaks Urdu.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <a href="./profiles/farah.html" class="btn btn-primary">View Profile</a>
+                                <span class="fw-bold">Rs 380/hour</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 scroll-reveal delay-4" data-city="islamabad" data-type="on-site" data-age="infants" data-language="english">
+                    <div class="babysitter-card">
+                        <div class="babysitter-id">NC-ISB-004</div>
+                        <div class="verified-badge">Verified</div>
+                        <img src="./images/sarah.png" class="babysitter-img" alt="Babysitter">
+                        <div class="babysitter-info">
+                            <h4>Sarah Ahmed</h4>
+                            <p class="text-muted">Islamabad • 2 years experience</p>
+                            <div class="rating mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="text-dark ms-2">4.3 (12 reviews)</span>
+                            </div>
+                            <p>Newborn care specialist with gentle parenting approach. Speaks English.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <a href="./profiles/sarah.html" class="btn btn-primary">View Profile</a>
+                                <span class="fw-bold">Rs 420/hour</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 scroll-reveal delay-1" data-city="islamabad" data-type="at-home" data-age="infants,toddlers" data-language="urdu,english">
+                    <div class="babysitter-card">
+                        <div class="babysitter-id">NC-ISB-005</div>
+                        <div class="verified-badge">Verified</div>
+                        <img src="./images/zoya.jpeg" class="babysitter-img" alt="Babysitter">
+                        <div class="babysitter-info">
+                            <h4>Zoya Ahmed</h4>
+                            <p class="text-muted">Islamabad • 3 years experience</p>
+                            <div class="rating mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="text-dark ms-2">5.0 (25 reviews)</span>
+                            </div>
+                            <p>Infant care specialist with focus on early development. Speaks Urdu and English.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <a href="./profiles/zoya.html" class="btn btn-primary">View Profile</a>
+                                <span class="fw-bold">Rs 450/hour</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 scroll-reveal delay-2" data-city="islamabad" data-type="on-site" data-age="school-age" data-language="english">
+                    <div class="babysitter-card">
+                        <div class="babysitter-id">NC-ISB-006</div>
+                        <div class="verified-badge">Verified</div>
+                        <img src="./images/laiba.jpg" class="babysitter-img" alt="Babysitter">
+                        <div class="babysitter-info">
+                            <h4>Laiba Khan</h4>
+                            <p class="text-muted">Islamabad • 5 years experience</p>
+                            <div class="rating mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="text-dark ms-2">4.7 (38 reviews)</span>
+                            </div>
+                            <p>After-school program specialist with focus on STEM activities. Fluent in English.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <a href="./profiles/laiba.html" class="btn btn-primary">View Profile</a>
+                                <span class="fw-bold">Rs 500/hour</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 scroll-reveal delay-3" data-city="islamabad" data-type="at-home" data-age="toddlers,preschoolers" data-language="urdu">
+                    <div class="babysitter-card">
+                        <div class="babysitter-id">NC-ISB-007</div>
+                        <div class="verified-badge">Verified</div>
+                        <img src="./images/hira.jpg" class="babysitter-img" alt="Babysitter">
+                        <div class="babysitter-info">
+                            <h4>Hira Malik</h4>
+                            <p class="text-muted">Islamabad • 4 years experience</p>
+                            <div class="rating mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="text-dark ms-2">4.1 (21 reviews)</span>
+                            </div>
+                            <p>Creative play and early learning specialist. Speaks Urdu.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <a href="./profiles/hira.html" class="btn btn-primary">View Profile</a>
+                                <span class="fw-bold">Rs 400/hour</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5 scroll-reveal">
+                <button class="btn btn-primary" id="loadMore">Load More Babysitters</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container px-5">
+            <div class="row gx-5">
+                <div class="col-lg-4 col-md-6 mb-4 ps-lg-5">
+                    <h5 class="text-white mb-4">Quick Links</h5>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="babysitters.html">Babysitters</a>
+                        <a href="training.html">Babysitter Training</a>
+                        <a href="blog.html">Blog</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="text-white mb-4">More Links</h5>
+                    <div class="footer-links">
+                        <a href="about.html">About</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="faq.html">FAQs</a>
+                        <a href="pricing.html">Pricing</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="text-white mb-4">Product Categories</h5>
+                    <div class="footer-links">
+                        <a href="products.html?category=all">All Products</a>
+                        <a href="products.html?category=newborn">Newborns (0-12 Months)</a>
+                        <a href="products.html?category=toddler">Toddlers (1-3 Years)</a>
+                        <a href="products.html?category=preschool">Preschoolers (3-5 Years)</a>
+                        <a href="products.html?category=school">School Age (5-10 Years)</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright text-center px-5">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <a href="termsofservice.html" class="footer-legal-link">Terms of Service</a>
+                        <span class="text-white mx-2">|</span>
+                        <a href="privacypolicy.html" class="footer-legal-link">Privacy Policy</a>
+                        <span class="text-white mx-2">|</span>
+                        <a href="sitemap.html" class="footer-legal-link">Sitemap</a>
+                    </div>
+                    <div>
+                        <a href="https://www.facebook.com" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.twitter.com" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Emergency Button -->
+    <div class="emergency-btn" onclick="showEmergencyModal()">
+        <i class="fas fa-bell"></i>
+    </div>
+
+    <!-- Emergency Modal -->
+    <div id="emergencyModal" class="video-modal">
+        <div class="modal-content bg-light" style="max-width: 500px;">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div class="p-4 text-center">
+                <div class="icon-container mx-auto mb-4" style="width: 80px; height: 80px; background-color: #ff4d4d;">
+                    <i class="fas fa-exclamation-triangle fa-2x text-white"></i>
+                </div>
+                <h4 class="mb-3">Emergency Contact</h4>
+                <p>Please select an emergency contact option:</p>
+                <div class="d-grid gap-3">
+                    <button class="btn btn-danger py-3">
+                        <i class="fas fa-phone-alt me-2"></i> Call Emergency Services (1122)
+                    </button>
+                    <button class="btn btn-warning py-3">
+                        <i class="fas fa-user me-2"></i> Contact Selected Babysitter
+                    </button>
+                    <button class="btn btn-primary py-3">
+                        <i class="fas fa-headset me-2"></i> Contact NanhaCare Support
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+// Scroll Reveal Animation
+function scrollReveal() {
+    const elements = document.querySelectorAll('.scroll-reveal:not(.active)');
+    const windowHeight = window.innerHeight;
+    const revealPoint = 150;
+
+    elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        if (elementTop < windowHeight - revealPoint) {
+            element.classList.add('active');
+        }
+    });
+}
+
+// Function to show initial babysitters (first 9 in original order)
+function showInitialBabysitters() {
+    const allBabysitters = Array.from(document.querySelectorAll('#babysittersContainer > div'));
+    
+    // Hide all babysitters first
+    allBabysitters.forEach(babysitter => {
+        babysitter.style.display = 'none';
+        babysitter.classList.remove('active');
+    });
+    
+    // Show first 9 babysitters (in original order)
+    allBabysitters.slice(0, 9).forEach(babysitter => {
+        babysitter.style.display = 'block';
+        babysitter.classList.add('scroll-reveal');
+    });
+    
+    // Store the remaining babysitters for "Load More"
+    window.remainingBabysitters = allBabysitters.slice(9);
+    
+    // Trigger scroll reveal after DOM updates
+    setTimeout(scrollReveal, 100);
+}
+
+// Function to load more babysitters
+function loadMoreBabysitters() {
+    const loadCount = 9;
+    const toLoad = window.remainingBabysitters.splice(0, loadCount);
+    
+    toLoad.forEach(babysitter => {
+        babysitter.style.display = 'block';
+        babysitter.classList.add('scroll-reveal');
+    });
+    
+    // Hide button if no more to load
+    if (window.remainingBabysitters.length === 0) {
+        document.getElementById('loadMore').style.display = 'none';
+    }
+    
+    // Trigger scroll reveal after DOM updates
+    setTimeout(scrollReveal, 100);
+}
+
+// Filter functionality (without shuffling)
+function applyFilters() {
+    const cityFilter = document.getElementById('cityFilter').value.toLowerCase();
+    const typeFilter = document.getElementById('typeFilter').value.toLowerCase();
+    const ageFilter = document.getElementById('ageFilter').value.toLowerCase();
+    const languageFilter = document.getElementById('languageFilter').value.toLowerCase();
+    
+    const allBabysitters = Array.from(document.querySelectorAll('#babysittersContainer > div'));
+    
+    // Filter babysitters based on criteria
+    const filteredBabysitters = allBabysitters.filter(container => {
+        const city = container.getAttribute('data-city');
+        const type = container.getAttribute('data-type');
+        const age = container.getAttribute('data-age');
+        const language = container.getAttribute('data-language');
+        
+        // City filter - exact match
+        const cityMatch = !cityFilter || city === cityFilter;
+        
+        // Service type filter - exact match
+        const typeMatch = !typeFilter || type === typeFilter;
+        
+        // Age group filter - check if selected age is included in babysitter's age groups
+        const ageMatch = !ageFilter || age.split(',').includes(ageFilter);
+        
+        // Language filter - improved logic
+        let languageMatch;
+        if (!languageFilter) {
+            languageMatch = true;
+        } else if (languageFilter === "bilingual") {
+            // For bilingual, check if both urdu and english are present
+            const languages = language.split(',');
+            languageMatch = languages.includes("urdu") && languages.includes("english");
+        } else if (languageFilter === "urdu" || languageFilter === "english") {
+            // For specific language, check if it's included (will also match bilinguals)
+            languageMatch = language.split(',').includes(languageFilter);
+        } else {
+            languageMatch = false;
+        }
+        
+        return cityMatch && typeMatch && ageMatch && languageMatch;
+    });
+    
+    // Hide all babysitters first
+    allBabysitters.forEach(babysitter => {
+        babysitter.style.display = 'none';
+        babysitter.classList.remove('active');
+    });
+    
+    // Show first 9 filtered babysitters (in original order)
+    filteredBabysitters.slice(0, 9).forEach(babysitter => {
+        babysitter.style.display = 'block';
+        babysitter.classList.add('scroll-reveal');
+    });
+    
+    // Store remaining for "Load More"
+    window.remainingBabysitters = filteredBabysitters.slice(9);
+    
+    // Show/Hide Load More button based on remaining
+    document.getElementById('loadMore').style.display = 
+        window.remainingBabysitters.length > 0 ? 'inline-block' : 'none';
+    
+    // Trigger scroll reveal after DOM updates
+    setTimeout(scrollReveal, 100);
+    
+    // Scroll to results after filtering
+    setTimeout(() => {
+        document.getElementById('babysittersContainer').scrollIntoView({
+            behavior: 'smooth'
+        });
+    }, 300);
+}
+
+// Reset filters
+function resetFilters() {
+    // Reset all select elements
+    document.getElementById('cityFilter').value = '';
+    document.getElementById('typeFilter').value = '';
+    document.getElementById('ageFilter').value = '';
+    document.getElementById('languageFilter').value = '';
+    
+    // Show initial 9 babysitters
+    showInitialBabysitters();
+    document.getElementById('loadMore').style.display = 'inline-block';
+    
+    // Scroll to results after resetting
+    setTimeout(() => {
+        document.getElementById('babysittersContainer').scrollIntoView({
+            behavior: 'smooth'
+        });
+    }, 300);
+}
+
+// Show emergency modal
+function showEmergencyModal() {
+    const modal = document.getElementById('emergencyModal');
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+}
+
+// Close modal
+function closeModal() {
+    const modals = document.querySelectorAll('.video-modal');
+    modals.forEach(modal => {
+        modal.style.display = 'none';
+    });
+    document.body.style.overflow = 'auto';
+}
+
+// Initialize on load
+window.addEventListener('load', function() {
+    window.scrollTo(0, 0);
+    
+    // Show initial babysitters
+    showInitialBabysitters();
+    
+    // Initialize event listeners
+    document.getElementById('applyFilters').addEventListener('click', applyFilters);
+    document.getElementById('resetFilters').addEventListener('click', resetFilters);
+    document.getElementById('loadMore').addEventListener('click', loadMoreBabysitters);
+    
+    // Run scroll reveal once immediately
+    scrollReveal();
+    
+    // Then set up the scroll event listener
+    window.addEventListener('scroll', scrollReveal);
+    
+    // Also run it periodically to catch any missed elements
+    setInterval(scrollReveal, 500);
+    
+    // Initialize Bootstrap tooltips if needed
+    if (typeof bootstrap !== 'undefined') {
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+    }
+});
+
+// Close modal when clicking outside
+window.onclick = function(event) {
+    const modals = document.querySelectorAll('.video-modal');
+    modals.forEach(modal => {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+}
+    </script>
+</body>
+</html>

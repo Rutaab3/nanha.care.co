@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="icon" href="../images/favricon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zainab Khan Profile | NanhaCare - Trusted Babysitters in Pakistan</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sky-blue: #7EB8DA;
+            --baby-pink: #F8B1C8;
+            --mint-green: #C6F3D3;
+            --off-white: #FFF9F2;
+            --sunshine-yellow: #FFE97F;
+            --slate-grey: #AAAAAA;
+            --dark-text: #555555;
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: var(--off-white);
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(var(--sky-blue), var(--baby-pink));
+            border-radius: 10px;
+            border: 3px solid var(--off-white);
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(var(--baby-pink), var(--sky-blue));
+        }
+        
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: var(--off-white);
+            color: var(--dark-text);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        
+        /* Scroll Reveal Animation Classes */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Delay classes for staggered animations */
+        .delay-1 { transition-delay: 0.1s; }
+        .delay-2 { transition-delay: 0.2s; }
+        .delay-3 { transition-delay: 0.3s; }
+        .delay-4 { transition-delay: 0.4s; }
+        .delay-5 { transition-delay: 0.5s; }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: #4A4A6A;
+        }
+        
+        .navbar {
+            background: linear-gradient(135deg, var(--sky-blue), var(--baby-pink));
+            padding: 15px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            padding: 0;
+        }
+
+        .navbar-brand img {
+            height: 55px;
+            width: auto;
+            margin-right: 10px;
+        }
+
+        .navbar .btn-primary {
+            padding: 12px 24px;
+            margin-left: 10px;
+            box-shadow: none;
+        }
+
+        .navbar .btn-primary:hover {
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .nav-link {
+            color: white !important;
+            margin: 0 5px;
+            padding: 8px 2px;
+            position: relative;
+            display: inline-block;
+            transition: all 0.3s ease;
+            font-size: large;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 4px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: white;
+            transform: translateX(-50%);
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 60%;
+        }
+
+        .nav-link.active::after {
+            width: 60%;
+            height: 2px;
+            background-color: white;
+        }
+        
+        .navbar-toggler {
+            border: none;
+            color: white;
+        }
+        
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }   
+        
+        .btn-primary {
+            background-color: var(--sunshine-yellow);
+            color: #5a4a2a;
+            border: none;
+            padding: 14px 32px;
+            font-weight: 700;
+            border-radius: 50px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(255, 233, 127, 0.3);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--mint-green);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(198, 243, 211, 0.4);
+            color: #2c5a3a;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--sky-blue), var(--baby-pink));
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            border-radius: 0 0 30px 30px;
+            overflow: hidden;
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        .feature-card {
+            background-color: white;
+            border-radius: 20px;
+            padding: 30px;
+            height: 100%;
+            transition: all 0.3s;
+            box-shadow: 0 8px 20px rgba(167, 211, 242, 0.15);
+            border: 1px solid rgba(252, 214, 226, 0.3);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(167, 211, 242, 0.25);
+        }
+        
+        .icon-container {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: var(--baby-pink);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 60px;
+            display: inline-block;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(to right, var(--sky-blue), var(--baby-pink));
+            border-radius: 10px;
+        }
+        
+        /* Profile Page Specific Styles */
+        .profile-header {
+            background: linear-gradient(135deg, var(--sky-blue), var(--baby-pink));
+            padding: 60px 0 30px;
+            color: white;
+            border-radius: 0 0 30px 30px;
+            margin-bottom: 40px;
+        }
+        
+        .profile-picture {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .profile-details {
+            background-color: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 20px rgba(167, 211, 242, 0.15);
+            margin-bottom: 30px;
+        }
+        
+        .detail-card {
+            background-color: white;
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 20px rgba(167, 211, 242, 0.15);
+            border: 1px solid rgba(252, 214, 226, 0.3);
+        }
+
+        .badge-custom {
+            background-color: var(--sky-blue);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            display: inline-block;
+        }
+        
+        .rating {
+            color: var(--sunshine-yellow);
+        }
+        
+        .emergency-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #ff4d4d;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 4px 15px rgba(255, 77, 77, 0.4);
+            z-index: 100;
+            animation: pulse 2s infinite;
+            cursor: pointer;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .language-selector {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 100;
+        }
+        
+        .language-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            cursor: pointer;
+        }
+
+        .video-modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+        }
+        
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 800px;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .highlight {
+            color: var(--sky-blue);
+            font-weight: 700;
+        }
+
+        .cartoon-shape {
+            position: absolute;
+            z-index: 0;
+            opacity: 0.15;
+        }
+        
+        .rounded-section {
+            border-radius: 30px;
+        }
+        
+        .soft-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .testimonial-card {
+            background-color: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 15px;
+            box-shadow: 0 8px 20px rgba(167, 211, 242, 0.15);
+            border-left: 4px solid var(--baby-pink);
+        }
+        
+        .testimonial-img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--sky-blue);
+            box-shadow: 0 4px 8px rgba(167, 211, 242, 0.3);
+        }
+        
+        footer {
+            background: linear-gradient(135deg, var(--sky-blue), var(--baby-pink));
+            padding: 60px 0 30px;
+            color: #5a4a6a;
+            border-radius: 30px 30px 0 0;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: white;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 8px;
+            transition: all 0.3s;
+            color: var(--sky-blue);
+            box-shadow: 0 4px 8px rgba(167, 211, 242, 0.3);
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-5px);
+            background-color: var(--mint-green);
+            color: #2c5a3a;
+        }
+        
+        .footer-links a {
+            color: #5a4a6a;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .footer-links a:hover {
+            color: #fff;
+            transform: translateX(5px);
+        }
+        
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.3);
+            padding-top: 20px;
+            color: #5a4a6a;
+        }
+
+        .footer-legal-link {
+            color: white !important;
+            text-decoration: none !important;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 2px;
+        }
+        .footer-legal-link:hover {
+            color: white !important;
+        }
+        .footer-legal-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: white;
+            transition: width 0.3s ease;
+        }
+        .footer-legal-link:hover::after {
+            width: 100%;
+        }
+        
+        .copyright .text-white.mx-2 {
+            color: white !important;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .profile-picture {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .profile-header {
+                padding: 40px 0 20px;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .btn-primary:focus,
+        .btn-primary:active,
+        .btn-primary:focus:active {
+         background-color: var(--mint-green) !important;
+         color: #5a4a2a !important;
+         box-shadow: 0 4px 12px rgba(255, 233, 127, 0.3) !important;
+        }
+        .detail-card i.text-primary {
+            color: var(--baby-pink) !important;
+        }
+
+        /* Tablet-specific fixes (1024px width) */
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+    .navbar-nav {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+    
+    .nav-item {
+        margin: 0 8px 8px 0;
+    }
+    
+    .btn-nav {
+        margin-left: 0 !important;
+        margin-top: 0;
+    }
+    
+    .navbar-brand img {
+        height: 45px; /* Slightly smaller logo */
+    }
+    
+    .nav-link {
+        font-size: 15px; /* Slightly smaller font */
+        padding: 6px 0;
+    }
+}
+
+    /* Ensure button stays properly aligned */
+    .btn-nav {
+        white-space: nowrap;
+        padding: 10px 20px;
+    }
+
+    </style>
+</head>
+<body>
+    <!-- Decorative shapes -->
+    <div class="cartoon-shape circle" style="top: 10%; left: 5%;"></div>
+    <div class="cartoon-shape triangle" style="top: 15%; right: 8%;"></div>
+    <div class="cartoon-shape circle" style="bottom: 20%; right: 7%; width: 80px; height: 80px;"></div>
+    
+    <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="../index.html">
+            <img src="../images/logo4.png" alt="NanhaCare Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="../babysitters.html">Babysitters</a></li>
+                <li class="nav-item"><a class="nav-link" href="../products.html">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="../blog.html">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="../faq.html">FAQs</a></li>
+                <li class="nav-item ms-lg-3">
+                    <a class="btn btn-primary btn-nav" href="../pricing.html">
+                        <i class="fas fa-crown me-2"></i>Pricing
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <!-- Profile Header -->
+    <section class="profile-header">
+        <div class="container text-center scroll-reveal delay-1">
+            <img src="./images/zainab.jpeg" class="profile-picture mb-4" alt="Babysitter Profile">
+            <h1 class="mb-2">Zainab Khan</h1>
+            <div class="rating mb-3">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span class="text-white ms-2">4.6 (15 reviews)</span>
+            </div>
+            <div class="d-flex justify-content-center">
+                <div class="mx-3">
+                    <i class="fas fa-map-marker-alt me-2"></i> Lahore, Pakistan
+                </div>
+                <div class="mx-3">
+                    <i class="fas fa-user-clock me-2"></i> 3 years experience
+                </div>
+                <div class="mx-3">
+                    <i class="fas fa-money-bill-wave me-2"></i> Rs 350/hour
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile Content -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <!-- Quick Details Card -->
+                    <div class="detail-card scroll-reveal">
+                        <h4 class="mb-4"><i class="fas fa-info-circle me-2"></i>Quick Details</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-3">
+                                <strong><i class="fas fa-birthday-cake me-2"></i>Age:</strong> 25 years
+                            </li>
+                            <li class="mb-3">
+                                <strong><i class="fas fa-language me-2"></i>Languages:</strong> Urdu, English
+                            </li>
+                            <li class="mb-3">
+                                <strong><i class="fas fa-heart me-2"></i>Marital Status:</strong> Single
+                            </li>
+                            <li class="mb-3">
+                                <strong><i class="fas fa-smoking-ban me-2"></i>Smoker:</strong> No
+                            </li>
+                            <li class="mb-3">
+                                <strong><i class="fas fa-home me-2"></i>Preferred Location:</strong> On-Site
+                            </li>
+                            <li class="mb-3">
+                                <strong><i class="fas fa-id-card me-2"></i>ID:</strong> NC-LHR-004
+                            </li>
+                            <li class="mb-3">
+                                <strong><i class="fas fa-shield-alt me-2"></i>Verified:</strong> Yes
+                            </li>
+                        </ul>
+                        <div class="text-center mt-4">
+                            <a href="../contact.html?babysitter=NC-LHR-004" class="btn btn-primary w-100 py-3">
+                                <i class="fas fa-calendar-check me-2"></i> Book Now
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Certifications Card -->
+                    <div class="detail-card scroll-reveal delay-1">
+                        <h4 class="mb-4"><i class="fas fa-certificate me-2"></i>Certifications</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Early Childhood Education</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Creative Learning Techniques</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Basic First Aid</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Skills Card -->
+                    <div class="detail-card scroll-reveal delay-2">
+                        <h4 class="mb-4"><i class="fas fa-star me-2"></i>Skills</h4>
+                        <div>
+                            <span class="badge-custom"><i class="fas fa-child me-1"></i> Preschool Activities</span>
+                            <span class="badge-custom"><i class="fas fa-book me-1"></i> Storytelling</span>
+                            <span class="badge-custom"><i class="fas fa-paint-brush me-1"></i> Arts & Crafts</span>
+                            <span class="badge-custom"><i class="fas fa-music me-1"></i> Musical Activities</span>
+                            <span class="badge-custom"><i class="fas fa-language me-1"></i> Bilingual Care</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-8">
+                    <!-- About Me Card -->
+                    <div class="detail-card scroll-reveal">
+                        <h4 class="mb-4"><i class="fas fa-user me-2"></i>About Me</h4>
+                        <p>Hello! I'm Zainab, a passionate preschool activities specialist with 3 years of experience in creative learning approaches. I'm fluent in both Urdu and English, which helps me communicate effectively with children from diverse backgrounds.</p>
+                        <p>My approach focuses on making learning fun through interactive games, storytelling, and creative arts. I believe in nurturing each child's unique talents while helping them develop essential social and cognitive skills.</p>
+                        <p>I specialize in creating engaging educational activities that keep preschoolers excited about learning while ensuring their safety and well-being at all times.</p>
+                    </div>
+                    
+                    <!-- Experience Card -->
+                    <div class="detail-card scroll-reveal delay-1">
+                        <h4 class="mb-4"><i class="fas fa-briefcase me-2"></i>Experience</h4>
+                        <div class="mb-4">
+                            <h5>Preschool Activity Specialist</h5>
+                            <p class="text-muted">2020 - Present | Lahore</p>
+                            <ul>
+                                <li>Developed and implemented creative learning activities for children aged 3-5</li>
+                                <li>Specialized in bilingual (Urdu/English) educational games</li>
+                                <li>Organized weekly themed learning sessions</li>
+                            </ul>
+                        </div>
+                        <div class="mb-4">
+                            <h5>Private Babysitter</h5>
+                            <p class="text-muted">2019 - 2020 | Lahore</p>
+                            <ul>
+                                <li>Provided after-school care for preschool-aged children</li>
+                                <li>Created customized learning activities based on children's interests</li>
+                                <li>Helped children with language development in both Urdu and English</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Education Card -->
+                    <div class="detail-card scroll-reveal delay-3">
+                        <h4 class="mb-4"><i class="fas fa-graduation-cap me-2"></i>Education</h4>
+                        <div class="mb-4">
+                            <h5>Diploma in Early Childhood Education</h5>
+                            <p class="text-muted">Lahore College for Women | 2018 - 2020</p>
+                        </div>
+                        <div class="mb-4">
+                            <h5>Creative Learning Workshop</h5>
+                            <p class="text-muted">Lahore Arts Council | 2019</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Age Specialization Card -->
+                    <div class="detail-card scroll-reveal delay-4">
+                        <h4 class="mb-4"><i class="fas fa-child me-2"></i>Age Specialization</h4>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="me-3" style="font-size: 2rem;">
+                                        <i class="fas fa-child text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-1">Preschoolers (3-5 years)</h5>
+                                        <p class="mb-0">3 years experience</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="me-3" style="font-size: 2rem;">
+                                        <i class="fas fa-school text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-1">After-School Care</h5>
+                                        <p class="mb-0">2 years experience</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="me-3" style="font-size: 2rem;">
+                                        <i class="fas fa-language text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-1">Bilingual Education</h5>
+                                        <p class="mb-0">3 years experience</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="me-3" style="font-size: 2rem;">
+                                        <i class="fas fa-paint-brush text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-1">Creative Activities</h5>
+                                        <p class="mb-0">3 years experience</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center mb-5 scroll-reveal">
+                <h2 class="section-title">Parent <span class="highlight">Reviews</span></h2>
+                <p class="lead">What parents say about Zainab</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4 scroll-reveal delay-1">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="./images/reviews.png" class="testimonial-img me-3" alt="Parent">
+                            <div>
+                                <h5 class="mb-0">Amina Sheikh</h5>
+                                <small>Lahore</small>
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p>"Zainab has been wonderful with our 4-year-old. Her creative activities keep our daughter engaged and learning. We especially appreciate her bilingual approach!"</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 scroll-reveal delay-2">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="./images/reviews.png" class="testimonial-img me-3" alt="Parent">
+                            <div>
+                                <h5 class="mb-0">Bilal Ahmed</h5>
+                                <small>Lahore</small>
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p>"Our son looks forward to Zainab's visits. Her storytelling sessions are magical, and we've noticed significant improvement in his English vocabulary."</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 scroll-reveal delay-3">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="./images/reviews.png" class="testimonial-img me-3" alt="Parent">
+                            <div>
+                                <h5 class="mb-0">Sara Khan</h5>
+                                <small>Lahore</small>
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p>"Zainab's arts and crafts activities have brought out our daughter's creativity. She's patient, punctual, and truly understands preschoolers' needs."</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5 scroll-reveal">
+                <button class="btn btn-primary">View All 15 Reviews</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container px-5">
+            <div class="row gx-5">
+                <div class="col-lg-4 col-md-6 mb-4 ps-lg-5">
+                    <h5 class="text-white mb-4">Quick Links</h5>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="babysitters.html">Babysitters</a>
+                        <a href="training.html">Babysitter Training</a>
+                        <a href="blog.html">Blog</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="text-white mb-4">More Links</h5>
+                    <div class="footer-links">
+                        <a href="about.html">About</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="faq.html">FAQs</a>
+                        <a href="pricing.html">Pricing</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="text-white mb-4">Product Categories</h5>
+                    <div class="footer-links">
+                        <a href="products.html?category=all">All Products</a>
+                        <a href="products.html?category=newborn">Newborns (0-12 Months)</a>
+                        <a href="products.html?category=toddler">Toddlers (1-3 Years)</a>
+                        <a href="products.html?category=preschool">Preschoolers (3-5 Years)</a>
+                        <a href="products.html?category=school">School Age (5-10 Years)</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright text-center px-5">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <a href="termsofservice.html" class="footer-legal-link">Terms of Service</a>
+                        <span class="text-white mx-2">|</span>
+                        <a href="privacypolicy.html" class="footer-legal-link">Privacy Policy</a>
+                        <span class="text-white mx-2">|</span>
+                        <a href="sitemap.html" class="footer-legal-link">Sitemap</a>
+                    </div>
+                    <div>
+                        <a href="https://www.facebook.com" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.twitter.com" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Emergency Button -->
+    <div class="emergency-btn" onclick="showEmergencyModal()">
+        <i class="fas fa-bell"></i>
+    </div>
+
+    <!-- Emergency Modal -->
+    <div id="emergencyModal" class="video-modal">
+        <div class="modal-content bg-light" style="max-width: 500px;">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div class="p-4 text-center">
+                <div class="icon-container mx-auto mb-4" style="width: 80px; height: 80px; background-color: #ff4d4d;">
+                    <i class="fas fa-exclamation-triangle fa-2x text-white"></i>
+                </div>
+                <h4 class="mb-3">Emergency Contact</h4>
+                <p>Please select an emergency contact option:</p>
+                <div class="d-grid gap-3">
+                    <button class="btn btn-danger py-3">
+                        <i class="fas fa-phone-alt me-2"></i> Call Emergency Services (1122)
+                    </button>
+                    <button class="btn btn-warning py-3">
+                        <i class="fas fa-user me-2"></i> Contact Selected Babysitter
+                    </button>
+                    <button class="btn btn-primary py-3">
+                        <i class="fas fa-headset me-2"></i> Contact NanhaCare Support
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Scroll Reveal Animation
+        function scrollReveal() {
+            const elements = document.querySelectorAll('.scroll-reveal:not(.active)');
+            const windowHeight = window.innerHeight;
+            const revealPoint = 150;
+
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                if (elementTop < windowHeight - revealPoint) {
+                    element.classList.add('active');
+                }
+            });
+        }
+
+        // Show emergency modal
+        function showEmergencyModal() {
+            const modal = document.getElementById('emergencyModal');
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Close modal
+        function closeModal() {
+            const modals = document.querySelectorAll('.video-modal');
+            modals.forEach(modal => {
+                modal.style.display = 'none';
+            });
+            document.body.style.overflow = 'auto';
+        }
+
+        // Initialize on load
+        window.addEventListener('load', function() {
+            window.scrollTo(0, 0);
+            
+            // Run scroll reveal once immediately
+            scrollReveal();
+            
+            // Then set up the scroll event listener
+            window.addEventListener('scroll', scrollReveal);
+            
+            // Also run it periodically to catch any missed elements
+            setInterval(scrollReveal, 500);
+            
+            // Initialize Bootstrap tooltips if needed
+            if (typeof bootstrap !== 'undefined') {
+                var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+                var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                    return new bootstrap.Tooltip(tooltipTriggerEl);
+                });
+            }
+        });
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modals = document.querySelectorAll('.video-modal');
+            modals.forEach(modal => {
+                if (event.target == modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

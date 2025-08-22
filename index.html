@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="icon" href="./images/favricon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NanhaCare - Trusted Babysitters in Pakistan</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sky-blue: #7EB8DA;
+            --baby-pink: #F8B1C8;
+            --mint-green: #C6F3D3;
+            --off-white: #FFF9F2;
+            --sunshine-yellow: #FFE97F;
+            --slate-grey: #AAAAAA;
+            --dark-text: #555555;
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: var(--off-white);
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(var(--sky-blue), var(--baby-pink));
+            border-radius: 10px;
+            border: 3px solid var(--off-white);
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(var(--baby-pink), var(--sky-blue));
+        }
+        
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: var(--off-white);
+            color: var(--dark-text);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        
+        /* Scroll Reveal Animation Classes */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Delay classes for staggered animations */
+        .delay-1 { transition-delay: 0.1s; }
+        .delay-2 { transition-delay: 0.2s; }
+        .delay-3 { transition-delay: 0.3s; }
+        .delay-4 { transition-delay: 0.4s; }
+        .delay-5 { transition-delay: 0.5s; }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: #4A4A6A;
+        }
+        
+        .navbar {
+            background: linear-gradient(135deg, var(--sky-blue), var(--baby-pink));
+            padding: 15px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            padding: 0;
+        }
+
+        .navbar-brand img {
+            height: 55px;
+            width: auto;
+            margin-right: 10px;
+        }
+
+        .navbar .btn-primary {
+            padding: 12px 24px;
+            margin-left: 10px;
+            box-shadow: none;
+        }
+
+        .navbar .btn-primary:hover {
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .nav-link {
+            color: white !important;
+            margin: 0 5px;
+            padding: 8px 2px;
+            position: relative;
+            display: inline-block;
+            transition: all 0.3s ease;
+            font-size: large;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 4px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: white;
+            transform: translateX(-50%);
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 60%;
+        }
+
+        .nav-link.active::after {
+            width: 60%;
+            height: 2px;
+            background-color: white;
+        }
+        
+        .navbar-toggler {
+            border: none;
+            color: white;
+        }
+        
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }   
+        
+        .hero-section {
+            background: url('./images/hero\ bg.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 55px 0 100px;
+            position: relative;
+            border-radius: 0 0 30px 30px;
+            overflow: hidden;
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        .hero-overlay {
+            background: rgba(255, 249, 242, 0.9);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .btn-primary {
+            background-color: var(--sunshine-yellow);
+            color: #5a4a2a;
+            border: none;
+            padding: 14px 32px;
+            font-weight: 700;
+            border-radius: 50px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(255, 233, 127, 0.3);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--mint-green);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(198, 243, 211, 0.4);
+            color: #2c5a3a;
+        }
+        
+        .feature-card {
+            background-color: white;
+            border-radius: 20px;
+            padding: 30px;
+            height: 100%;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(167, 211, 242, 0.15);
+            border: 1px solid rgba(252, 214, 226, 0.3);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(167, 211, 242, 0.25);
+        }
+        
+        .icon-container {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: var(--baby-pink);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 60px;
+            display: inline-block;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(to right, var(--sky-blue), var(--baby-pink));
+            border-radius: 10px;
+        }
+        
+        .process-step {
+            position: relative;
+            padding: 30px;
+            background-color: white;
+            border-radius: 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(167, 211, 242, 0.15);
+        }
+
+        .process-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(167, 211, 242, 0.25);
+        }
+        
+        .step-number {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--sky-blue), var(--baby-pink));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
+            color: white;
+            box-shadow: 0 4px 8px rgba(167, 211, 242, 0.4);
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 15px;
+            box-shadow: 0 8px 20px rgba(167, 211, 242, 0.15);
+            border-left: 4px solid var(--baby-pink);
+        }
+        
+        .testimonial-img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--sky-blue);
+            box-shadow: 0 4px 8px rgba(167, 211, 242, 0.3);
+        }
+        
+        footer {
+            background: linear-gradient(135deg, var(--sky-blue), var(--baby-pink));
+            padding: 60px 0 30px;
+            color: #5a4a6a;
+            border-radius: 30px 30px 0 0;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: white;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 8px;
+            transition: all 0.3s;
+            color: var(--sky-blue);
+            box-shadow: 0 4px 8px rgba(167, 211, 242, 0.3);
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-5px);
+            background-color: var(--mint-green);
+            color: #2c5a3a;
+        }
+        
+        .footer-links a {
+            color: #5a4a6a;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .footer-links a:hover {
+            color: #fff;
+            transform: translateX(5px);
+        }
+        
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.3);
+            padding-top: 20px;
+            color: #5a4a6a;
+        }
+
+        .footer-legal-link {
+            color: white !important;
+            text-decoration: none !important;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 2px;
+        }
+        .footer-legal-link:hover {
+            color: white !important;
+        }
+        .footer-legal-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: white;
+            transition: width 0.3s ease;
+        }
+        .footer-legal-link:hover::after {
+            width: 100%;
+        }
+        
+        .copyright .text-white.mx-2 {
+            color: white !important;
+        }
+
+        .highlight {
+            color: var(--sky-blue);
+            font-weight: 700;
+        }
+
+        .form-control {
+            background-color: rgba(255,255,255,0.8);
+            border: 1px solid var(--sky-blue);
+            color: var(--dark-text);
+            padding: 12px 20px;
+            border-radius: 15px;
+        }
+        
+        .form-control:focus {
+            background-color: white;
+            border-color: var(--baby-pink);
+            box-shadow: 0 0 0 0.25rem rgba(252, 214, 226, 0.25);
+        }
+        
+        .baby-icon {
+            font-size: 2.5rem;
+            color: var(--baby-pink);
+            margin-bottom: 15px;
+        }
+        
+        .cartoon-shape {
+            position: absolute;
+            z-index: 0;
+            opacity: 0.15;
+        }
+        
+        .circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: var(--baby-pink);
+        }
+        
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 60px solid transparent;
+            border-right: 60px solid transparent;
+            border-bottom: 100px solid var(--sky-blue);
+        }
+        
+        .rounded-section {
+            border-radius: 30px;
+        }
+        
+        .soft-shadow {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        
+        .playful-icon {
+            font-size: 2rem;
+            color: var(--baby-pink);
+            background: white;
+            width: 60px;
+            height: 60px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 6px 12px rgba(252, 214, 226, 0.3);
+        }
+        
+        .bubble {
+            position: absolute;
+            background: var(--sky-blue);
+            border-radius: 50%;
+            opacity: 0.1;
+            z-index: 0;
+            animation: float 10s infinite ease-in-out;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0) translateX(0); }
+            25% { transform: translateY(-20px) translateX(10px); }
+            50% { transform: translateY(-10px) translateX(20px); }
+            75% { transform: translateY(-15px) translateX(-10px); }
+            100% { transform: translateY(0) translateX(0); }
+        }
+        
+        .babysitter-card {
+            background-color: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(167, 211, 242, 0.15);
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+            transform-style: preserve-3d;
+        }
+        
+        .babysitter-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(167, 211, 242, 0.25);
+        }
+        
+        /* Verified Badge */
+        .babysitter-card .verified-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: linear-gradient(135deg, var(--sky-blue), var(--baby-pink));
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 2;
+        }
+
+        .babysitter-card:hover .verified-badge {
+            opacity: 1;
+        }
+        
+        .babysitter-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        .babysitter-info {
+            padding: 20px;
+        }
+
+        /* Babysitter ID Badge */
+        .babysitter-id {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(255,255,255,0.9);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            color: var(--dark-text);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 2;
+            transform: translateZ(20px);
+        }
+        
+        .rating {
+            color: var(--sunshine-yellow);
+        }
+        
+        .emergency-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #ff4d4d;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 4px 15px rgba(255, 77, 77, 0.4);
+            z-index: 100;
+            animation: pulse 2s infinite;
+            cursor: pointer;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .language-selector {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 100;
+        }
+        
+        .language-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            cursor: pointer;
+        }
+        
+        .video-modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+        }
+        
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 800px;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        
+        .verification-step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+        
+        .verification-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--baby-pink);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        
+        .safety-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(167, 211, 242, 0.15);
+            height: 100%;
+        }
+
+        .safety-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(167, 211, 242, 0.25);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .btn-primary:focus,
+        .btn-primary:active,
+        .btn-primary:focus:active {
+         background-color: var(--mint-green) !important;
+         color: #5a4a2a !important;
+         box-shadow: 0 4px 12px rgba(255, 233, 127, 0.3) !important;
+        }
+
+        /* Tablet-specific fixes (1024px width) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .navbar-nav {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+    
+    .nav-item {
+        margin: 0 8px 8px 0;
+    }
+    
+    .btn-nav {
+        margin-left: 0 !important;
+        margin-top: 0;
+    }
+    
+    .navbar-brand img {
+        height: 45px; /* Slightly smaller logo */
+    }
+    
+    .nav-link {
+        font-size: 15px; /* Slightly smaller font */
+        padding: 6px 0;
+    }
+}
+
+    /* Ensure button stays properly aligned */
+    .btn-nav {
+        white-space: nowrap;
+        padding: 10px 20px;
+    }
+
+    </style>
+</head>
+<body>
+    <!-- Decorative shapes -->
+    <div class="cartoon-shape circle" style="top: 10%; left: 5%;"></div>
+    <div class="cartoon-shape triangle" style="top: 15%; right: 8%;"></div>
+    <div class="cartoon-shape circle" style="bottom: 20%; right: 7%; width: 80px; height: 80px;"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="./images/logo4.png" alt="NanhaCare Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-center">
+                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="babysitters.html">Babysitters</a></li>
+                <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="faq.html">FAQs</a></li>
+                <li class="nav-item ms-lg-3">
+                    <a class="btn btn-primary btn-nav" href="pricing.html">
+                        <i class="fas fa-crown me-2"></i>Pricing
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content">
+                    <h1 class="display-4 fw-bold mb-4">Find Trusted & <span class="highlight">Verified</span> Babysitters</h1>
+                    <p class="lead mb-5">NanhaCare connects parents with thoroughly vetted babysitters in Pakistan. Our platform ensures safety, reliability, and peace of mind for your little ones.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <button class="btn btn-primary" onclick="showBabysitters()">
+                            <i class="fas fa-search me-2"></i> Find a Babysitter
+                        </button>
+                    <a href="training.html" class="btn btn-outline-primary d-flex align-items-center">
+                        <i class="fas fa-user me-2"></i> Become a Babysitter
+                    </a>
+
+                    </div>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block text-center position-relative">
+                    <div class="position-relative z-2">
+                        <img src="./images/babysitter.png" class="img-fluid rounded-3 shadow-lg" alt="Happy child with babysitter" style="border: 5px solid white; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+                    </div>
+                    <div class="bubble" style="width: 120px; height: 120px; top: -20px; left: -20px;"></div>
+                    <div class="bubble" style="width: 80px; height: 80px; bottom: -10px; right: -10px;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5 scroll-reveal">
+                <h2 class="section-title">Our <span class="highlight">Safety Features</span></h2>
+                <p class="lead">Advanced security measures designed for Pakistani families</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4 scroll-reveal delay-1">
+                    <div class="feature-card">
+                        <div class="icon-container">
+                            <i class="fas fa-id-card fa-2x" style="color: #e20074;"></i>
+                        </div>
+                        <h4>Triple-Verified Babysitters</h4>
+                        <p>Every babysitter undergoes a comprehensive verification process including CNIC validation, police clearance, and personal interviews with our team.</p>
+                        <div class="mt-3">
+                            <button class="btn btn-sm btn-outline-primary" onclick="showVerificationSection()">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 scroll-reveal delay-2">
+                    <div class="feature-card">
+                        <div class="icon-container">
+                            <i class="fas fa-star fa-2x" style="color: #e20074;"></i>
+                        </div>
+                        <h4>Transparent Ratings & Reviews</h4>
+                        <p>Read detailed reviews from other parents and see verified ratings for each babysitter's reliability, skills, and child interaction.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 scroll-reveal delay-3">
+                    <div class="feature-card">
+                        <div class="icon-container">
+                            <i class="fas fa-bell fa-2x" style="color: #e20074;"></i>
+                        </div>
+                        <h4>Emergency Response System</h4>
+                        <p>Instant panic button connects you to emergency services, our support team, and your selected babysitter with one tap.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-5 rounded-section" style="background: linear-gradient(135deg, var(--sky-blue), var(--baby-pink));">
+        <div class="container py-5">
+            <div class="text-center mb-5 scroll-reveal">
+                <h2 class="section-title text-white">How <span class="text-white">It Works</span></h2>
+                <p class="lead text-white-80">Simple steps to find the perfect babysitter for your family</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-6 scroll-reveal delay-1">
+                    <div class="process-step soft-shadow">
+                        <div class="step-number">1</div>
+                        <div class="playful-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h4>Search</h4>
+                        <p>Find babysitters in your area</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 scroll-reveal delay-2">
+                    <div class="process-step soft-shadow">
+                        <div class="step-number">2</div>
+                        <div class="playful-icon">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <h4>Verify</h4>
+                        <p>Review credentials & reviews</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 scroll-reveal delay-3">
+                    <div class="process-step soft-shadow">
+                        <div class="step-number">3</div>
+                        <div class="playful-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h4>Book</h4>
+                        <p>Schedule a session instantly</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Verification Process Section -->
+    <section id="verification" class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5 scroll-reveal">
+                <h2 class="section-title">Our <span class="highlight">Verification Process</span></h2>
+                <p class="lead">Ensuring only the most trustworthy caregivers join our platform</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="verification-step scroll-reveal delay-1">
+                        <div class="verification-icon">
+                            <i class="fas fa-id-card fa-2x" style="color: #e20074;"></i>
+                        </div>
+                        <div>
+                            <h4>CNIC Verification</h4>
+                            <p>We validate each babysitter's Computerized National Identity Card through NADRA's verification system to confirm their identity and citizenship status.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="verification-step scroll-reveal delay-2">
+                        <div class="verification-icon">
+                            <i class="fas fa-shield-alt fa-2x" style="color: #e20074;"></i>
+                        </div>
+                        <div>
+                            <h4>Police Clearance Certificate</h4>
+                            <p>All babysitters must provide a valid Police Clearance Certificate from their local police station, ensuring no criminal record exists.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="verification-step scroll-reveal delay-3">
+                        <div class="verification-icon">
+                            <i class="fas fa-user-check fa-2x" style="color: #e20074;"></i>
+                        </div>
+                        <div>
+                            <h4>In-Person Interview</h4>
+                            <p>Our team conducts comprehensive face-to-face interviews assessing childcare knowledge, experience, and interpersonal skills.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="verification-step scroll-reveal delay-4">
+                        <div class="verification-icon">
+                            <i class="fas fa-graduation-cap fa-2x" style="color: #e20074;"></i>
+                        </div>
+                        <div>
+                            <h4>Training & Certification</h4>
+                            <p>All approved babysitters complete our specialized childcare training program covering safety protocols, first aid, and child development.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Babysitters Section -->
+    <section id="babysitters" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center mb-5 scroll-reveal">
+                <h2 class="section-title">Our <span class="highlight">Verified Babysitters</span></h2>
+                <p class="lead">Meet some of our trusted babysitters available in your area</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6 col-lg-4 scroll-reveal delay-1">
+                    <div class="babysitter-card">
+                        <div class="babysitter-id">NC-KHI-001</div>
+                        <div class="verified-badge">Verified</div>
+                        <img src="./images/fatima.jpeg" class="babysitter-img" alt="Babysitter">
+                        <div class="babysitter-info">
+                            <h4>Fatima Khan</h4>
+                            <p class="text-muted">Karachi • 5 years experience</p>
+                            <div class="rating mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="text-dark ms-2">5.0 (45 reviews)</span>
+                            </div>
+                            <p>Specializes in newborn care and early childhood education. Fluent in Urdu and English. CPR certified.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <a href="fatima.html" class="btn btn-primary">View Profile</a>
+                                <span class="fw-bold">Rs 500/hour</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 scroll-reveal delay-2">
+                    <div class="babysitter-card">
+                        <div class="babysitter-id">NC-ISB-001</div>
+                        <div class="verified-badge">Verified</div>
+                        <img src="./images/maria.jpg" class="babysitter-img" alt="Babysitter">
+                        <div class="babysitter-info">
+                            <h4>Maria Khan</h4>
+                            <p class="text-muted">Islamabad • 7 years experience</p>
+                            <div class="rating mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="text-dark ms-2">4.9 (18 reviews)</span>
+                            </div>
+                            <p>Montessori-trained with expertise in toddler development. Speaks fluent English.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <a href="maria.html" class="btn btn-primary">View Profile</a>
+                                <span class="fw-bold">Rs 450/hour</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 scroll-reveal delay-3">
+                    <div class="babysitter-card">
+                        <div class="babysitter-id">NC-LHR-004</div>
+                        <div class="verified-badge">Verified</div>
+                        <img src="./images/zainab.jpeg" class="babysitter-img" alt="Babysitter">
+                        <div class="babysitter-info">
+                            <h4>Zainab Khan</h4>
+                            <p class="text-muted">Lahore • 3 years experience</p>
+                            <div class="rating mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="text-dark ms-2">4.6 (15 reviews)</span>
+                            </div>
+                            <p>Preschool activities specialist with creative learning approach. Speaks Urdu and English.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <a href="zainab.html" class="btn btn-primary">View Profile</a>
+                                <span class="fw-bold">Rs 350/hour</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5 scroll-reveal delay-1">
+                <a href="babysitters.html" class="btn btn-primary">View More Babysitters</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coming Soon Section -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5 scroll-reveal">
+                <h2 class="section-title">Coming <span class="highlight">Soon</span></h2>
+                <p class="lead">Our commitment to your child's security</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4 scroll-reveal delay-1">
+                    <div class="safety-card">
+                        <div class="icon-container mb-4">
+                            <i class="fas fa-shield-alt fa-2x" style="color: #e20074;"></i>
+                        </div>
+                        <h4>Background Checks</h4>
+                        <p>We conduct comprehensive background checks including criminal records, employment history, and reference verification for every babysitter.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 scroll-reveal delay-2">
+                    <div class="safety-card">
+                        <div class="icon-container mb-4">
+                            <i class="fas fa-camera fa-2x" style="color: #e20074;"></i>
+                        </div>
+                        <h4>Activity Reports</h4>
+                        <p>Receive detailed reports of your child's activities, meals, and milestones during each babysitting session through our mobile app.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 scroll-reveal delay-3">
+                    <div class="safety-card">
+                        <div class="icon-container mb-4">
+                            <i class="fas fa-hand-holding-heart fa-2x" style="color: #e20074;"></i>
+                        </div>
+                        <h4>Parent Community</h4>
+                        <p>Connect with other parents in our secure community forum to share experiences, recommendations, and childcare tips.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 scroll-reveal delay-1">
+                    <div class="feature-card">
+                        <div class="icon-container">
+                            <i class="fas fa-map-marker-alt fa-2x" style="color: #e20074;"></i>
+                        </div>
+                        <h4>Real-Time Location Tracking</h4>
+                        <p>Track your babysitter's location throughout the booking period with our secure GPS technology for complete peace of mind.</p>
+                        <div class="mt-3">
+                            <button class="btn btn-sm btn-outline-primary" onclick="showLiveTrackingDemo()">See Demo</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 scroll-reveal delay-2">
+                    <div class="feature-card">
+                        <div class="icon-container">
+                            <i class="fas fa-video fa-2x" style="color: #e20074;"></i>
+                        </div>
+                        <h4>Personal Video Profiles</h4>
+                        <p>Watch introductory videos where babysitters showcase their personality, experience, and childcare philosophy.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 scroll-reveal delay-3">
+                    <div class="feature-card">
+                        <div class="icon-container">
+                            <i class="fas fa-language fa-2x" style="color: #e20074;"></i>
+                        </div>
+                        <h4>Multilingual Platform</h4>
+                        <p>Access our platform in Urdu and English to ensure all Pakistani families can use our service comfortably.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center mb-5 scroll-reveal">
+                <h2 class="section-title">What <span class="highlight">Parents Say</span></h2>
+                <p class="lead">Real experiences from families across Pakistan</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4 scroll-reveal delay-1">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="./images/reviews.png" class="testimonial-img me-3" alt="Parent">
+                            <div>
+                                <h5 class="mb-0">Ayesha Khan</h5>
+                                <small>Lahore</small>
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p>"As a working mother in Lahore, finding reliable childcare was a constant struggle and often left me anxious at work. NanhaCare has been a lifesaver! The verification process gave us confidence, and the live tracking feature lets me check in during my workday. Our babysitter Fatima is now like family to us."</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 scroll-reveal delay-2">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="./images/reviews.png" class="testimonial-img me-3" alt="Parent">
+                            <div>
+                                <h5 class="mb-0">Ahmed Raza</h5>
+                                <small>Karachi</small>
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p>"As a doctor with irregular hours at Aga Khan Hospital, finding reliable childcare was challenging. NanhaCare's flexible booking system and emergency protocols give me peace of mind when I'm on call. The detailed profiles helped us find a babysitter who connects perfectly with our twins."</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 scroll-reveal delay-3">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="./images/reviews.png" class="testimonial-img me-3" alt="Parent">
+                            <div>
+                                <h5 class="mb-0">Sana Malik</h5>
+                                <small>Islamabad</small>
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p>"The detailed profiles made all the difference! We could see potential babysitters' personalities before meeting them. Our children love Maria, who speaks English with them just like their grandparents. The activity reports we receive after each session are incredibly detailed and reassuring."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container px-5">
+            <div class="row gx-5">
+                <div class="col-lg-4 col-md-6 mb-4 ps-lg-5">
+                    <h5 class="text-white mb-4">Quick Links</h5>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="babysitters.html">Babysitters</a>
+                        <a href="training.html">Babysitter Training</a>
+                        <a href="blog.html">Blog</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="text-white mb-4">More Links</h5>
+                    <div class="footer-links">
+                        <a href="about.html">About</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="faq.html">FAQs</a>
+                        <a href="pricing.html">Pricing</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="text-white mb-4">Product Categories</h5>
+                    <div class="footer-links">
+                        <a href="products.html?category=all">All Products</a>
+                        <a href="products.html?category=newborn">Newborns (0-12 Months)</a>
+                        <a href="products.html?category=toddler">Toddlers (1-3 Years)</a>
+                        <a href="products.html?category=preschool">Preschoolers (3-5 Years)</a>
+                        <a href="products.html?category=school">School Age (5-10 Years)</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright text-center px-5">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <a href="termsofservice.html" class="footer-legal-link">Terms of Service</a>
+                        <span class="text-white mx-2">|</span>
+                        <a href="privacypolicy.html" class="footer-legal-link">Privacy Policy</a>
+                        <span class="text-white mx-2">|</span>
+                        <a href="sitemap.html" class="footer-legal-link">Sitemap</a>
+                    </div>
+                    <div>
+                        <a href="https://www.facebook.com" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.twitter.com" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Emergency Button -->
+    <div class="emergency-btn" onclick="showEmergencyModal()">
+        <i class="fas fa-bell"></i>
+    </div>
+
+  
+
+    <!-- Live Tracking Demo Modal -->
+    <div id="trackingModal" class="video-modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div class="p-4">
+                <h4 class="mb-4">Live Tracking Demo</h4>
+                <div class="ratio ratio-16x9 mb-4">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13613.271469207853!2d74.32449341977538!3d31.558053399999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39191b65ea9a4e6b%3A0x871fd9ae7a6c5f1a!2sLiberty%20Market%2C%20Lahore%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1686754328761!5m2!1sen!2s" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <p>This demo shows how you can track your babysitter's location in real-time during their shift. The blue marker shows the babysitter's current location, and the path shows their route throughout the day.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Emergency Modal -->
+    <div id="emergencyModal" class="video-modal">
+        <div class="modal-content bg-light" style="max-width: 500px;">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div class="p-4 text-center">
+                <div class="icon-container mx-auto mb-4" style="width: 80px; height: 80px; background-color: #ff4d4d;">
+                    <i class="fas fa-exclamation-triangle fa-2x text-white"></i>
+                </div>
+                <h4 class="mb-3">Emergency Contact</h4>
+                <p>Please select an emergency contact option:</p>
+                <div class="d-grid gap-3">
+                    <button class="btn btn-danger py-3">
+                        <i class="fas fa-phone-alt me-2"></i> Call Emergency Services (1122)
+                    </button>
+                    <button class="btn btn-warning py-3">
+                        <i class="fas fa-user me-2"></i> Contact Selected Babysitter
+                    </button>
+                    <button class="btn btn-primary py-3">
+                        <i class="fas fa-headset me-2"></i> Contact NanhaCare Support
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Scroll Reveal Animation
+        function scrollReveal() {
+            const elements = document.querySelectorAll('.scroll-reveal');
+            const windowHeight = window.innerHeight;
+            const revealPoint = 150;
+
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                if (elementTop < windowHeight - revealPoint) {
+                    element.classList.add('active');
+                }
+            });
+        }
+
+        // Initialize scroll reveal on load and scroll
+        window.addEventListener('load', scrollReveal);
+        window.addEventListener('scroll', scrollReveal);
+
+        // Show babysitters section when "Find a Babysitter" is clicked
+        function showBabysitters() {
+            document.getElementById('babysitters').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // Show verification section
+        function showVerificationSection() {
+            document.getElementById('verification').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Show live tracking demo
+        function showLiveTrackingDemo() {
+            const modal = document.getElementById('trackingModal');
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Show emergency modal
+        function showEmergencyModal() {
+            const modal = document.getElementById('emergencyModal');
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Close modal
+        function closeModal() {
+            const modals = document.querySelectorAll('.video-modal');
+            modals.forEach(modal => {
+                modal.style.display = 'none';
+            });
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modals = document.querySelectorAll('.video-modal');
+            modals.forEach(modal => {
+                if (event.target == modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        }
+
+        // Add bubbles to hero section
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.querySelector('.hero-section');
+            for (let i = 0; i < 12; i++) {
+                const bubble = document.createElement('div');
+                bubble.classList.add('bubble');
+                const size = Math.random() * 100 + 30;
+                const left = Math.random() * 90;
+                const top = Math.random() * 90;
+                bubble.style.width = `${size}px`;
+                bubble.style.height = `${size}px`;
+                bubble.style.left = `${left}%`;
+                bubble.style.top = `${top}%`;
+                bubble.style.opacity = Math.random() * 0.1 + 0.05;
+                bubble.style.animationDuration = `${Math.random() * 10 + 5}s`;
+                container.appendChild(bubble);
+            }
+        });
+
+         // Add this to ensure page starts at top
+        window.addEventListener('load', function() {
+            // Scroll to top on page load
+            window.scrollTo(0, 0);
+        });
+    </script>
+</body>
+</html>

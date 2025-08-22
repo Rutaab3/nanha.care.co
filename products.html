@@ -1,0 +1,2238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="icon" href="./images/favricon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NanhaCare - Products</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sky-blue: #7EB8DA;
+            --baby-pink: #F8B1C8;
+            --mint-green: #C6F3D3;
+            --off-white: #FFF9F2;
+            --sunshine-yellow: #FFE97F;
+            --slate-grey: #AAAAAA;
+            --dark-text: #555555;
+        }
+        
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: var(--off-white);
+            color: var(--dark-text);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: #4A4A6A;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: var(--off-white);
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(var(--sky-blue), var(--baby-pink));
+            border-radius: 10px;
+            border: 3px solid var(--off-white);
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(var(--baby-pink), var(--sky-blue));
+        }
+
+        /* Scroll Reveal Animation Classes */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Delay classes for staggered animations */
+        .delay-1 { transition-delay: 0.1s; }
+        .delay-2 { transition-delay: 0.2s; }
+        .delay-3 { transition-delay: 0.3s; }
+        .delay-4 { transition-delay: 0.4s; }
+        .delay-5 { transition-delay: 0.5s; }
+
+        .navbar {
+            background: linear-gradient(135deg, var(--sky-blue), var(--baby-pink));
+            padding: 15px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            padding: 0;
+        }
+
+        .navbar-brand img {
+            height: 55px;
+            width: auto;
+            margin-right: 10px;
+        }
+
+        .navbar .btn-primary {
+            padding: 12px 24px;
+            margin-left: 10px;
+            box-shadow: none;
+        }
+
+        .navbar .btn-primary:hover {
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .nav-link {
+            color: white !important;
+            margin: 0 5px;
+            padding: 8px 2px; /* Adjusted padding */
+            position: relative;
+            display: inline-block;
+            transition: all 0.3s ease;
+            font-size: large;
+        }
+
+        /* Centered underline animation */
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 4px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: white;
+            transform: translateX(-50%);
+            transition: all 0.3s ease;
+        }
+
+        /* Hover effect */
+        .nav-link:hover::after {
+            width: 60%;
+        }
+
+        /* Active link style */
+        .nav-link.active::after {
+            width: 60%;
+            height: 2px;
+            background-color: white;
+        }
+        
+        .navbar-toggler {
+            border: none;
+            color: white;
+        }
+        
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }        
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 60px;
+            display: inline-block;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(to right, var(--sky-blue), var(--baby-pink));
+            border-radius: 10px;
+        }
+        
+        .highlight {
+            color: var(--sky-blue);
+            font-weight: 700;
+        }
+        
+        .icon-container {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--baby-pink);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        
+        .form-control {
+            background-color: rgba(255,255,255,0.8);
+            border: 1px solid var(--sky-blue);
+            color: var(--dark-text);
+            padding: 12px 20px;
+            border-radius: 15px;
+        }
+        
+        .form-control:focus {
+            background-color: white;
+            border-color: var(--baby-pink);
+            box-shadow: 0 0 0 0.25rem rgba(252, 214, 226, 0.25);
+        }
+        
+        .btn-primary {
+            background-color: var(--sunshine-yellow);
+            color: #5a4a2a;
+            border: none;
+            padding: 14px 32px;
+            font-weight: 700;
+            border-radius: 50px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(255, 233, 127, 0.3);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--mint-green);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(198, 243, 211, 0.4);
+            color: #2c5a3a;
+        }
+
+        footer {
+            background: linear-gradient(135deg, var(--sky-blue), var(--baby-pink));
+            padding: 60px 0 30px;
+            color: #5a4a6a;
+            border-radius: 30px 30px 0 0;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: white;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 8px;
+            transition: all 0.3s;
+            color: var(--sky-blue);
+            box-shadow: 0 4px 8px rgba(167, 211, 242, 0.3);
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-5px);
+            background-color: var(--mint-green);
+            color: #2c5a3a;
+        }
+        
+        .footer-links a {
+            color: #5a4a6a;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .footer-links a:hover {
+            color: #fff;
+            transform: translateX(5px);
+        }
+        
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.3);
+            padding-top: 20px;
+            color: #5a4a6a;
+        }
+
+        /* Footer Legal Links Styling */
+        .footer-legal-link {
+            color: white !important;
+            text-decoration: none !important;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 2px;
+        }
+        .footer-legal-link:hover {
+            color: white !important;
+        }
+        .footer-legal-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: white;
+            transition: width 0.3s ease;
+        }
+        .footer-legal-link:hover::after {
+            width: 100%;
+        }
+    
+        /* Vertical line between links */
+        .copyright .text-white.mx-2 {
+            color: white !important;
+        }
+
+        /* Emergency Button */
+        .emergency-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #ff4d4d;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 4px 15px rgba(255, 77, 77, 0.4);
+            z-index: 100;
+            animation: pulse 2s infinite;
+            cursor: pointer;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Language Selector */
+        .language-selector {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 100;
+        }
+        
+        .language-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            cursor: pointer;
+        }
+
+        /* Modal Styles */
+        .video-modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+        }
+        
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 800px;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .btn-primary:focus,
+        .btn-primary:active,
+        .btn-primary:focus:active {
+         background-color: var(--mint-green) !important;
+         color: #5a4a2a !important;
+         box-shadow: 0 4px 12px rgba(255, 233, 127, 0.3) !important;
+        }
+        
+        /* Validation Styles */
+        .is-invalid {
+            border-color: #dc3545 !important;
+        }
+
+        .invalid-feedback {
+            display: none;
+            color: #dc3545;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+        }
+
+        .is-invalid + .invalid-feedback {
+            display: block;
+        }
+
+        /* Tablet-specific fixes (1024px width) */
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+            .navbar-nav {
+                flex-wrap: wrap;
+                justify-content: flex-end;
+            }
+            
+            .nav-item {
+                margin: 0 8px 8px 0;
+            }
+            
+            .btn-nav {
+                margin-left: 0 !important;
+                margin-top: 0;
+            }
+            
+            .navbar-brand img {
+                height: 45px; /* Slightly smaller logo */
+            }
+            
+            .nav-link {
+                font-size: 15px; /* Slightly smaller font */
+                padding: 6px 0;
+            }
+        }
+
+        /* Ensure button stays properly aligned */
+        .btn-nav {
+            white-space: nowrap;
+            padding: 10px 20px;
+        }
+
+    /* Product Card Styles */
+    .product-card {
+        border-radius: 30px;
+        width: 300px;
+        transition: all 0.3s ease;
+        overflow: hidden;
+        margin-bottom: 30px;
+        box-shadow: 0 5px 15px rgba(126, 184, 218, 0.15);
+        background: linear-gradient(135deg, var(--sky-blue), var(--baby-pink));
+    }
+
+    .product-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(126, 184, 218, 0.25);
+    }
+
+    .product-basic-info {
+        background-color: white;
+        padding: 25px;
+        position: relative;
+        border-radius: 30px 30px 0 0;
+    }
+
+    .product-title .category,
+    .product-title .info {
+        font-weight: 600;
+        font-size: x-small;
+        color: var(--dark-text);
+    }
+
+    .product-title .name {
+        font-weight: bold;
+        font-size: large;
+        padding-bottom: 3px;
+        color: var(--sky-blue);
+    }
+
+    .product-img {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .product-img img {
+        height: 180px;
+        transform: scale(1) rotate(20deg);
+        transition: 0.5s;
+        object-fit: contain;
+    }
+
+    .product-img::before {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        content: '';
+        transform: translate(-50%, -50%);
+        background-color: rgba(126, 184, 218, 0.2);
+        z-index: -2;
+        top: 50%;
+        left: 50%;
+    }
+
+    .product-img::after {
+        position: absolute;
+        bottom: 0;
+        width: 70%;
+        height: 40px;
+        background-color: #000;
+        content: '';
+        right: 30px;
+        z-index: -1;
+        border-radius: 50%;
+        opacity: 0.2;
+        filter: blur(10px);
+        transition: 0.5s;
+    }
+
+    .product-colors {
+        display: flex;
+        font-size: xx-small;
+        text-align: center;
+        gap: 1em;
+    }
+
+    .product-colors .name {
+        margin-bottom: 5px;
+    }
+
+    .product-colors .ellipse {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .product-more-info {
+        padding: 25px;
+        background-color: var(--sky-blue);
+        border-radius: 0 0 25px 25px;
+        color: white;
+    }
+
+    .product-stars,
+    .product-price {
+        display: inline-block;
+    }
+
+    .product-price {
+        float: right;
+        color: white;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    .product-stars {
+        color: var(--off-white);
+    }
+
+    .text-yellow {
+        color: var(--sunshine-yellow);
+    }
+
+    .add-to-cart {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+    }
+
+    .add-to-cart i {
+        position: absolute;
+        width: 59px;
+        height: 59px;
+        font-size: 18px;
+        background-color: var(--sunshine-yellow);
+        color: #5a4a2a;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        right: 90px;
+        bottom: -25px;
+        border: 5px solid #7EB8DA;
+        transition: 0.5s;
+        opacity: 0;
+        transform: translate(0, 10px);
+        cursor: pointer;
+    }
+
+    .add-to-cart::before {
+        position: absolute;
+        bottom: 0;
+        background-color: transparent;
+        width: 47px;
+        height: 38px;
+        content: '';
+        right: 46px;
+        border-bottom-left-radius: 55%;
+        opacity: 0;
+        transform: translate(0, 20px);
+        box-shadow: 0 20px 0 0 #7EB8DA;
+        transition: 0.5s;
+    }
+
+    .add-to-cart::after {
+        position: absolute;
+        bottom: 0;
+        background-color: transparent;
+        width: 47px;
+        height: 38px;
+        content: '';
+        left: 107px;
+        border-bottom-right-radius: 55%;
+        opacity: 0;
+        transform: translate(0, 20px);
+        box-shadow: 0 20px 0 0 #7EB8DA;
+        transition: 0.5s;
+    }
+
+    /* Product Card Animation */
+    .product-card:hover .product-img img {
+        transform: scale(1.2) rotate(30deg) translate(10px, -20px);
+    }
+
+    .product-card:hover .product-img::after {
+        width: 90%;
+    }
+
+    .product-card:hover .add-to-cart i,
+    .product-card:hover .add-to-cart::before,
+    .product-card:hover .add-to-cart::after {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+
+        /* Hide Add to Cart button on mobile screens (e.g., below 768px) */
+        @media (max-width: 767px) {
+        .add-to-cart {
+            display: none;
+        }
+        }
+
+        /* Product Grid */
+        .products-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            padding: 20px 0;
+        }
+
+        @media (max-width: 576px) {
+        .products-grid {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 20px;
+            padding: 15px 10px;
+        }
+        
+        .product-item {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        
+        .product-card {
+            width: 100% !important;
+            max-width: 280px !important;
+            margin: 0 auto !important;
+        }
+        }
+
+        /* Category Tabs */
+        .category-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .category-tab {
+            padding: 12px 25px;
+            margin: 0 10px 10px;
+            border-radius: 50px;
+            background-color: white;
+            color: var(--dark-text);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .category-tab:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .category-tab.active {
+            background: linear-gradient(135deg, var(--sky-blue), var(--baby-pink));
+            color: white;
+        }
+
+        /* New Badge */
+        .new-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: var(--baby-pink);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="./images/logo4.png" alt="NanhaCare Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="babysitters.html">Babysitters</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQs</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-primary btn-nav" href="pricing.html">
+                            <i class="fas fa-crown me-2"></i>Pricing
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Products Section -->
+    <section id="products" class="py-5">
+        <div class="container py-5">
+            <div class="text-center scroll-reveal delay-1">
+                <h2 class="section-title mb-4">Our <span class="highlight">Products</span></h2>
+                <p class="mb-5">Discover high-quality products for your child's every need and stage of development</p>
+            </div>
+
+            <!-- Category Tabs -->
+            <div class="category-tabs scroll-reveal delay-2">
+                <div class="category-tab active" data-category="all">All Products</div>
+                <div class="category-tab" data-category="newborn">Newborns (0-12 months)</div>
+                <div class="category-tab" data-category="toddler">Toddlers (1-3 years)</div>
+                <div class="category-tab" data-category="preschool">Preschoolers (3-5 years)</div>
+                <div class="category-tab" data-category="school">School Age (5–10 years)</div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid">
+                <!-- Newborns Products -->
+            <div class="scroll-reveal delay-1 product-item" data-category="newborn">
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">Newborns (0-12 months)</div>
+                            <div class="name">Soft Plush Rattle</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Soft Plush Rattle.png" alt="Soft Plush Rattle">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/0-12-i277057916.html?spm=a2a0e.searchlist.list.7.35676e04R1SiJZ" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 375</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-reveal delay-2 product-item" data-category="newborn">
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">Newborns (0-12 months)</div>
+                            <div class="name">Crib Mobile</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Crib Mobile.png" alt="Crib Mobile">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/baby-musical-crib-mobile-with-hanging-rotating-toys-sweet-cuddles-musical-cot-mobile-tweety-harmonious-music-box-cartoon-rattles-for-babies-boy-girl-0-24-months-newborn-sleep-with-melodies-i331717783.html?spm=a2a0e.searchlist.list.1.6eb148f6jiVLAw" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 2,299</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-reveal delay-3 product-item" data-category="newborn">
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">Newborns (0-12 months)</div>
+                            <div class="name">Formula Milk</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Formula Milk.png" alt="Formula Milk">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/morinaga-bf-1-infant-formula-400-gm-i1871480.html?spm=a2a0e.searchlist.list.11.15005693A4" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 2,713</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-reveal delay-1 product-item" data-category="newborn">
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">Newborns (0-12 months)</div>
+                            <div class="name">Silicone Feeding Spoon</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Silicone Feeding Spoon.png" alt="Silicone Feeding Spoon">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/baby-spoon-feeder-90ml-silicone-feeding-bottle-i202058158-s1401152735.html" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 339</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-reveal delay-2 product-item" data-category="newborn">
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">Newborns (0-12 months)</div>
+                            <div class="name">Onesies</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Onesies.png" alt="Onesies">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/2-i432784331-s2244430428.html" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 715</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-reveal delay-3 product-item" data-category="newborn">
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">Newborns (0-12 months)</div>
+                            <div class="name">Baby Mittens</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Baby Mittens.png" alt="Baby Mittens">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/pack-of-3-pair-of-soft-baby-mittens-for-new-born-infant-gloves-0-3-months-multicolor-unisex-i260603902-s1478870587.html" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 198</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-reveal delay-1 product-item" data-category="newborn">
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">Newborns (0-12 months)</div>
+                            <div class="name">Gentle Baby Wipes</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Gentle Baby Wipes.png" alt="Gentle Baby Wipes">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/momse-wipes-regular-66-pcs-i388545800-s1911914546.html" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 395</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-reveal delay-2 product-item" data-category="newborn">
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">Newborns (0-12 months)</div>
+                            <div class="name">Newborn Diapers</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Newborn Diapers.png" alt="Newborn Diapers">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/bona-papa-super-diapers-super-economy-pack-newborn-size-1-50-pcs-i388546483-s1911915612.html" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 870</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-reveal delay-3 product-item" data-category="newborn">
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">Newborns (0-12 months)</div>
+                            <div class="name">Baby Lotion</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Baby Lotion.png" alt="Baby Lotion">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/250-i193596248-s1387266904.html" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 775</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-reveal delay-1 product-item" data-category="newborn">
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">Newborns (0-12 months)</div>
+                            <div class="name">Diaper Rash Cream</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Diaper Rash Cream.png" alt="Diaper Rash Cream">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/nexton-baby-diaper-care-cream-rash-cream-25g-i397411487-s1923946889.html" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 199</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-reveal delay-2 product-item" data-category="newborn">
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">Newborns (0-12 months)</div>
+                            <div class="name">Nasal Aspirator</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Nasal Aspirator.png" alt="Nasal Aspirator">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/nursing-nose-nasal-suction-cleaner-vacuum-device-baby-aspirator-flu-protections-mucus-remover-for-infants-newborn-toddler-i270296955-s1483899130.html" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 420</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll-reveal delay-3 product-item" data-category="newborn">
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">Newborns (0-12 months)</div>
+                            <div class="name">Swaddle Blanket</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Swaddle Blanket.png" alt="Swaddle Blanket">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/0-3-i431713362-s2333680819.html" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 406</div>
+                    </div>
+                </div>
+            </div>
+
+                <!-- Toddlers Products -->
+            <div class="scroll-reveal delay-1 product-item" data-category="toddler">
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">Toddlers (1-3 years)</div>
+                            <div class="name">Stackable Blocks</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Stackable Blocks.png" alt="Stackable Blocks">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="http://daraz.pk/products/-i450423110-s2143539835.html?c=&channelLpJumpArgs=&clickTrackInfo=query%253AStackable%252" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 475</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-reveal delay-2 product-item" data-category="toddler">
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">Toddlers (1-3 years)</div>
+                            <div class="name">Musical Activity Table</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Musical Activity Table.png" alt="Musical Activity Table">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/3-i268656196-s1800712000.html?c=&channelLpJumpArgs=&clickTrackInfo=query%253AMusica" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 2,999</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-reveal delay-3 product-item" data-category="toddler">
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">Toddlers (1-3 years)</div>
+                            <div class="name">Toddler Cereal</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Toddler Cereal.png" alt="Toddler Cereal">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/nestle-cerelac-3-fruits-wheat-baby-food-350g-i2035735-s10055676.html?c=&channelLpJumpAr" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 825</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-reveal delay-1 product-item" data-category="toddler">
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">Toddlers (1-3 years)</div>
+                            <div class="name">Sippy Cup</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Sippy Cup.png" alt="Sippy Cup">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/180-i152484239-s1316988613.html?c=&channelLpJumpArgs=&clickTrackInfo=query%253ASippy%252BCup%253Bnid%253A152484239%253Bsrc%253ALazadaMainSrp%253Brn%253A80006295a147486ac6548421e4d6ab86%253Bregion%253Apk%253Bsku%253A152484239_PK%253Bprice%253A249%253Bclient%253Adesktop%253Bsupplier_id%253A23300%253Bbiz_source%253Ah5_external%253Bslot%253A1%253Butlog_bucket_id%253A470687%253Basc_category_id%253A8750%253Bitem_id%253A152484239%253Bsku_id%253A1316988613%253Bshop_id%253A109631%253BtemplateInfo%253A1103_L%2523-1_A3_C%2523&freeshipping=0&fs_ab=1&fuse_fs=&lang=en&location=Punjab&price=249&priceCompare=skuId%3A1316988613%3Bsource%3Alazada-search-voucher%3Bsn%3A80006295a147486ac6548421e4d6ab86%3BoriginPrice%3A24900%3BdisplayPrice%3A24900%3BsinglePromotionId%3A-1%3BsingleToolCode%3AmockedSalePrice%3BvoucherPricePlugin%3A0%3Btimestamp%3A1755418941151&ratingscore=4.816192560175055&request_id=80006295a147486ac6548421e4d6ab86&review=457&sale=2142&search=1&source=search&spm=a2a0e.searchlist.list.1&stock=1" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 249</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-reveal delay-2 product-item" data-category="toddler">
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">Toddlers (1-3 years)</div>
+                            <div class="name">Rompers</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Rompers.png" alt="Rompers">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/2-i386715107-s2135534750.html?c=&channelLpJumpArgs=&clickTrackInfo=query%253ARompers%253Bnid%253A386715107%253Bsrc%253ALazadaMainSrp%253Brn%253A2580615c3cda03c0e93df02d5e347996%253Bregion%253Apk%253Bsku%253A386715107_PK%253Bprice%253A399%253Bclient%253Adesktop%253Bsupplier_id%253A6005012958290%253Bbiz_source%253Ah5_external%253Bslot%253A7%253Butlog_bucket_id%253A470687%253Basc_category_id%253A8967%253Bitem_id%253A386715107%253Bsku_id%253A2135534750%253Bshop_id%253A499461%253BtemplateInfo%253A1103_L%2523-1_A3_C%2523&freeshipping=0&fs_ab=1&fuse_fs=&lang=en&location=Sindh&price=399&priceCompare=skuId%3A2135534750%3Bsource%3Alazada-search-voucher%3Bsn%3A2580615c3cda03c0e93df02d5e347996%3BoriginPrice%3A39900%3BdisplayPrice%3A39900%3BsinglePromotionId%3A-1%3BsingleToolCode%3AmockedSalePrice%3BvoucherPricePlugin%3A0%3Btimestamp%3A1755421268300&ratingscore=4.587982832618025&request_id=2580615c3cda03c0e93df02d5e347996&review=233&sale=1164&search=1&source=search&spm=a2a0e.searchlist.list.7&stock=1" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 399</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-reveal delay-3 product-item" data-category="toddler">
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">Toddlers (1-3 years)</div>
+                            <div class="name">Soft Sole Shoes</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Soft Sole Shoes.png" alt="Soft Sole Shoes">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/1-i523498857-s2467180237.html?c=&channelLpJumpArgs=&clickTrackInfo=query%253ASoft%252BSole%252BShoes%253Bnid%253A523498857%253Bsrc%253ALazadaMainSrp%253Brn%253A12eb139a5fb8d02f3a1edf907fcb76a2%253Bregion%253Apk%253Bsku%253A523498857_PK%253Bprice%253A990%253Bclient%253Adesktop%253Bsupplier_id%253A6005012901057%253Bbiz_source%253Ah5_external%253Bslot%253A14%253Butlog_bucket_id%253A470687%253Basc_category_id%253A10001979%253Bitem_id%253A523498857%253Bsku_id%253A2467180237%253Bshop_id%253A488520%253BtemplateInfo%253A-1_A3_C%25231103_L%2523&freeshipping=0&fs_ab=1&fuse_fs=&lang=en&location=Punjab&price=9.9E%202&priceCompare=skuId%3A2467180237%3Bsource%3Alazada-search-voucher%3Bsn%3A12eb139a5fb8d02f3a1edf907fcb76a2%3BoriginPrice%3A99000%3BdisplayPrice%3A99000%3BsinglePromotionId%3A-1%3BsingleToolCode%3AmockedSalePrice%3BvoucherPricePlugin%3A0%3Btimestamp%3A1755421390433&ratingscore=3.75&request_id=12eb139a5fb8d02f3a1edf907fcb76a2&review=4&sale=23&search=1&source=search&spm=a2a0e.searchlist.list.14&stock=0" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 990</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-reveal delay-1 product-item" data-category="toddler">
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">Toddlers (1-3 years)</div>
+                            <div class="name">Training Pants</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Training Pants.png" alt="Training Pants">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/3-i266578298-s1482167371.html?c=&channelLpJumpArgs=&clickTrackInfo=query%253ATraining%252BPants%253Bnid%253A266578298%253Bsrc%253ALazadaMainSrp%253Brn%253Adc22ea9cad532dacbee0d3374e82d627%253Bregion%253Apk%253Bsku%253A266578298_PK%253Bprice%253A749%253Bclient%253Adesktop%253Bsupplier_id%253A6005007801140%253Bbiz_source%253Ah5_external%253Bslot%253A0%253Butlog_bucket_id%253A470687%253Basc_category_id%253A8763%253Bitem_id%253A266578298%253Bsku_id%253A1482167371%253Bshop_id%253A261021%253BtemplateInfo%253A1103_L%2523-1_A3_C%2523&freeshipping=1&fs_ab=1&fuse_fs=&lang=en&location=Sindh&price=749&priceCompare=skuId%3A1482167371%3Bsource%3Alazada-search-voucher%3Bsn%3Adc22ea9cad532dacbee0d3374e82d627%3BoriginPrice%3A74900%3BdisplayPrice%3A74900%3BsinglePromotionId%3A-1%3BsingleToolCode%3AmockedSalePrice%3BvoucherPricePlugin%3A0%3Btimestamp%3A1755421508945&ratingscore=4.189130434782609&request_id=dc22ea9cad532dacbee0d3374e82d627&review=460&sale=2113&search=1&source=search&spm=a2a0e.searchlist.list.0&stock=1" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 749</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-reveal delay-2 product-item" data-category="toddler">
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">Toddlers (1-3 years)</div>
+                            <div class="name">Baby Toothbrush</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Baby Toothbrush.png" alt="Baby Toothbrush">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/u-shaped-360-i831055409-s3777707306.html?c=&channelLpJumpArgs=&clickTrackInfo=query%253Atoothbrush%253Bnid%253A831055409%253Bsrc%253ALazadaMainSrp%253Brn%253Affa84ef7aa89f2e8d6b189a50dc0042d%253Bregion%253Apk%253Bsku%253A831055409_PK%253Bprice%253A63%253Bclient%253Adesktop%253Bsupplier_id%253A6005301760705%253Bbiz_source%253Ah5_external%253Bslot%253A5%253Butlog_bucket_id%253A470687%253Basc_category_id%253A10002697%253Bitem_id%253A831055409%253Bsku_id%253A3777707306%253Bshop_id%253A2043021%253BtemplateInfo%253A-1_A3_C%25231103_L%2523115931_G%2523&configId=choice_PK_promotion&freeshipping=0&fs_ab=1&fuse_fs=&lang=en&location=Sindh&price=63&priceCompare=skuId%3A3777707306%3Bsource%3Alazada-search-voucher%3Bsn%3Affa84ef7aa89f2e8d6b189a50dc0042d%3BoriginPrice%3A6300%3BdisplayPrice%3A6300%3BsinglePromotionId%3A-1%3BsingleToolCode%3AmockedSalePrice%3BvoucherPricePlugin%3A0%3Btimestamp%3A1755421651633&ratingscore=4.945945945945946&request_id=ffa84ef7aa89f2e8d6b189a50dc0042d&review=111&sale=652&search=1&source=search&spm=a211g0.searchlist.list.5&stock=1&upItemIds=831055409" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 63</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-reveal delay-3 product-item" data-category="toddler">
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">Toddlers (1-3 years)</div>
+                            <div class="name">Moisturizing Cream</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Moisturizing Cream.png" alt="Moisturizing Cream">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/johnsons-baby-24hour-moisture-lightly-fragranced-200ml-i481754245-s2263182801.html?c=&channelLpJumpArgs=&clickTrackInfo=query%253Amoisturizer%252Bfor%252Bbaby%253Bnid%253A481754245%253Bsrc%253ALazadaMainSrp%253Brn%253Ad3265eb334ed62bf1ac95854ab247ccc%253Bregion%253Apk%253Bsku%253A481754245_PK%253Bprice%253A1799%253Bclient%253Adesktop%253Bsupplier_id%253A6005185632928%253Bbiz_source%253Ah5_external%253Bslot%253A7%253Butlog_bucket_id%253A470687%253Basc_category_id%253A7282%253Bitem_id%253A481754245%253Bsku_id%253A2263182801%253Bshop_id%253A1654036%253BtemplateInfo%253A1103_L%2523-1_A3_C%2523&freeshipping=0&fs_ab=1&fuse_fs=&lang=en&location=Sindh&price=1799&priceCompare=skuId%3A2263182801%3Bsource%3Alazada-search-voucher%3Bsn%3Ad3265eb334ed62bf1ac95854ab247ccc%3BoriginPrice%3A179900%3BdisplayPrice%3A179900%3BsinglePromotionId%3A-1%3BsingleToolCode%3AmockedSalePrice%3BvoucherPricePlugin%3A0%3Btimestamp%3A1755421898140&ratingscore=4.875&request_id=d3265eb334ed62bf1ac95854ab247ccc&review=24&sale=121&search=1&source=search&spm=a2a0e.searchlist.list.7&stock=1" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 1,799</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-reveal delay-1 product-item" data-category="toddler">
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">Toddlers (1-3 years)</div>
+                            <div class="name">Baby Sunscreen</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Baby Sunscreen.png" alt="Baby Sunscreen">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/aveeno-baby-sunscreen-lotion-sensitive-skin-spf-88ml-i888209742-s3921035875.html?c=&channelLpJumpArgs=&clickTrackInfo=query%253ABaby%252BSunscreen%253Bnid%253A888209742%253Bsrc%253ALazadaMainSrp%253Brn%253Afdd389e15060b71e5d0dfa6b00ff77f5%253Bregion%253Apk%253Bsku%253A888209742_PK%253Bprice%253A6300%253Bclient%253Adesktop%253Bsupplier_id%253A6005013129164%253Bbiz_source%253Ah5_external%253Bslot%253A1%253Butlog_bucket_id%253A470687%253Basc_category_id%253A10002698%253Bitem_id%253A888209742%253Bsku_id%253A3921035875%253Bshop_id%253A527044%253BtemplateInfo%253A-1_A3_C%25231103_L%2523&freeshipping=0&fs_ab=1&fuse_fs=&lang=en&location=Punjab&price=6.3E%203&priceCompare=skuId%3A3921035875%3Bsource%3Alazada-search-voucher%3Bsn%3Afdd389e15060b71e5d0dfa6b00ff77f5%3BoriginPrice%3A630000%3BdisplayPrice%3A630000%3BsinglePromotionId%3A-1%3BsingleToolCode%3AmockedSalePrice%3BvoucherPricePlugin%3A0%3Btimestamp%3A1755421993432&ratingscore=&request_id=fdd389e15060b71e5d0dfa6b00ff77f5&review=&sale=0&search=1&source=search&spm=a2a0e.searchlist.list.1&stock=1" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 6,300</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-reveal delay-2 product-item" data-category="toddler">
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">Toddlers (1-3 years)</div>
+                            <div class="name">Step Stool</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Step Stool.png" alt="Step Stool">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/-i877685143-s3882838440.html?c=&channelLpJumpArgs=&clickTrackInfo=query%253AStep%252BStool%253Bnid%253A877685143%253Bsrc%253ALazadaMainSrp%253Brn%253Ae7a2ef8a7b1169ffed3b77546bb052bf%253Bregion%253Apk%253Bsku%253A877685143_PK%253Bprice%253A291%253Bclient%253Adesktop%253Bsupplier_id%253A6005301760705%253Bbiz_source%253Ah5_external%253Bslot%253A1%253Butlog_bucket_id%253A470687%253Basc_category_id%253A9942%253Bitem_id%253A877685143%253Bsku_id%253A3882838440%253Bshop_id%253A2043021%253BtemplateInfo%253A-1_A3_C%25231103_L%2523115931_G%2523&configId=choice_PK_promotion&freeshipping=0&fs_ab=1&fuse_fs=&lang=en&location=Sindh&price=291&priceCompare=skuId%3A3882838440%3Bsource%3Alazada-search-voucher%3Bsn%3Ae7a2ef8a7b1169ffed3b77546bb052bf%3BoriginPrice%3A29100%3BdisplayPrice%3A29100%3BsinglePromotionId%3A50000030402010%3BsingleToolCode%3AshopPromPrice_choiceEarlyBird%3BvoucherPricePlugin%3A0%3Btimestamp%3A1755422243016&ratingscore=4.785714285714286&request_id=e7a2ef8a7b1169ffed3b77546bb052bf&review=14&sale=118&search=1&source=search&spm=a211g0.searchlist.list.1&stock=1&upItemIds=877685143" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 291</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-reveal delay-3 product-item" data-category="toddler">
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">Toddlers (1-3 years)</div>
+                            <div class="name">Bath Toy Set</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Bath Toy Set.png" alt="Bath Toy Set">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/4611-pcs-soft-rubber-baby-cute-animals-bath-toys-set-whistle-water-animal-floating-toy-for-kids-boys-and-girls-swimming-float-squeeze-sound-kids-wash-play-funny-gift-i427123794-s2027228687.html" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 899</div>
+                    </div>
+                </div>
+            </div>
+
+                <!-- Preschoolers Products -->
+            <div class="scroll-reveal delay-1 product-item" data-category="preschool">    
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">Preschoolers (3-5 years)</div>
+                            <div class="name">Puzzle Set</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Puzzle Set.png" alt="Puzzle Set">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/36pcs-set-4cmx4cm-alphabet-letters-numbers-puzzle-kids-puzzles-toys-foam-mat-abc-123-puzzle-foam-floor-mat-for-kids-i132919689-s1709667137.html?c=&channelLpJumpArgs=&clickTrackInfo=query%253APuzzle%252BSet%253Bnid%253A132919689%253Bsrc%253ALazadaMainSrp%253Brn%253A689277303c01307c2c9b728f5459cb98%253Bregion%253Apk%253Bsku%253A132919689_PK%253Bprice%253A199%253Bclient%253Adesktop%253Bsupplier_id%253A6011%253Bbiz_source%253Ah5_external%253Bslot%253A7%253Butlog_bucket_id%253A470687%253Basc_category_id%253A9219%253Bitem_id%253A132919689%253Bsku_id%253A1709667137%253Bshop_id%253A91185%253BtemplateInfo%253A1103_L%2523-1_A3_C%2523&freeshipping=0&fs_ab=1&fuse_fs=&lang=en&location=Sindh&price=199&priceCompare=skuId%3A1709667137%3Bsource%3Alazada-search-voucher%3Bsn%3A689277303c01307c2c9b728f5459cb98%3BoriginPrice%3A19900%3BdisplayPrice%3A19900%3BsinglePromotionId%3A-1%3BsingleToolCode%3A-1%3BvoucherPricePlugin%3A0%3Btimestamp%3A1755422472542&ratingscore=4.407569141193595&request_id=689277303c01307c2c9b728f5459cb98&review=687&sale=2917&search=1&source=search&spm=a2a0e.searchlist.list.7&stock=1" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 199</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-reveal delay-2 product-item" data-category="preschool">
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">Preschoolers (3-5 years)</div>
+                            <div class="name">Pretend Play Kitchen</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Pretend Play Kitchen.png" alt="Pretend Play Kitchen">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/kitchen-set-toy-for-kids-girls-boys-kitchen-cooking-toy-set-with-accessories-pretend-play-toys-for-children-i383383844-s2329971921.html?c=&channelLpJumpArgs=&clickTrackInfo=query%253APretend%252BPlay%252BKitchen%253Bnid%253A383383844%253Bsrc%253ALazadaMainSrp%253Brn%253A46a90a109783a11f0bbc716ce9086a6d%253Bregion%253Apk%253Bsku%253A383383844_PK%253Bprice%253A2490%253Bclient%253Adesktop%253Bsupplier_id%253A14338%253Bbiz_source%253Ah5_external%253Bslot%253A10%253Butlog_bucket_id%253A470687%253Basc_category_id%253A10002775%253Bitem_id%253A383383844%253Bsku_id%253A2329971921%253Bshop_id%253A99092%253BtemplateInfo%253A1103_L%2523-1_A3_C%2523&freeshipping=0&fs_ab=1&fuse_fs=&lang=en&location=Sindh&price=2.49E%203&priceCompare=skuId%3A2329971921%3Bsource%3Alazada-search-voucher%3Bsn%3A46a90a109783a11f0bbc716ce9086a6d%3BoriginPrice%3A249000%3BdisplayPrice%3A249000%3BsinglePromotionId%3A-1%3BsingleToolCode%3AmockedSalePrice%3BvoucherPricePlugin%3A0%3Btimestamp%3A1755422524919&ratingscore=3.9305555555555554&request_id=46a90a109783a11f0bbc716ce9086a6d&review=72&sale=376&search=1&source=search&spm=a2a0e.searchlist.list.10&stock=1" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 2,490</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-reveal delay-3 product-item" data-category="preschool">
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">Preschoolers (3-5 years)</div>
+                            <div class="name">Snack Pouches</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Snack Pouches.png" alt="Snack Pouches">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/15-i438491533-s2122535742.html?c=&channelLpJumpArgs=&clickTrackInfo=query%253ASnack" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 400</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-reveal delay-1 product-item" data-category="preschool">
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">Preschoolers (3-5 years)</div>
+                            <div class="name">Divided Plate Set</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Divided Plate Set.png" alt="Divided Plate Set">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/234-100-led-i456100896-s2495196033.html?c=&channelLpJumpArgs=&clickTrackInfo=query%253ADivided%252BPlate%252BSet%253Bnid%253A456100896%253Bsrc%253ALazadaMainSrp%253Brn%253A1afd73efcc31f9b10c148a2e53df12e5%253Bregion%253Apk%253Bsku%253A456100896_PK%253Bprice%253A450%253Bclient%253Adesktop%253Bsupplier_id%253A6005056002714%253Bbiz_source%253Ah5_external%253Bslot%253A4%253Butlog_bucket_id%253A470687%253Basc_category_id%253A8751%253Bitem_id%253A456100896%253Bsku_id%253A2495196033%253Bshop_id%253A1299723%253BtemplateInfo%253A1103_L%2523-1_A3_C%2523&freeshipping=0&fs_ab=1&fuse_fs=&lang=en&location=Punjab&price=4.5E%202&priceCompare=skuId%3A2495196033%3Bsource%3Alazada-search-voucher%3Bsn%3A1afd73efcc31f9b10c148a2e53df12e5%3BoriginPrice%3A45000%3BdisplayPrice%3A45000%3BsinglePromotionId%3A-1%3BsingleToolCode%3AmockedSalePrice%3BvoucherPricePlugin%3A0%3Btimestamp%3A1755422652156&ratingscore=4.884615384615385&request_id=1afd73efcc31f9b10c148a2e53df12e5&review=78&sale=398&search=1&source=search&spm=a2a0e.searchlist.list.4&stock=1" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 450</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-reveal delay-2 product-item" data-category="preschool">
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">Preschoolers (3-5 years)</div>
+                            <div class="name">Casual Wear</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Casual Wear.png" alt="Casual Wear">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/boys-winterspring-casual-long-sleeve-printed-patchwork-round-neck-top-and-pants-set-i550322478-s2561735790.html" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 1,199</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-reveal delay-3 product-item" data-category="preschool">
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">Preschoolers (3-5 years)</div>
+                            <div class="name">Crocs</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Crocs.png" alt="Crocs">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/kids-crocs-crocs-i412919372-s1970443900.html?c=&channelLpJumpArgs=&clickTrackInfo=query%253ACrocs%253Bnid%253A412919372%253Bsrc%253ALazadaMainSrp%253Brn%253A6422738fad01057260e5f91e8b56323f%253Bregion%253Apk%253Bsku%253A412919372_PK%253Bprice%253A900%253Bclient%253Adesktop%253Bsupplier_id%253A6005044689197%253Bbiz_source%253Ah5_external%253Bslot%253A4%253Butlog_bucket_id%253A470687%253Basc_category_id%253A10001979%253Bitem_id%253A412919372%253Bsku_id%253A1970443900%253Bshop_id%253A1123682%253BtemplateInfo%253A-1_A3_C%25231103_L%2523&freeshipping=0&fs_ab=1&fuse_fs=&lang=en&location=Punjab&price=9E%202&priceCompare=skuId%3A1970443900%3Bsource%3Alazada-search-voucher%3Bsn%3A6422738fad01057260e5f91e8b56323f%3BoriginPrice%3A90000%3BdisplayPrice%3A90000%3BsinglePromotionId%3A-1%3BsingleToolCode%3AmockedSalePrice%3BvoucherPricePlugin%3A0%3Btimestamp%3A1755424347055&ratingscore=4.176470588235294&request_id=6422738fad01057260e5f91e8b56323f&review=17&sale=61&search=1&source=search&spm=a2a0e.searchlist.list.4&stock=1" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 900</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-reveal delay-1 product-item" data-category="preschool">
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">Preschoolers (3-5 years)</div>
+                            <div class="name">Potty Seat</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Potty Seat.png" alt="Potty Seat">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/baby-potty-chair-child-toddler-toilet-seat-kid-urinal-training-pot-red-color-i146004401-s1308566736.html?c=&channelLpJumpArgs=&clickTrackInfo=query%253APotty%252BSeat%253Bnid%253A146004401%253Bsrc%253ALazadaMainSrp%253Brn%253A8562f63e5b4fbf5b44559a31776a9437%253Bregion%253Apk%253Bsku%253A146004401_PK%253Bprice%253A1499%253Bclient%253Adesktop%253Bsupplier_id%253A1136657%253Bbiz_source%253Ah5_external%253Bslot%253A13%253Butlog_bucket_id%253A470687%253Basc_category_id%253A10002752%253Bitem_id%253A146004401%253Bsku_id%253A1308566736%253Bshop_id%253A246043%253BtemplateInfo%253A-1_A3_C%25231103_L%2523&freeshipping=0&fs_ab=1&fuse_fs=&lang=en&location=Khyber%20Pakhtunkhwa&price=1499&priceCompare=skuId%3A1308566736%3Bsource%3Alazada-search-voucher%3Bsn%3A8562f63e5b4fbf5b44559a31776a9437%3BoriginPrice%3A149900%3BdisplayPrice%3A149900%3BsinglePromotionId%3A-1%3BsingleToolCode%3AmockedSalePrice%3BvoucherPricePlugin%3A0%3Btimestamp%3A1755424388810&ratingscore=4.541666666666667&request_id=8562f63e5b4fbf5b44559a31776a9437&review=24&sale=99&search=1&source=search&spm=a2a0e.searchlist.list.13&stock=1" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 1,499</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-reveal delay-2 product-item" data-category="preschool">
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">Preschoolers (3-5 years)</div>
+                            <div class="name">Handwash for Kids</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Handwash for Kids.png" alt="Handwash for Kids">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/all-in-one-hand-wash-in-one-pack-lavender-hand-wash-peach-hand-wash-jasmine-hand-wash-rose-hand-wash-liquid-handwash-liquid-soap-bottle-antibacterial-handwash-soft-and-softly-antiseptic-handwash-bottle-refill-500ml-pack-of-4-i427791678-s2032903273.html?c=&channelLpJumpArgs=&clickTrackInfo=query%253AHandwash%252Bfor%252BKids%253Bnid%253A427791678%253Bsrc%253ALazadaMainSrp%253Brn%253A1b10324d950f83261d0f38a26ebcca3e%253Bregion%253Apk%253Bsku%253A427791678_PK%253Bprice%253A1049%253Bclient%253Adesktop%253Bsupplier_id%253A6005032602892%253Bbiz_source%253Ah5_external%253Bslot%253A3%253Butlog_bucket_id%253A470687%253Basc_category_id%253A20000218%253Bitem_id%253A427791678%253Bsku_id%253A2032903273%253Bshop_id%253A957782%253BtemplateInfo%253A-1_A3_C%25231103_L%2523&freeshipping=0&fs_ab=1&fuse_fs=&lang=en&location=Sindh&price=1049&priceCompare=skuId%3A2032903273%3Bsource%3Alazada-search-voucher%3Bsn%3A1b10324d950f83261d0f38a26ebcca3e%3BoriginPrice%3A104900%3BdisplayPrice%3A104900%3BsinglePromotionId%3A-1%3BsingleToolCode%3AmockedSalePrice%3BvoucherPricePlugin%3A0%3Btimestamp%3A1755424585557&ratingscore=4.324324324324325&request_id=1b10324d950f83261d0f38a26ebcca3e&review=37&sale=122&search=1&source=search&spm=a2a0e.searchlist.list.3&stock=1" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 1,049</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-reveal delay-3 product-item" data-category="preschool">
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">Preschoolers (3-5 years)</div>
+                            <div class="name">Baby Soap</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Baby Soap.png" alt="Baby Soap">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/100-i715211613-s3371320042.html?c=&channelLpJumpArgs=&clickTrackInfo=query%253Akids%252Bsoap%253Bnid%253A715211613%253Bsrc%253ALazadaMainSrp%253Brn%253Aa19b97f81c82eba65ec37bf33d54cb23%253Bregion%253Apk%253Bsku%253A715211613_PK%253Bprice%253A399%253Bclient%253Adesktop%253Bsupplier_id%253A6005012832061%253Bbiz_source%253Ah5_external%253Bslot%253A20%253Butlog_bucket_id%253A470687%253Basc_category_id%253A10002758%253Bitem_id%253A715211613%253Bsku_id%253A3371320042%253Bshop_id%253A480785%253BtemplateInfo%253A-1_A3_C%25231103_L%2523&freeshipping=0&fs_ab=1&fuse_fs=&lang=en&location=Punjab&price=399&priceCompare=skuId%3A3371320042%3Bsource%3Alazada-search-voucher%3Bsn%3Aa19b97f81c82eba65ec37bf33d54cb23%3BoriginPrice%3A39900%3BdisplayPrice%3A39900%3BsinglePromotionId%3A-1%3BsingleToolCode%3A-1%3BvoucherPricePlugin%3A0%3Btimestamp%3A1755425647005&ratingscore=5.0&request_id=a19b97f81c82eba65ec37bf33d54cb23&review=1&sale=7&search=1&source=search&spm=a2a0e.searchlist.list.20&stock=1" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 399</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-reveal delay-1 product-item" data-category="preschool">
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">Preschoolers (3-5 years)</div>
+                            <div class="name">Lip Balm for Kids</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Lip Balm For Kids.png" alt="Lip Balm for Kids">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/2-in-1-lollipop-lip-balm-lip-gloss-set-fruit-flavour-color-changing-lip-moisturizing-lipstick-lip-oil-lip-tint-gloss-makeup-cosmetics-i389061492-s1912945396.html?c=&channelLpJumpArgs=&clickTrackInfo=query%253ALip%252BBalm%252Bfor%252BKids%253Bnid%253A389061492%253Bsrc%253ALazadaMainSrp%253Brn%253A292a7d52c55bdf5c86e8ef8a58b6a8fa%253Bregion%253Apk%253Bsku%253A389061492_PK%253Bprice%253A369%253Bclient%253Adesktop%253Bsupplier_id%253A1041023%253Bbiz_source%253Ah5_external%253Bslot%253A2%253Butlog_bucket_id%253A470687%253Basc_category_id%253A10002062%253Bitem_id%253A389061492%253Bsku_id%253A1912945396%253Bshop_id%253A152553%253BtemplateInfo%253A1103_L%2523-1_A3_C%2523&freeshipping=0&fs_ab=1&fuse_fs=&lang=en&location=Punjab&price=369&priceCompare=skuId%3A1912945396%3Bsource%3Alazada-search-voucher%3Bsn%3A292a7d52c55bdf5c86e8ef8a58b6a8fa%3BoriginPrice%3A36900%3BdisplayPrice%3A36900%3BsinglePromotionId%3A-1%3BsingleToolCode%3AmockedSalePrice%3BvoucherPricePlugin%3A0%3Btimestamp%3A1755425694154&ratingscore=4.533333333333333&request_id=292a7d52c55bdf5c86e8ef8a58b6a8fa&review=255&sale=1187&search=1&source=search&spm=a2a0e.searchlist.list.2&stock=1" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 369</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-reveal delay-2 product-item" data-category="preschool">
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">Preschoolers (3-5 years)</div>
+                            <div class="name">Hair Detangler Brush</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Hair Detangler Brush.png" alt="Hair Detangler Brush">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/-i526148542-s3048157038.html?c=&channelLpJumpArgs=&clickTrackInfo=query%253AHair%252BDetangler%252BBrush%253Bnid%253A526148542%253Bsrc%253ALazadaMainSrp%253Brn%253A8395d648c60a3b6d2fa64861d89bbbdb%253Bregion%253Apk%253Bsku%253A526148542_PK%253Bprice%253A778%253Bclient%253Adesktop%253Bsupplier_id%253A6005234928538%253Bbiz_source%253Ah5_external%253Bslot%253A5%253Butlog_bucket_id%253A470687%253Basc_category_id%253A1608%253Bitem_id%253A526148542%253Bsku_id%253A3048157038%253Bshop_id%253A1778972%253BtemplateInfo%253A-1_A3_C%25231103_L%2523&configId=choice_PK_promotion&freeshipping=0&fs_ab=1&fuse_fs=&lang=en&location=Overseas&price=778&priceCompare=skuId%3A3048157038%3Bsource%3Alazada-search-voucher%3Bsn%3A8395d648c60a3b6d2fa64861d89bbbdb%3BoriginPrice%3A77800%3BdisplayPrice%3A77800%3BsinglePromotionId%3A-1%3BsingleToolCode%3AmockedSalePrice%3BvoucherPricePlugin%3A0%3Btimestamp%3A1755426669721&ratingscore=4.916666666666667&request_id=8395d648c60a3b6d2fa64861d89bbbdb&review=22&sale=914&search=1&source=search&spm=a211g0.searchlist.list.5&stock=1&upItemIds=526148542" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 759</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-reveal delay-3 product-item" data-category="preschool">
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">Preschoolers (3-5 years)</div>
+                            <div class="name">Mosquito Trap Light</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Mosquito Trap Light.png" alt="Mosquito Trap Light">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/mosquito-killer-machine-trap-lamp-for-home-electric-machar-mosquito-killer-repellent-machine-uv-light-fly-mosquito-lamp-i519683405-s3266245046.html?c=&channelLpJumpArgs=&clickTrackInfo=query%253AMosquito%252BTrap%252BLight%253Bnid%253A519683405%253Bsrc%253ALazadaMainSrp%253Brn%253Ae10c87e1ca38ced943909179c64cd0cf%253Bregion%253Apk%253Bsku%253A519683405_PK%253Bprice%253A160%253Bclient%253Adesktop%253Bsupplier_id%253A6005236160639%253Bbiz_source%253Ah5_external%253Bslot%253A2%253Butlog_bucket_id%253A470687%253Basc_category_id%253A892%253Bitem_id%253A519683405%253Bsku_id%253A3266245046%253Bshop_id%253A1798889%253BtemplateInfo%253A-1_A3_C%25231103_L%2523&freeshipping=0&fs_ab=1&fuse_fs=&lang=en&location=Punjab&price=1.6E%202&priceCompare=skuId%3A3266245046%3Bsource%3Alazada-search-voucher%3Bsn%3Ae10c87e1ca38ced943909179c64cd0cf%3BoriginPrice%3A16000%3BdisplayPrice%3A16000%3BsinglePromotionId%3A-1%3BsingleToolCode%3AmockedSalePrice%3BvoucherPricePlugin%3A0%3Btimestamp%3A1755426807325&ratingscore=4.031496062992126&request_id=e10c87e1ca38ced943909179c64cd0cf&review=127&sale=972&search=1&source=search&spm=a2a0e.searchlist.list.2&stock=1" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 160</div>
+                    </div>
+                </div>
+            </div>
+
+                <!-- Early School Age Products -->
+            <div class="scroll-reveal delay-1 product-item" data-category="school">     
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">School Age (5–10 years)</div>
+                            <div class="name">Educational Tablet</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Educational Tablet.png" alt="Educational Tablet">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/hot-selling-lcd-writing-tabletpad-for-kids-85-inch-kids-doodle-scribble-boards-with-protect-cover-educational-toys-erasable-e-writer-digital-drawing-board-toddler-toys-kids-drawing-pad-best-gift-for-kids-multi-color-i387283405-s2345245882.html?c=&channelLpJumpArgs=&clickTrackInfo=query%253AEducational%252BTablet%253Bnid%253A387283405%253Bsrc%253ALazadaMainSrp%253Brn%253Aa0776cac0d9c070c4553e7e21134669a%253Bregion%253Apk%253Bsku%253A387283405_PK%253Bprice%253A269%253Bclient%253Adesktop%253Bsupplier_id%253A6005019783946%253Bbiz_source%253Ah5_external%253Bslot%253A0%253Butlog_bucket_id%253A470687%253Basc_category_id%253A9080%253Bitem_id%253A387283405%253Bsku_id%253A2345245882%253Bshop_id%253A815452%253BtemplateInfo%253A-1_A3_C%25231103_L%2523&freeshipping=0&fs_ab=1&fuse_fs=&lang=en&location=Punjab&price=269&priceCompare=skuId%3A2345245882%3Bsource%3Alazada-search-voucher%3Bsn%3Aa0776cac0d9c070c4553e7e21134669a%3BoriginPrice%3A26900%3BdisplayPrice%3A26900%3BsinglePromotionId%3A50000030412007%3BsingleToolCode%3ApromPrice%3BvoucherPricePlugin%3A0%3Btimestamp%3A1755426850009&ratingscore=4.718072289156627&request_id=a0776cac0d9c070c4553e7e21134669a&review=1660&sale=10012&search=1&source=search&spm=a2a0e.searchlist.list.0&stock=1" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 299</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-reveal delay-2 product-item" data-category="school"> 
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">School Age (5–10 years)</div>
+                            <div class="name">Board Game</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Board Game.png" alt="Board Game">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/4-4-1-i255241424-s1471631994.html?c=&channelLpJumpArgs=&clickTrackInfo=query%253ABo" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 799</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-reveal delay-3 product-item" data-category="school"> 
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">School Age (5–10 years)</div>
+                            <div class="name">Lunchbox</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Lunchbox.png" alt="Lunchbox">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/850ml-bpa-i682224867-s3222916842.html?c=&channelLpJumpArgs=&clickTrackInfo=query%25" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 472</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-reveal delay-1 product-item" data-category="school"> 
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">School Age (5–10 years)</div>
+                            <div class="name">Nutritional Gummies</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Nutritional Gummies.png" alt="Nutritional Gummies">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/pedia-sure-milk-powder-pedia-sure-chocolate-flavor-height-grow-powder-height-grow-powder-milk-milk-powder-for-children-pediasure-milk-powder-pediasure-complete-nutrition-400-g-kids-milk-powder-for-weight-height-gain-i733711143-s3871813539.html?c=&channelLpJumpArgs=&clickTrackInfo=query%253ANutritional%252BGummies%253Bnid%253A733711143%253Bsrc%253ALazadaMainSrp%253Brn%253Ad1a757f1ef329faac0ebe56229a32dd9%253Bregion%253Apk%253Bsku%253A733711143_PK%253Bprice%253A3915%253Bclient%253Adesktop%253Bsupplier_id%253A6005397552776%253Bbiz_source%253Ah5_external%253Bslot%253A10%253Butlog_bucket_id%253A470687%253Basc_category_id%253A10002474%253Bitem_id%253A733711143%253Bsku_id%253A3871813539%253Bshop_id%253A2116422%253BtemplateInfo%253A-1_A3_C%25231103_L%2523&freeshipping=0&fs_ab=1&fuse_fs=&lang=en&location=Sindh&price=3915&priceCompare=skuId%3A3871813539%3Bsource%3Alazada-search-voucher%3Bsn%3Ad1a757f1ef329faac0ebe56229a32dd9%3BoriginPrice%3A391500%3BdisplayPrice%3A391500%3BsinglePromotionId%3A-1%3BsingleToolCode%3A-1%3BvoucherPricePlugin%3A0%3Btimestamp%3A1755427604733&ratingscore=5.0&request_id=d1a757f1ef329faac0ebe56229a32dd9&review=1&sale=10&search=1&source=search&spm=a2a0e.searchlist.list.10&stock=1" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 3,915</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-reveal delay-2 product-item" data-category="school"> 
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">School Age (5–10 years)</div>
+                            <div class="name">Sportswear</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Sportswear.png" alt="Sportswear">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/brooklyn-track-suit-unisex-i485261856-s2279284254.html?c=&channelLpJumpArgs=&clickTrackInfo=query%253Atracksuit%253Bnid%253A485261856%253Bsrc%253ALazadaMainSrp%253Brn%253A6cf288f7235917afdc7125c9812cc77b%253Bregion%253Apk%253Bsku%253A485261856_PK%253Bprice%253A2399%253Bclient%253Adesktop%253Bsupplier_id%253A6005013420294%253Bbiz_source%253Ah5_external%253Bslot%253A38%253Butlog_bucket_id%253A470687%253Basc_category_id%253A9698%253Bitem_id%253A485261856%253Bsku_id%253A2279284254%253Bshop_id%253A573453%253BtemplateInfo%253A-1_A3_C%25231103_L%2523&freeshipping=0&fs_ab=1&fuse_fs=&lang=en&location=Punjab&price=2399&priceCompare=skuId%3A2279284254%3Bsource%3Alazada-search-voucher%3Bsn%3A6cf288f7235917afdc7125c9812cc77b%3BoriginPrice%3A239900%3BdisplayPrice%3A239900%3BsinglePromotionId%3A-1%3BsingleToolCode%3A-1%3BvoucherPricePlugin%3A0%3Btimestamp%3A1755429292443&ratingscore=&request_id=6cf288f7235917afdc7125c9812cc77b&review=&sale=0&search=1&source=search&spm=a2a0e.searchlist.list.38&stock=1" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 2,399</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-reveal delay-3 product-item" data-category="school"> 
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">School Age (5–10 years)</div>
+                            <div class="name">Shower Gel</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Shower Gel.png" alt="Shower Gel">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/1-3-532-i426372414-s2039957994.html?c=&channelLpJumpArgs=&clickTrackInfo=query%253Ashampoo%252Bfor%252Bkids%253Bnid%253A426372414%253Bsrc%253ALazadaMainSrp%253Brn%253A42186268962516c3f32550c122ba131f%253Bregion%253Apk%253Bsku%253A426372414_PK%253Bprice%253A2499%253Bclient%253Adesktop%253Bsupplier_id%253A6005009736055%253Bbiz_source%253Ah5_external%253Bslot%253A9%253Butlog_bucket_id%253A470687%253Basc_category_id%253A10002689%253Bitem_id%253A426372414%253Bsku_id%253A2039957994%253Bshop_id%253A308571%253BtemplateInfo%253A1103_L%2523-1_A3_C%2523&freeshipping=0&fs_ab=1&fuse_fs=&lang=en&location=Punjab&price=2499&priceCompare=skuId%3A2039957994%3Bsource%3Alazada-search-voucher%3Bsn%3A42186268962516c3f32550c122ba131f%3BoriginPrice%3A249900%3BdisplayPrice%3A249900%3BsinglePromotionId%3A-1%3BsingleToolCode%3AmockedSalePrice%3BvoucherPricePlugin%3A0%3Btimestamp%3A1755429423233&ratingscore=4.764705882352941&request_id=42186268962516c3f32550c122ba131f&review=17&sale=88&search=1&source=search&spm=a2a0e.searchlist.list.9&stock=1" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 2,499</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-reveal delay-1 product-item" data-category="school"> 
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">School Age (5–10 years)</div>
+                            <div class="name">Toothpaste for Kids</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Toothpaste For Kids.png" alt="Toothpaste for Kids">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/abc-i485710741-s2281303292.html?c=&channelLpJumpArgs=&clickTrackInfo=query%253AToothpaste%252Bfor%252BKids%253Bnid%253A485710741%253Bsrc%253ALazadaMainSrp%253Brn%253A7e6127f3868fde1076ba7bb4b5a282f1%253Bregion%253Apk%253Bsku%253A485710741_PK%253Bprice%253A320%253Bclient%253Adesktop%253Bsupplier_id%253A6005065380418%253Bbiz_source%253Ah5_external%253Bslot%253A5%253Butlog_bucket_id%253A470687%253Basc_category_id%253A10002697%253Bitem_id%253A485710741%253Bsku_id%253A2281303292%253Bshop_id%253A1349534%253BtemplateInfo%253A-1_A3_C%25231103_L%2523&freeshipping=0&fs_ab=1&fuse_fs=&lang=en&location=Punjab&price=3.2E%202&priceCompare=skuId%3A2281303292%3Bsource%3Alazada-search-voucher%3Bsn%3A7e6127f3868fde1076ba7bb4b5a282f1%3BoriginPrice%3A32000%3BdisplayPrice%3A32000%3BsinglePromotionId%3A-1%3BsingleToolCode%3A-1%3BvoucherPricePlugin%3A0%3Btimestamp%3A1755430240426&ratingscore=&request_id=7e6127f3868fde1076ba7bb4b5a282f1&review=0&sale=1&search=1&source=search&spm=a2a0e.searchlist.list.5&stock=1" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 138</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-reveal delay-2 product-item" data-category="school">    
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">School Age (5–10 years)</div>
+                            <div class="name">Hand Lotion</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Hand Lotion.png" alt="Hand Lotion">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/100-i652104693-s3045382447.html?c=&channelLpJumpArgs=&clickTrackInfo=query%253Ajohnson%252Blotion%253Bnid%253A652104693%253Bsrc%253ALazadaMainSrp%253Brn%253A2072ce35f528f02d3b60a14b2961552f%253Bregion%253Apk%253Bsku%253A652104693_PK%253Bprice%253A599%253Bclient%253Adesktop%253Bsupplier_id%253A6005316832948%253Bbiz_source%253Ah5_external%253Bslot%253A5%253Butlog_bucket_id%253A470687%253Basc_category_id%253A10002755%253Bitem_id%253A652104693%253Bsku_id%253A3045382447%253Bshop_id%253A1954279%253BtemplateInfo%253A-1_A3_C%25231103_L%2523&freeshipping=0&fs_ab=1&fuse_fs=&lang=en&location=Punjab&price=599&priceCompare=skuId%3A3045382447%3Bsource%3Alazada-search-voucher%3Bsn%3A2072ce35f528f02d3b60a14b2961552f%3BoriginPrice%3A59900%3BdisplayPrice%3A59900%3BsinglePromotionId%3A-1%3BsingleToolCode%3A-1%3BvoucherPricePlugin%3A0%3Btimestamp%3A1755430385025&ratingscore=&request_id=2072ce35f528f02d3b60a14b2961552f&review=&sale=0&search=1&source=search&spm=a2a0e.searchlist.list.5&stock=1" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 599</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-reveal delay-3 product-item" data-category="school"> 
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">School Age (5–10 years)</div>
+                            <div class="name">Backpack</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Backpack.png" alt="Backpack">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/2-7-i471851765-s3781834675.html?c=&channelLpJumpArgs=&clickTrackInfo=query%253ABackpack%252Bfor%252B%252Bschool%252Bkids%253Bnid%253A471851765%253Bsrc%253ALazadaMainSrp%253Brn%253A7b1aed2885d7ee48c5e9f645b202ec4d%253Bregion%253Apk%253Bsku%253A471851765_PK%253Bprice%253A2825%253Bclient%253Adesktop%253Bsupplier_id%253A6005013585341%253Bbiz_source%253Ah5_external%253Bslot%253A6%253Butlog_bucket_id%253A470687%253Basc_category_id%253A20000256%253Bitem_id%253A471851765%253Bsku_id%253A3781834675%253Bshop_id%253A596663%253BtemplateInfo%253A1103_L%2523-1_A3_C%2523&freeshipping=1&fs_ab=1&fuse_fs=&lang=en&location=Punjab&price=2825&priceCompare=skuId%3A3781834675%3Bsource%3Alazada-search-voucher%3Bsn%3A7b1aed2885d7ee48c5e9f645b202ec4d%3BoriginPrice%3A282500%3BdisplayPrice%3A282500%3BsinglePromotionId%3A-1%3BsingleToolCode%3AmockedSalePrice%3BvoucherPricePlugin%3A0%3Btimestamp%3A1755430492892&ratingscore=4.827586206896552&request_id=7b1aed2885d7ee48c5e9f645b202ec4d&review=29&sale=145&search=1&source=search&spm=a2a0e.searchlist.list.6&stock=1" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 2,825</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-reveal delay-1 product-item" data-category="school"> 
+                <div class="product-card">
+                    <div class="product-basic-info">
+                        <div class="product-title">
+                            <div class="category">School Age (5–10 years)</div>
+                            <div class="name">Reusable Water Bottle</div>
+                        </div>
+                        <div class="product-img">
+                            <img src="./images/Reusable Water Bottle.png" alt="Reusable Water Bottle">
+                        </div>
+                        <div class="add-to-cart">
+                            <a href="https://www.daraz.pk/products/premium-nice-400ml-glass-water-bottle-insulated-for-ultimate-freshness-perfect-for-school-gym-and-office-use-durable-glassplastic-hybrid-construction-leakproof-design-stay-hydrated-in-style-i491896313-s2828451762.html?c=&channelLpJumpArgs=&clickTrackInfo=query%253Aschool%252BWater%252BBottle%253Bnid%253A491896313%253Bsrc%253ALazadaMainSrp%253Brn%253Ad9974d6c88dc7094761ebdc395e0f716%253Bregion%253Apk%253Bsku%253A491896313_PK%253Bprice%253A325%253Bclient%253Adesktop%253Bsupplier_id%253A6005174208821%253Bbiz_source%253Ah5_external%253Bslot%253A2%253Butlog_bucket_id%253A470687%253Basc_category_id%253A4688%253Bitem_id%253A491896313%253Bsku_id%253A2828451762%253Bshop_id%253A1614487%253BtemplateInfo%253A1103_L%2523-1_A3_C%2523&freeshipping=0&fs_ab=1&fuse_fs=&lang=en&location=Sindh&price=325&priceCompare=skuId%3A2828451762%3Bsource%3Alazada-search-voucher%3Bsn%3Ad9974d6c88dc7094761ebdc395e0f716%3BoriginPrice%3A32500%3BdisplayPrice%3A32500%3BsinglePromotionId%3A50000029824177%3BsingleToolCode%3AflashSale%3BvoucherPricePlugin%3A0%3Btimestamp%3A1755430521579&ratingscore=4.311728395061729&request_id=d9974d6c88dc7094761ebdc395e0f716&review=324&sale=2201&search=1&source=search&spm=a2a0e.searchlist.list.2&stock=1" target="_blank"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-more-info">
+                        <div class="product-stars">
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star text-yellow"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="product-price">Rs. 325</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container px-5">
+            <div class="row gx-5">
+                <div class="col-lg-4 col-md-6 mb-4 ps-lg-5">
+                    <h5 class="text-white mb-4">Quick Links</h5>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="babysitters.html">Babysitters</a>
+                        <a href="training.html">Babysitter Training</a>
+                        <a href="blog.html">Blog</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="text-white mb-4">More Links</h5>
+                    <div class="footer-links">
+                        <a href="about.html">About</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="faq.html">FAQs</a>
+                        <a href="pricing.html">Pricing</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="text-white mb-4">Product Categories</h5>
+                    <div class="footer-links">
+                        <a href="products.html?category=all">All Products</a>
+                        <a href="products.html?category=newborn">Newborns (0-12 Months)</a>
+                        <a href="products.html?category=toddler">Toddlers (1-3 Years)</a>
+                        <a href="products.html?category=preschool">Preschoolers (3-5 Years)</a>
+                        <a href="products.html?category=school">School Age (5-10 Years)</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright text-center px-5">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <a href="termsofservice.html" class="footer-legal-link">Terms of Service</a>
+                        <span class="text-white mx-2">|</span>
+                        <a href="privacypolicy.html" class="footer-legal-link">Privacy Policy</a>
+                        <span class="text-white mx-2">|</span>
+                        <a href="sitemap.html" class="footer-legal-link">Sitemap</a>
+                    </div>
+                    <div>
+                        <a href="https://www.facebook.com" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.twitter.com" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Emergency Button -->
+    <div class="emergency-btn" onclick="showEmergencyModal()">
+        <i class="fas fa-bell"></i>
+    </div>
+
+    <!-- Emergency Modal -->
+    <div id="emergencyModal" class="video-modal">
+        <div class="modal-content bg-light" style="max-width: 500px;">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div class="p-4 text-center">
+                <div class="icon-container mx-auto mb-4" style="width: 80px; height: 80px; background-color: #ff4d4d;">
+                    <i class="fas fa-exclamation-triangle fa-2x text-white"></i>
+                </div>
+                <h4 class="mb-3">Emergency Contact</h4>
+                <p>Please select an emergency contact option:</p>
+                <div class="d-grid gap-3">
+                    <button class="btn btn-danger py-3">
+                        <i class="fas fa-phone-alt me-2"></i> Call Emergency Services (1122)
+                    </button>
+                    <button class="btn btn-warning py-3">
+                        <i class="fas fa-user me-2"></i> Contact Selected Babysitter
+                    </button>
+                    <button class="btn btn-primary py-3">
+                        <i class="fas fa-headset me-2"></i> Contact NanhaCare Support
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Scroll Reveal Animation
+        function scrollReveal() {
+            const elements = document.querySelectorAll('.scroll-reveal');
+            const windowHeight = window.innerHeight;
+            const revealPoint = 150;
+
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                if (elementTop < windowHeight - revealPoint) {
+                    element.classList.add('active');
+                }
+            });
+        }
+
+        // Category Filtering with smooth animation
+        function filterProducts(category) {
+            const products = document.querySelectorAll('.product-item');
+            
+            products.forEach(product => {
+                if (category === 'all' || product.dataset.category === category) {
+                    product.classList.remove('filtered-out');
+                    setTimeout(() => {
+                        product.style.display = 'block';
+                    }, 50);
+                } else {
+                    product.classList.add('filtered-out');
+                    setTimeout(() => {
+                        product.style.display = 'none';
+                    }, 500); // Match the transition duration
+                }
+            });
+
+            // Update active tab
+            const tabs = document.querySelectorAll('.category-tab');
+            tabs.forEach(tab => {
+                if (tab.dataset.category === category) {
+                    tab.classList.add('active');
+                } else {
+                    tab.classList.remove('active');
+                }
+            });
+        }
+
+        // Show emergency modal
+        function showEmergencyModal() {
+            const modal = document.getElementById('emergencyModal');
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Close modal
+        function closeModal() {
+            const modals = document.querySelectorAll('.video-modal');
+            modals.forEach(modal => {
+                modal.style.display = 'none';
+            });
+            document.body.style.overflow = 'auto';
+        }
+
+        // Initialize when page loads
+        window.addEventListener('load', function() {
+            window.scrollTo(0, 0);
+            
+            // Initialize scroll reveal
+            scrollReveal();
+            window.addEventListener('scroll', scrollReveal);
+            
+            // Set up category tabs
+            const tabs = document.querySelectorAll('.category-tab');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    filterProducts(this.dataset.category);
+                });
+            });
+        });
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modals = document.querySelectorAll('.video-modal');
+            modals.forEach(modal => {
+                if (event.target == modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        };
+        
+        // Make entire product card clickable on mobile
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.addEventListener('touchend', function(event) {
+                // Prevent default to avoid unwanted behavior (e.g., zooming)
+                event.preventDefault();
+                // Check if the touch is not on the add-to-cart button itself
+                if (!event.target.closest('.add-to-cart')) {
+                    const link = this.querySelector('.add-to-cart a');
+                    if (link) {
+                        window.location.href = link.href; // Navigate to the link
+                    }
+                }
+            });
+        });
+        
+    // Function to get URL parameters
+    function getUrlParameter(name) {
+        name = name.replace(/[\[\]]/g, '\\$&');
+        const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)');
+        const results = regex.exec(window.location.href);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
+
+    // Initialize when page loads
+    window.addEventListener('load', function() {
+        window.scrollTo(0, 0);
+        
+        // Initialize scroll reveal
+        scrollReveal();
+        window.addEventListener('scroll', scrollReveal);
+        
+        // Set up category tabs
+        const tabs = document.querySelectorAll('.category-tab');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                filterProducts(this.dataset.category);
+            });
+        });
+        
+        // Check for category parameter in URL
+        const categoryParam = getUrlParameter('category');
+        if (categoryParam) {
+            // Find the tab with matching data-category
+            const targetTab = document.querySelector(`.category-tab[data-category="${categoryParam}"]`);
+            if (targetTab) {
+                // Trigger click on the matching tab
+                targetTab.click();
+            }
+        }
+    });
+    </script>
+</body>
+</html>
