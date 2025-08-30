@@ -1,0 +1,2317 @@
+{
+  "babysitter1": {
+    "name": "Zoya Ahmed",
+    "image": "./images/zoya.jpeg",
+    "location": "Islamabad, Pakistan",
+    "experience_years": 3,
+    "rate_per_hour": 450,
+    "rating": 5.0,
+    "reviews_count": 25,
+    "quick_details": {
+      "age": 26,
+      "languages": ["Urdu", "English"],
+      "marital_status": "Single",
+      "smoker": false,
+      "preferred_location": "At Home",
+      "id": "NC-ISB-005",
+      "verified": true
+    },
+    "certifications": [
+      "CPR Certified",
+      "First Aid Training",
+      "Child Safety Course",
+      "Infant Care Specialist"
+    ],
+    "skills": [
+      "Newborn Care",
+      "Toddler Care",
+      "Early Development",
+      "Meal Preparation",
+      "Storytelling",
+      "Musical Activities"
+    ],
+    "about_me": [
+      "Hello! I'm Zoya, an infant care specialist with 3 years of professional experience focusing on early childhood development. I'm fluent in both Urdu and English, which helps me communicate effectively with children and parents from diverse backgrounds.",
+      "My approach combines gentle care with developmental activities tailored to each child's needs. I specialize in creating stimulating environments that promote cognitive and motor skill development in infants and toddlers.",
+      "I'm passionate about helping children reach their developmental milestones while providing a safe, nurturing environment. My goal is to make parents feel completely at ease when they leave their little ones in my care."
+    ],
+    "experience": [
+      {
+        "title": "Professional Babysitter",
+        "location": "Islamabad",
+        "years": "2020 - Present",
+        "details": [
+          "Specialized care for infants and toddlers (0-3 years)",
+          "Developed age-appropriate activities to stimulate development",
+          "Maintained detailed records of children's routines and progress"
+        ]
+      },
+      {
+        "title": "Daycare Assistant",
+        "location": "Islamabad",
+        "years": "2019 - 2020",
+        "details": [
+          "Assisted with care for multiple infants simultaneously",
+          "Helped implement daily schedules and activities",
+          "Maintained clean and safe environment for children"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "title": "Diploma in Early Childhood Education",
+        "institution": "Islamabad College",
+        "years": "2018 - 2019"
+      },
+      {
+        "title": "Infant Care Specialist Certification",
+        "institution": "Childcare Training Institute",
+        "years": "2020"
+      },
+      {
+        "title": "Child Development Workshop",
+        "institution": "Pakistan Pediatrics Association",
+        "years": "2021"
+      }
+    ],
+    "age_specialization": [
+      {
+        "category": "Infants (0-12 months)",
+        "experience_years": 3
+      },
+      {
+        "category": "Toddlers (1-3 years)",
+        "experience_years": 2
+      },
+      {
+        "category": "Overnight Care",
+        "experience_years": 1
+      },
+      {
+        "category": "After-School Care",
+        "experience_years": 1
+      }
+    ],
+    "reviews": [
+      {
+        "parent": "Sara Khan",
+        "location": "Islamabad",
+        "rating": 5,
+        "text": "Zoya has been caring for our 6-month-old for 4 months now. She's incredibly patient and attentive. Our baby lights up when she arrives!"
+      },
+      {
+        "parent": "Ali Raza",
+        "location": "Islamabad",
+        "rating": 4.5,
+        "text": "Zoya's developmental activities with our 2-year-old have been amazing. We've seen significant improvement in his speech and motor skills."
+      },
+      {
+        "parent": "Fatima Shah",
+        "location": "Islamabad",
+        "rating": 5,
+        "text": "We trust Zoya completely with our twins. Her ability to handle two infants simultaneously while giving each individual attention is remarkable."
+      }
+    ]
+  },
+  "babysitter2": {
+    "name": "Zara Khan",
+    "image": "./images/zara.png",
+    "location": "Karachi, Pakistan",
+    "experience_years": 2,
+    "rate_per_hour": 300,
+    "rating": 4.2,
+    "reviews_count": 14,
+    "quick_details": {
+      "age": 25,
+      "languages": ["Urdu"],
+      "marital_status": "Single",
+      "smoker": false,
+      "preferred_location": "On-Site",
+      "id": "NC-KHI-004",
+      "verified": true
+    },
+    "certifications": [
+      "Infant Care Certification",
+      "First Aid Training",
+      "Child Safety Course",
+      "Gentle Parenting Workshop"
+    ],
+    "skills": [
+      "Newborn Care",
+      "Toddler Care",
+      "Bottle Feeding",
+      "Bathing",
+      "Sleep Training",
+      "Infant Massage"
+    ],
+    "about_me": [
+      "Hello! I'm Zara, a compassionate and attentive babysitter specializing in infant and toddler care. With 2 years of professional experience, I provide gentle, nurturing care that helps babies feel safe and loved.",
+      "My approach is based on gentle parenting principles, focusing on creating a warm and responsive environment for your little ones. I'm fluent in Urdu and comfortable communicating with parents in their preferred language.",
+      "I take pride in being patient, observant, and attuned to each child's unique needs and cues. Whether it's feeding, diaper changes, or helping establish healthy sleep routines, I provide reliable and loving care for your precious little ones."
+    ],
+    "experience": [
+      {
+        "title": "Infant Care Specialist",
+        "location": "Karachi",
+        "years": "2021 - Present",
+        "details": [
+          "Provided specialized care for newborns and infants (0-12 months)",
+          "Assisted with feeding schedules, sleep routines, and developmental activities",
+          "Maintained detailed logs of feeding, sleeping, and diaper changes"
+        ]
+      },
+      {
+        "title": "Toddler Nanny",
+        "location": "Karachi",
+        "years": "2020 - 2021",
+        "details": [
+          "Cared for toddlers aged 1-3 years",
+          "Engaged children in age-appropriate play and learning activities",
+          "Assisted with potty training and developing self-help skills"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "title": "Diploma in Early Childhood Education",
+        "institution": "Karachi Vocational Institute",
+        "years": "2018 - 2020"
+      },
+      {
+        "title": "Infant Care Specialist Certification",
+        "institution": "Childcare Professionals Pakistan",
+        "years": "2020"
+      },
+      {
+        "title": "Child Nutrition Workshop",
+        "institution": "Aga Khan University",
+        "years": "2021"
+      }
+    ],
+    "age_specialization": [
+      {
+        "category": "Infants (0-12 months)",
+        "experience_years": 2
+      },
+      {
+        "category": "Toddlers (1-3 years)",
+        "experience_years": 2
+      },
+      {
+        "category": "Bottle Feeding",
+        "experience_years": 2
+      },
+      {
+        "category": "Sleep Training",
+        "experience_years": 1
+      }
+    ],
+    "reviews": [
+      {
+        "parent": "Amina Shah",
+        "location": "Karachi",
+        "rating": 5,
+        "text": "Zara took care of our newborn when I had to return to work. Her gentle approach and attention to detail gave us complete peace of mind. She's wonderful with infants!"
+      },
+      {
+        "parent": "Bilal Ahmed",
+        "location": "Karachi",
+        "rating": 4,
+        "text": "Zara helped our 18-month-old transition to solid foods and start potty training. She's patient and understands toddler development very well."
+      },
+      {
+        "parent": "Farah Malik",
+        "location": "Karachi",
+        "rating": 4.5,
+        "text": "We hired Zara for our premature baby who needed extra care. Her knowledge of infant care and gentle approach was exactly what we needed during that challenging time."
+      }
+    ]
+  },
+  "babysitter3": {
+    "name": "Zainab Khan",
+    "image": "./images/zainab.jpeg",
+    "location": "Lahore, Pakistan",
+    "experience_years": 3,
+    "rate_per_hour": 350,
+    "rating": 4.6,
+    "reviews_count": 15,
+    "quick_details": {
+      "age": 25,
+      "languages": ["Urdu", "English"],
+      "marital_status": "Single",
+      "smoker": false,
+      "preferred_location": "On-Site",
+      "id": "NC-LHR-004",
+      "verified": true
+    },
+    "certifications": [
+      "Early Childhood Education",
+      "Creative Learning Techniques",
+      "Basic First Aid"
+    ],
+    "skills": [
+      "Preschool Activities",
+      "Storytelling",
+      "Arts & Crafts",
+      "Musical Activities",
+      "Bilingual Care"
+    ],
+    "about_me": [
+      "Hello! I'm Zainab, a passionate preschool activities specialist with 3 years of experience in creative learning approaches. I'm fluent in both Urdu and English, which helps me communicate effectively with children from diverse backgrounds.",
+      "My approach focuses on making learning fun through interactive games, storytelling, and creative arts. I believe in nurturing each child's unique talents while helping them develop essential social and cognitive skills.",
+      "I specialize in creating engaging educational activities that keep preschoolers excited about learning while ensuring their safety and well-being at all times."
+    ],
+    "experience": [
+      {
+        "title": "Preschool Activity Specialist",
+        "location": "Lahore",
+        "years": "2020 - Present",
+        "details": [
+          "Developed and implemented creative learning activities for children aged 3-5",
+          "Specialized in bilingual (Urdu/English) educational games",
+          "Organized weekly themed learning sessions"
+        ]
+      },
+      {
+        "title": "Private Babysitter",
+        "location": "Lahore",
+        "years": "2019 - 2020",
+        "details": [
+          "Provided after-school care for preschool-aged children",
+          "Created customized learning activities based on children's interests",
+          "Helped children with language development in both Urdu and English"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "title": "Diploma in Early Childhood Education",
+        "institution": "Lahore College for Women",
+        "years": "2018 - 2020"
+      },
+      {
+        "title": "Creative Learning Workshop",
+        "institution": "Lahore Arts Council",
+        "years": "2019"
+      }
+    ],
+    "age_specialization": [
+      {
+        "category": "Preschoolers (3-5 years)",
+        "experience_years": 3
+      },
+      {
+        "category": "After-School Care",
+        "experience_years": 2
+      },
+      {
+        "category": "Bilingual Education",
+        "experience_years": 3
+      },
+      {
+        "category": "Creative Activities",
+        "experience_years": 3
+      }
+    ],
+    "reviews": [
+      {
+        "parent": "Amina Sheikh",
+        "location": "Lahore",
+        "rating": 5,
+        "text": "Zainab has been wonderful with our 4-year-old. Her creative activities keep our daughter engaged and learning. We especially appreciate her bilingual approach!"
+      },
+      {
+        "parent": "Bilal Ahmed",
+        "location": "Lahore",
+        "rating": 4.5,
+        "text": "Our son looks forward to Zainab's visits. Her storytelling sessions are magical, and we've noticed significant improvement in his English vocabulary."
+      },
+      {
+        "parent": "Sara Khan",
+        "location": "Lahore",
+        "rating": 5,
+        "text": "Zainab's arts and crafts activities have brought out our daughter's creativity. She's patient, punctual, and truly understands preschoolers' needs."
+      }
+    ]
+  },
+  "babysitter4": {
+    "name": "Sarah Ahmed",
+    "image": "./images/sarah.png",
+    "location": "Islamabad, Pakistan",
+    "experience_years": 2,
+    "rate_per_hour": 420,
+    "rating": 4.3,
+    "reviews_count": 12,
+    "quick_details": {
+      "age": 24,
+      "languages": ["English"],
+      "marital_status": "Single",
+      "smoker": false,
+      "preferred_location": "On-Site",
+      "id": "NC-ISB-004",
+      "verified": true
+    },
+    "certifications": [
+      "Newborn Care Specialist",
+      "Infant CPR Certified",
+      "Gentle Parenting Training",
+      "Postpartum Care Course"
+    ],
+    "skills": [
+      "Newborn Care",
+      "Sleep Training",
+      "Gentle Parenting",
+      "Feeding Support",
+      "Infant Hygiene",
+      "Early Stimulation"
+    ],
+    "about_me": [
+      "Hello! I'm Sarah, a newborn care specialist with 2 years of experience providing gentle, nurturing care for infants. I'm fluent in English and specialize in creating calm, loving environments for newborns to thrive.",
+      "My approach combines evidence-based newborn care with gentle parenting principles, focusing on meeting each baby's unique needs while supporting new parents. I'm particularly skilled at establishing healthy sleep and feeding routines.",
+      "I believe in responsive, respectful care that helps newborns feel secure while giving parents peace of mind during this special transition period."
+    ],
+    "experience": [
+      {
+        "title": "Newborn Care Specialist",
+        "location": "Islamabad",
+        "years": "2021 - Present",
+        "details": [
+          "Provided overnight and daytime newborn care for families",
+          "Helped establish healthy sleep and feeding schedules",
+          "Educated parents on newborn care and development"
+        ]
+      },
+      {
+        "title": "Postpartum Doula",
+        "location": "Islamabad",
+        "years": "2020 - 2021",
+        "details": [
+          "Supported new mothers with infant care",
+          "Assisted with breastfeeding and bottle feeding",
+          "Provided newborn care education to families"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "title": "Newborn Care Specialist Certification",
+        "institution": "International Nanny Association",
+        "years": "2020"
+      },
+      {
+        "title": "Child Development Course",
+        "institution": "Islamabad Child Development Center",
+        "years": "2019"
+      },
+      {
+        "title": "Infant Sleep Consultant Workshop",
+        "institution": "Pakistan Parenting Institute",
+        "years": "2021"
+      }
+    ],
+    "age_specialization": [
+      {
+        "category": "Newborns (0-3 months)",
+        "experience_years": 2
+      },
+      {
+        "category": "Overnight Care",
+        "experience_years": 2
+      },
+      {
+        "category": "Gentle Parenting",
+        "experience_years": 2
+      },
+      {
+        "category": "Early Stimulation",
+        "experience_years": 1
+      }
+    ],
+    "reviews": [
+      {
+        "parent": "Amina Khan",
+        "location": "Islamabad",
+        "rating": 5,
+        "text": "Sarah was a godsend during our first months with twins. Her gentle approach and expertise with newborns helped establish routines that saved our sanity!"
+      },
+      {
+        "parent": "Bilal Ahmed",
+        "location": "Islamabad",
+        "rating": 4.5,
+        "text": "Sarah's overnight care allowed us to get much-needed rest while knowing our newborn was in capable hands. She's patient, knowledgeable, and so gentle with babies."
+      },
+      {
+        "parent": "Fatima Malik",
+        "location": "Islamabad",
+        "rating": 5,
+        "text": "As first-time parents, we were nervous about newborn care. Sarah's calm presence and expert guidance made all the difference in our transition to parenthood."
+      }
+    ]
+  },
+  "babysitter5": {
+    "id": "NC-KHI-003",
+    "name": "Sana Ahmed",
+    "profile_picture": "./images/sana.jpeg",
+    "location": "Karachi, Pakistan",
+    "experience_years": 4,
+    "rate_per_hour": 450,
+    "rating": 4.9,
+    "total_reviews": 27,
+    "quick_details": {
+      "age": 30,
+      "languages": ["English", "Urdu"],
+      "marital_status": "Married",
+      "smoker": "No",
+      "preferred_location": "At Home",
+      "verified": true
+    },
+    "certifications": [
+      "Montessori Certification",
+      "First Aid Training",
+      "Child Development Course",
+      "Early Childhood Education"
+    ],
+    "skills": [
+      "School-age Care",
+      "Homework Help",
+      "Meal Preparation",
+      "Educational Games",
+      "Musical Activities",
+      "Arts & Crafts"
+    ],
+    "about": "Hello! I'm Sana, a Montessori-trained babysitter with 4 years of professional childcare experience. I specialize in school-age children and early childhood development, providing an engaging and educational environment for children to learn and grow. My approach combines Montessori principles with creative learning techniques, focusing on each child's individual needs and developmental stage. I'm fluent in both English and Urdu, which allows me to effectively communicate with children and parents from diverse backgrounds. My goal is to provide not just supervision, but an enriching experience that supports your child's cognitive, social, and emotional development while making learning fun and engaging.",
+    "experience": [
+      {
+        "title": "Montessori Babysitter",
+        "location": "Karachi",
+        "duration": "2019 - Present",
+        "responsibilities": [
+          "Provided care for children aged 5-12 years with Montessori approach",
+          "Developed and implemented educational activities and games",
+          "Assisted with homework and school projects"
+        ]
+      },
+      {
+        "title": "After-School Care Provider",
+        "location": "Karachi",
+        "duration": "2017 - 2019",
+        "responsibilities": [
+          "Supervised school-age children after school hours",
+          "Organized educational and recreational activities",
+          "Provided homework assistance and tutoring"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "title": "Bachelor's in Education",
+        "institution": "Karachi University",
+        "duration": "2013 - 2017"
+      },
+      {
+        "title": "Montessori Teaching Certification",
+        "institution": "Pakistan Montessori Council",
+        "duration": "2018"
+      },
+      {
+        "title": "Child Psychology Workshop",
+        "institution": "Aga Khan University",
+        "duration": "2019"
+      }
+    ],
+    "age_specialization": [
+      {
+        "category": "School Age (5-12 years)",
+        "experience": "4 years"
+      },
+      {
+        "category": "Homework Assistance",
+        "experience": "3 years"
+      },
+      {
+        "category": "Educational Games",
+        "experience": "4 years"
+      },
+      {
+        "category": "After-School Care",
+        "experience": "4 years"
+      }
+    ],
+    "reviews": [
+      {
+        "parent": "Ali Raza",
+        "location": "Karachi",
+        "rating": 5,
+        "feedback": "Sana has been wonderful with our 7-year-old. Her Montessori approach has helped improve our child's focus and independence. She's patient and creative with her activities."
+      },
+      {
+        "parent": "Fatima Khan",
+        "location": "Karachi",
+        "rating": 4.5,
+        "feedback": "Sana's English fluency was important for us as we wanted our children to practice conversational English. She's been great at making learning fun through games."
+      },
+      {
+        "parent": "Ahmed Malik",
+        "location": "Karachi",
+        "rating": 5,
+        "feedback": "We hired Sana for after-school care and homework help. Our son's grades have improved significantly since she started working with him. Highly recommend!"
+      }
+    ]
+  },
+  "babysitter6": {
+    "id": "NC-KHI-007",
+    "name": "Samina Ali",
+    "profile_picture": "./images/samina.jpg",
+    "location": "Karachi, Pakistan",
+    "experience_years": 3,
+    "rate_per_hour": 350,
+    "rating": 3.8,
+    "total_reviews": 22,
+    "quick_details": {
+      "age": 27,
+      "languages": ["Urdu"],
+      "marital_status": "Married",
+      "smoker": "No",
+      "preferred_location": "At Home",
+      "verified": true
+    },
+    "certifications": [
+      "Newborn Care Specialist",
+      "Postpartum Doula Training",
+      "Infant CPR Certified",
+      "Gentle Parenting Workshop"
+    ],
+    "skills": [
+      "Newborn Care",
+      "Infant Soothing",
+      "Sleep Routine",
+      "Bottle Feeding",
+      "Infant Hygiene",
+      "Gentle Parenting"
+    ],
+    "about": "Hello! I'm Samina, a newborn care specialist with 3 years of experience caring for infants. My gentle, nurturing approach helps newborns feel secure while giving parents peace of mind during those precious early months. I specialize in establishing healthy routines for feeding, sleeping, and playtime. My approach is based on gentle parenting principles, responding to each baby's unique needs and temperament. I'm fluent in Urdu and comfortable working with traditional Pakistani childcare practices. Nothing brings me more joy than helping new parents navigate the challenges of caring for their newborn while ensuring the baby feels loved, safe, and content.",
+    "experience": [
+      {
+        "title": "Newborn Care Specialist",
+        "location": "Karachi",
+        "duration": "2020 - Present",
+        "responsibilities": [
+          "Provided overnight newborn care for 20+ families",
+          "Established healthy feeding and sleeping routines",
+          "Educated parents on infant care and development"
+        ]
+      },
+      {
+        "title": "Postpartum Doula",
+        "location": "Karachi",
+        "duration": "2018 - 2020",
+        "responsibilities": [
+          "Supported new mothers with infant care",
+          "Assisted with breastfeeding and bottle feeding",
+          "Provided emotional support during postpartum period"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "title": "Diploma in Childcare",
+        "institution": "Karachi Vocational Institute",
+        "duration": "2017"
+      },
+      {
+        "title": "Newborn Care Specialist Certification",
+        "institution": "Pakistan Childcare Association",
+        "duration": "2019"
+      },
+      {
+        "title": "Infant Sleep Consultant Workshop",
+        "institution": "Aga Khan University",
+        "duration": "2020"
+      }
+    ],
+    "age_specialization": [
+      {
+        "category": "Newborns (0-3 months)",
+        "experience": "3 years"
+      },
+      {
+        "category": "Infants (3-12 months)",
+        "experience": "2 years"
+      },
+      {
+        "category": "Overnight Care",
+        "experience": "3 years"
+      },
+      {
+        "category": "Postpartum Support",
+        "experience": "2 years"
+      }
+    ],
+    "reviews": [
+      {
+        "parent": "Ayesha Malik",
+        "location": "Karachi",
+        "rating": 4,
+        "feedback": "Samina was a blessing during those first exhausting weeks with our newborn. Her gentle approach helped establish a feeding routine that saved my sanity. She has magic hands for soothing fussy babies!"
+      },
+      {
+        "parent": "Farhan Ahmed",
+        "location": "Karachi",
+        "rating": 3.5,
+        "feedback": "As first-time parents, we were nervous about leaving our 2-month-old. Samina's experience and calm demeanor put us at ease. She taught us so much about reading our baby's cues."
+      },
+      {
+        "parent": "Sana Khan",
+        "location": "Karachi",
+        "rating": 4.5,
+        "feedback": "Samina helped our premature baby gain weight and establish a sleep routine. Her knowledge of infant development was impressive. We couldn't have managed those first months without her!"
+      }
+    ]
+  },
+  "babysitter7": {
+    "id": "NC-KHI-005",
+    "name": "Rabia Khan",
+    "profile_picture": "./images/rabia.jpg",
+    "location": "Karachi, Pakistan",
+    "experience_years": 4,
+    "rate_per_hour": 420,
+    "rating": 4.6,
+    "total_reviews": 28,
+    "quick_details": {
+      "age": 29,
+      "languages": ["Urdu", "English"],
+      "marital_status": "Married",
+      "smoker": "No",
+      "preferred_location": "At Home",
+      "verified": true
+    },
+    "certifications": [
+      "Infant Nutrition Specialist",
+      "Early Childhood Development",
+      "First Aid & CPR Certified",
+      "Child Psychology Course"
+    ],
+    "skills": [
+      "Infant Nutrition",
+      "Early Development",
+      "Meal Preparation",
+      "Cognitive Stimulation",
+      "Early Literacy",
+      "Bilingual Care"
+    ],
+    "about": "Hello! I'm Rabia, a dedicated childcare professional with 4 years of experience specializing in infant nutrition and early childhood development. I'm fluent in both Urdu and English, which allows me to provide bilingual care and early language exposure. My approach focuses on creating a nurturing environment that supports both physical growth and cognitive development. I have extensive knowledge of age-appropriate nutrition and developmental milestones, helping parents establish healthy routines for their little ones. I believe in combining modern childcare techniques with traditional values, ensuring children receive care that aligns with family preferences while promoting optimal development during these crucial early years.",
+    "experience": [
+      {
+        "title": "Infant Care & Development Specialist",
+        "location": "Karachi",
+        "duration": "2019 - Present",
+        "responsibilities": [
+          "Provided specialized care focusing on nutrition and developmental milestones",
+          "Created personalized feeding plans and introduced solid foods",
+          "Implemented early stimulation activities for cognitive development"
+        ]
+      },
+      {
+        "title": "Preschool Teacher Assistant",
+        "location": "Karachi",
+        "duration": "2017 - 2019",
+        "responsibilities": [
+          "Assisted in implementing early childhood curriculum",
+          "Worked with toddlers (1-3 years) on language and motor skills",
+          "Conducted developmental assessments"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "title": "Bachelor's in Nutrition Sciences",
+        "institution": "University of Karachi",
+        "duration": "2013 - 2017"
+      },
+      {
+        "title": "Early Childhood Development Certification",
+        "institution": "Pakistan Childcare Association",
+        "duration": "2018"
+      },
+      {
+        "title": "Infant Mental Health Workshop",
+        "institution": "Aga Khan University",
+        "duration": "2019"
+      }
+    ],
+    "age_specialization": [
+      {
+        "category": "Infants (0-12 months)",
+        "experience": "4 years"
+      },
+      {
+        "category": "Toddlers (1-3 years)",
+        "experience": "3 years"
+      },
+      {
+        "category": "Infant Nutrition",
+        "experience": "4 years"
+      },
+      {
+        "category": "Early Development",
+        "experience": "3 years"
+      }
+    ],
+    "reviews": [
+      {
+        "parent": "Sara Ahmed",
+        "location": "Karachi",
+        "rating": 5,
+        "feedback": "Rabia transformed our feeding struggles with our 8-month-old. Her nutritional knowledge and gentle approach made the transition to solids so much easier. Our baby is thriving thanks to her!"
+      },
+      {
+        "parent": "Imran Khan",
+        "location": "Karachi",
+        "rating": 4.5,
+        "feedback": "We wanted our child to be bilingual and Rabia's English fluency has been wonderful. She naturally incorporates both languages into daily activities. Our 2-year-old is already counting in both!"
+      },
+      {
+        "parent": "Fatima Malik",
+        "location": "Karachi",
+        "rating": 5,
+        "feedback": "Rabia's knowledge of developmental milestones is impressive. She noticed our baby wasn't reaching for objects at 5 months and suggested exercises that helped tremendously. She's more than a babysitter!"
+      }
+    ]
+  },
+  "babysitter8": {
+    "id": "NC-LHR-003",
+    "name": "Sadia Riaz",
+    "profile_picture": "./images/sadia.jpeg",
+    "location": "Lahore, Pakistan",
+    "experience_years": 5,
+    "rate_per_hour": 380,
+    "rating": 4.1,
+    "total_reviews": 19,
+    "quick_details": {
+      "age": 30,
+      "languages": ["Urdu"],
+      "marital_status": "Married",
+      "smoker": "No",
+      "preferred_location": "At Home",
+      "verified": true
+    },
+    "certifications": [
+      "Newborn Care Specialist",
+      "Infant CPR Certified",
+      "Postpartum Doula Training",
+      "Lactation Support Course"
+    ],
+    "skills": [
+      "Newborn Care",
+      "Infant Soothing",
+      "Sleep Training",
+      "Feeding Support",
+      "Postpartum Care",
+      "Infant Hygiene"
+    ],
+    "about": "Hello! I'm Sadia, a dedicated newborn care specialist with 5 years of experience helping families navigate the precious first months with their babies. My gentle, nurturing approach focuses on creating a calm and loving environment for newborns while supporting new parents. I specialize in establishing healthy routines for feeding, sleeping, and playtime. My approach combines traditional Pakistani childcare practices with modern infant care techniques. I'm fluent in Urdu and particularly skilled at helping first-time parents gain confidence in caring for their newborns. Nothing brings me more joy than seeing parents bond with their babies while knowing their little ones are receiving the best possible care during these important early months.",
+    "experience": [
+      {
+        "title": "Newborn Care Specialist",
+        "location": "Lahore",
+        "duration": "2018 - Present",
+        "responsibilities": [
+          "Provided overnight newborn care for 30+ families",
+          "Established healthy feeding and sleeping routines",
+          "Educated parents on infant care and development"
+        ]
+      },
+      {
+        "title": "Postpartum Doula",
+        "location": "Lahore",
+        "duration": "2016 - 2018",
+        "responsibilities": [
+          "Supported new mothers with infant care",
+          "Assisted with breastfeeding and bottle feeding",
+          "Provided emotional support during postpartum period"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "title": "Diploma in Childcare",
+        "institution": "Lahore Vocational Institute",
+        "duration": "2015"
+      },
+      {
+        "title": "Newborn Care Specialist Certification",
+        "institution": "Pakistan Childcare Association",
+        "duration": "2016"
+      },
+      {
+        "title": "Infant Sleep Consultant Workshop",
+        "institution": "Aga Khan University",
+        "duration": "2017"
+      }
+    ],
+    "age_specialization": [
+      {
+        "category": "Newborns (0-3 months)",
+        "experience": "5 years"
+      },
+      {
+        "category": "Infants (3-12 months)",
+        "experience": "4 years"
+      },
+      {
+        "category": "Overnight Care",
+        "experience": "4 years"
+      },
+      {
+        "category": "Postpartum Support",
+        "experience": "3 years"
+      }
+    ],
+    "reviews": [
+      {
+        "parent": "Amina Shah",
+        "location": "Lahore",
+        "rating": 4,
+        "feedback": "Sadia was a godsend during those first overwhelming weeks with our newborn. Her experience and calm demeanor helped establish a routine that saved our sanity. She has a magical touch with babies!"
+      },
+      {
+        "parent": "Bilal Ahmed",
+        "location": "Lahore",
+        "rating": 4.5,
+        "feedback": "As first-time parents, we were nervous about everything. Sadia's expertise and patience taught us how to care for our baby with confidence. Her sleep training methods worked wonders!"
+      },
+      {
+        "parent": "Farah Malik",
+        "location": "Lahore",
+        "rating": 5,
+        "feedback": "Sadia cared for our premature twins with such dedication. Her knowledge of infant development was impressive, and she helped them reach their milestones despite their early start. We're forever grateful!"
+      }
+    ]
+  },
+  "babysitter9": {
+    "id": "NC-LHR-007",
+    "name": "Alina Shah",
+    "profile_picture": "./images/alina.jpg",
+    "location": "Lahore, Pakistan",
+    "experience_years": 6,
+    "rate_per_hour": 480,
+    "rating": 4.7,
+    "total_reviews": 42,
+    "quick_details": {
+      "age": 30,
+      "languages": ["English"],
+      "marital_status": "Married",
+      "smoker": "No",
+      "preferred_location": "On-Site",
+      "verified": true
+    },
+    "certifications": [
+      "Montessori Teaching Diploma",
+      "Early Childhood Education",
+      "Creative Learning Specialist",
+      "Child Psychology Course"
+    ],
+    "skills": [
+      "Montessori Method",
+      "Creative Learning",
+      "Educational Activities",
+      "Preschool Education",
+      "School Readiness",
+      "Arts Integration"
+    ],
+    "about": "Hello! I'm Alina, a Montessori-trained educator with 6 years of experience in creative learning approaches for preschoolers and school-age children. I'm fluent in English and specialize in creating engaging, child-centered learning environments. My teaching philosophy combines Montessori principles with modern educational techniques to foster independence, curiosity, and a love for learning. I believe in nurturing each child's unique abilities while helping them develop essential academic and social skills. I create customized learning plans that cater to different learning styles, ensuring children are not only prepared for school but also develop confidence in their abilities.",
+    "experience": [
+      {
+        "title": "Montessori Educator",
+        "location": "Lahore",
+        "duration": "2017 - Present",
+        "responsibilities": [
+          "Implemented Montessori curriculum for children aged 3-8 years",
+          "Developed individualized learning plans for diverse learners",
+          "Created hands-on learning materials for various subjects"
+        ]
+      },
+      {
+        "title": "Private Educational Consultant",
+        "location": "Lahore",
+        "duration": "2015 - 2017",
+        "responsibilities": [
+          "Provided personalized educational support for families",
+          "Designed creative learning activities for home education",
+          "Assessed children's developmental progress"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "title": "Montessori Teaching Diploma",
+        "institution": "International Montessori Institute",
+        "duration": "2014"
+      },
+      {
+        "title": "Bachelor's in Early Childhood Education",
+        "institution": "Lahore College for Women",
+        "duration": "2010 - 2014"
+      },
+      {
+        "title": "Creative Curriculum Development",
+        "institution": "Teachers Training Academy",
+        "duration": "2016"
+      }
+    ],
+    "age_specialization": [
+      {
+        "category": "Preschoolers (3-5 years)",
+        "experience": "6 years"
+      },
+      {
+        "category": "School Age (6-8 years)",
+        "experience": "4 years"
+      },
+      {
+        "category": "Montessori Education",
+        "experience": "5 years"
+      },
+      {
+        "category": "Creative Learning",
+        "experience": "6 years"
+      }
+    ],
+    "reviews": [
+      {
+        "parent": "Sarah Ahmed",
+        "location": "Lahore",
+        "rating": 5,
+        "feedback": "Alina's Montessori approach has transformed my child's learning experience. Her creative methods make learning so engaging that my daughter doesn't even realize she's learning!"
+      },
+      {
+        "parent": "Imran Khan",
+        "location": "Lahore",
+        "rating": 4.5,
+        "feedback": "Our son was struggling with school readiness until we found Alina. Her tailored approach helped him develop confidence and essential skills. She's truly gifted with children."
+      },
+      {
+        "parent": "Fatima Malik",
+        "location": "Lahore",
+        "rating": 5,
+        "feedback": "Alina has been working with both my preschooler and first grader. Her ability to adapt her teaching to different age groups while maintaining the Montessori philosophy is remarkable."
+      }
+    ]
+  },
+  "babysitter0": {
+    "id": "NC-KHI-002",
+    "name": "Ayesha Malik",
+    "profile_picture": "./images/ayesha.jpg",
+    "location": "Karachi, Pakistan",
+    "experience_years": 3,
+    "rate_per_hour": 400,
+    "rating": 5.0,
+    "total_reviews": 18,
+    "quick_details": {
+      "age": 26,
+      "languages": ["Urdu", "English"],
+      "marital_status": "Single",
+      "smoker": "No",
+      "preferred_location": "On-Site",
+      "verified": true
+    },
+    "certifications": [
+      "CPR Certified",
+      "First Aid Training",
+      "Special Needs Care Certification",
+      "Child Psychology Course"
+    ],
+    "skills": [
+      "Special Needs Care",
+      "Toddler Care",
+      "Early Education",
+      "Meal Preparation",
+      "Developmental Activities",
+      "Emotional Support"
+    ],
+    "about": "Hello! I'm Ayesha, a compassionate and dedicated babysitter with 3 years of experience specializing in special needs childcare. I'm passionate about creating a safe, nurturing environment where every child feels valued and supported. My approach focuses on understanding each child's unique needs and abilities. I have extensive training in working with children with autism, Down syndrome, and other developmental differences. I believe in fostering independence while providing the right level of support. Fluent in both Urdu and English, I can communicate effectively with children and parents from diverse backgrounds. My goal is to not just provide care, but to help each child thrive and reach their full potential.",
+    "experience": [
+      {
+        "title": "Special Needs Caregiver",
+        "location": "Karachi",
+        "duration": "2020 - Present",
+        "responsibilities": [
+          "Provided specialized care for children with autism and developmental delays",
+          "Implemented individualized care plans in collaboration with therapists",
+          "Facilitated social skills development through structured play"
+        ]
+      },
+      {
+        "title": "Preschool Assistant",
+        "location": "Karachi",
+        "duration": "2019 - 2020",
+        "responsibilities": [
+          "Supported inclusive classroom environment for children ages 2-5",
+          "Assisted with adaptive learning activities",
+          "Helped children with special needs integrate with peers"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "title": "Diploma in Special Education",
+        "institution": "Karachi Institute of Special Education",
+        "duration": "2018 - 2019"
+      },
+      {
+        "title": "Child Psychology Certification",
+        "institution": "Pakistan Montessori Council",
+        "duration": "2020"
+      },
+      {
+        "title": "Applied Behavior Analysis Workshop",
+        "institution": "Aga Khan University",
+        "duration": "2021"
+      }
+    ],
+    "age_specialization": [
+      {
+        "category": "Special Needs Care",
+        "experience": "3 years"
+      },
+      {
+        "category": "Toddlers (1-3 years)",
+        "experience": "3 years"
+      },
+      {
+        "category": "Preschoolers (3-5 years)",
+        "experience": "2 years"
+      },
+      {
+        "category": "Emotional Support",
+        "experience": "Specialized training"
+      }
+    ],
+    "reviews": [
+      {
+        "parent": "Sarah Ahmed",
+        "location": "Karachi",
+        "rating": 5,
+        "feedback": "Ayesha has been a blessing for our autistic son. Her patience and understanding are remarkable. She's helped him develop communication skills we never thought possible."
+      },
+      {
+        "parent": "Ali Raza",
+        "location": "Karachi",
+        "rating": 5,
+        "feedback": "Our daughter with Down syndrome adores Ayesha. She creates activities that are both fun and therapeutic. We've seen tremendous progress in her motor skills since Ayesha started."
+      },
+      {
+        "parent": "Fatima Khan",
+        "location": "Karachi",
+        "rating": 5,
+        "feedback": "Ayesha cares for our twins - one neurotypical and one with sensory processing disorder. She manages both their needs beautifully. Her ability to adapt is incredible."
+      }
+    ]
+  },
+  "babysitter10": {
+    "id": "NC-LHR-006",
+    "name": "Bushra Khan",
+    "profile_picture": "./images/bushra.jpg",
+    "location": "Lahore, Pakistan",
+    "experience_years": 2,
+    "rate_per_hour": 320,
+    "rating": 4.0,
+    "total_reviews": 12,
+    "quick_details": {
+      "age": 24,
+      "languages": ["Urdu"],
+      "marital_status": "Single",
+      "smoker": "No",
+      "preferred_location": "At Home",
+      "verified": true
+    },
+    "certifications": [
+      "Early Childhood Development",
+      "Language Development Course",
+      "Basic Child Safety"
+    ],
+    "skills": [
+      "Toddler Care",
+      "Language Development",
+      "Educational Play",
+      "Storytelling",
+      "Musical Activities"
+    ],
+    "about": "Hello! I'm Bushra, a dedicated toddler development specialist with 2 years of experience focusing on language skills and early childhood development. I provide care in Urdu, creating a comfortable environment for toddlers to learn and grow. My approach combines play-based learning with structured activities designed to boost language acquisition and social skills. I specialize in creating engaging, age-appropriate activities that help toddlers develop their communication abilities while having fun. I believe in nurturing each child's unique personality and developmental pace, providing a safe and stimulating environment where they can explore and learn through play.",
+    "experience": [
+      {
+        "title": "Toddler Development Specialist",
+        "location": "Lahore",
+        "duration": "2021 - Present",
+        "responsibilities": [
+          "Provided specialized care for children aged 1-3 years",
+          "Developed language-focused activities and games",
+          "Created personalized learning plans based on developmental milestones"
+        ]
+      },
+      {
+        "title": "Playgroup Assistant",
+        "location": "Lahore",
+        "duration": "2020 - 2021",
+        "responsibilities": [
+          "Assisted in toddler playgroup sessions",
+          "Helped develop sensory and language activities",
+          "Supported children in developing social skills"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "title": "Diploma in Early Childhood Education",
+        "institution": "Lahore College for Women",
+        "duration": "2018 - 2020"
+      },
+      {
+        "title": "Child Language Development Workshop",
+        "institution": "Child Development Center",
+        "duration": "2021"
+      }
+    ],
+    "age_specialization": [
+      {
+        "category": "Toddlers (1-3 years)",
+        "experience": "2 years"
+      },
+      {
+        "category": "Language Development",
+        "experience": "2 years"
+      },
+      {
+        "category": "Educational Play",
+        "experience": "2 years"
+      },
+      {
+        "category": "Musical Activities",
+        "experience": "1 year"
+      }
+    ],
+    "reviews": [
+      {
+        "parent": "Amina Shah",
+        "location": "Lahore",
+        "rating": 4,
+        "feedback": "Bushra has done wonders for my toddler's language skills. In just 3 months, my daughter's vocabulary has expanded tremendously. She's patient and creative with her teaching methods."
+      },
+      {
+        "parent": "Usman Malik",
+        "location": "Lahore",
+        "rating": 4,
+        "feedback": "Our son looks forward to Bushra's visits. Her play-based learning approach has helped him become more confident in expressing himself. We've seen great improvement in his communication."
+      },
+      {
+        "parent": "Sara Khan",
+        "location": "Lahore",
+        "rating": 4,
+        "feedback": "Bushra's musical activities are a hit with our twins. She has a natural way with toddlers and creates such engaging learning experiences. Highly recommend for language development!"
+      }
+    ]
+  },
+  "babysitter11": {
+    "id": "NC-ISB-002",
+    "name": "Amina Sheikh",
+    "profile_picture": "./images/amina.jpg",
+    "location": "Islamabad, Pakistan",
+    "experience_years": 4,
+    "rate_per_hour": 450,
+    "rating": 4.5,
+    "total_reviews": 22,
+    "quick_details": {
+      "age": 26,
+      "languages": ["Urdu", "English"],
+      "marital_status": "Single",
+      "smoker": "No",
+      "preferred_location": "On-Site",
+      "verified": true
+    },
+    "certifications": [
+      "Teaching Certification",
+      "Child Psychology Course",
+      "Bilingual Education Training",
+      "Homework Help Specialist"
+    ],
+    "skills": [
+      "Homework Assistance",
+      "Subject Tutoring",
+      "Bilingual Support",
+      "Study Skills",
+      "Time Management",
+      "After-School Care"
+    ],
+    "about": "Hello! I'm Amina, an after-school program specialist with 4 years of experience helping school-age children with their academic needs. I'm fluent in both Urdu and English, which allows me to effectively support children in both languages. My approach focuses on making homework time productive and stress-free while ensuring children understand their schoolwork thoroughly. I specialize in creating personalized learning plans that cater to each child's unique learning style and academic needs. I believe in fostering a positive learning environment that builds children's confidence in their academic abilities while helping them develop strong study habits and time management skills.",
+    "experience": [
+      {
+        "title": "After-School Program Coordinator",
+        "location": "Islamabad",
+        "duration": "2019 - Present",
+        "responsibilities": [
+          "Provided homework assistance and academic support for children aged 6-12",
+          "Developed customized learning plans based on school curriculum",
+          "Helped students improve study habits and time management skills"
+        ]
+      },
+      {
+        "title": "Private Tutor",
+        "location": "Islamabad",
+        "duration": "2017 - 2019",
+        "responsibilities": [
+          "Tutored primary school students in core subjects",
+          "Created engaging learning materials to supplement schoolwork",
+          "Worked with parents to track academic progress"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "title": "Bachelor's in Education",
+        "institution": "Quaid-i-Azam University",
+        "duration": "2013 - 2017"
+      },
+      {
+        "title": "Child Psychology Certification",
+        "institution": "Islamabad School of Psychology",
+        "duration": "2018"
+      },
+      {
+        "title": "Modern Teaching Methods Workshop",
+        "institution": "Teachers Training Academy",
+        "duration": "2019"
+      }
+    ],
+    "age_specialization": [
+      {
+        "category": "School Age (6-12 years)",
+        "experience": "4 years"
+      },
+      {
+        "category": "Homework Assistance",
+        "experience": "4 years"
+      },
+      {
+        "category": "Bilingual Support",
+        "experience": "4 years"
+      },
+      {
+        "category": "Study Skills",
+        "experience": "3 years"
+      }
+    ],
+    "reviews": [
+      {
+        "parent": "Ali Raza",
+        "location": "Islamabad",
+        "rating": 4.5,
+        "feedback": "Amina has been instrumental in improving our son's grades. Her bilingual support is especially helpful for our English-medium school curriculum."
+      },
+      {
+        "parent": "Sadia Khan",
+        "location": "Islamabad",
+        "rating": 4.5,
+        "feedback": "Our daughter went from struggling with homework to completing it independently thanks to Amina's study skills coaching."
+      },
+      {
+        "parent": "Bilal Ahmed",
+        "location": "Islamabad",
+        "rating": 4.5,
+        "feedback": "Amina's ability to explain concepts in both Urdu and English has been invaluable for our children's understanding of school material."
+      }
+    ]
+  },
+  "babysitter12": {
+    "id": "NC-KHI-001",
+    "name": "Fatima Khan",
+    "profile_picture": "./images/fatima.jpg",
+    "location": "Karachi, Pakistan",
+    "experience_years": 5,
+    "rate_per_hour": 500,
+    "rating": 5.0,
+    "total_reviews": 45,
+    "quick_details": {
+      "age": 28,
+      "languages": ["Urdu"],
+      "marital_status": "Married",
+      "smoker": "No",
+      "preferred_location": "At Home",
+      "verified": true
+    },
+    "certifications": [
+      "CPR Certified",
+      "First Aid Training",
+      "Child Safety Course",
+      "Early Childhood Education"
+    ],
+    "skills": [
+      "Newborn Care",
+      "Early Education",
+      "Meal Preparation",
+      "Bathing",
+      "Sleep Training",
+      "Musical Activities",
+      "Arts & Crafts"
+    ],
+    "about": "Hello! I'm Fatima, a dedicated and experienced babysitter with 5 years of professional childcare experience. I specialize in newborn care and early childhood education, providing a safe, nurturing environment for children to grow and learn. My approach combines Montessori principles with gentle parenting techniques, focusing on each child's individual needs and developmental stage. I'm CPR certified and have extensive training in child safety and first aid. I’m fluent in Urdu, which allows me to effectively communicate with children and parents from similar cultural backgrounds. My goal is to provide not just childcare, but an enriching experience that supports your child’s growth and development.",
+    "experience": [
+      {
+        "title": "Professional Babysitter",
+        "location": "Karachi",
+        "duration": "2018 - Present",
+        "responsibilities": [
+          "Provided care for children aged newborn to 5 years",
+          "Developed and implemented age-appropriate learning activities",
+          "Maintained detailed records of children's progress and routines"
+        ]
+      },
+      {
+        "title": "Preschool Assistant",
+        "location": "Karachi",
+        "duration": "2016 - 2018",
+        "responsibilities": [
+          "Assisted lead teacher in classroom activities for 3-5 year olds",
+          "Helped develop curriculum and learning materials",
+          "Supervised outdoor play and nap times"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "title": "Bachelor's in Early Childhood Education",
+        "institution": "Karachi University",
+        "duration": "2012 - 2016"
+      },
+      {
+        "title": "Montessori Teaching Certification",
+        "institution": "Pakistan Montessori Council",
+        "duration": "2017"
+      },
+      {
+        "title": "Child Nutrition Workshop",
+        "institution": "Aga Khan University",
+        "duration": "2019"
+      }
+    ],
+    "age_specialization": [
+      {
+        "category": "Infants (0-12 months)",
+        "experience": "5 years"
+      },
+      {
+        "category": "Toddlers (1-3 years)",
+        "experience": "4 years"
+      },
+      {
+        "category": "Overnight Care",
+        "experience": "3 years"
+      },
+      {
+        "category": "After-School Care",
+        "experience": "2 years"
+      }
+    ],
+    "reviews": [
+      {
+        "parent": "Ayesha Khan",
+        "location": "Karachi",
+        "rating": 5,
+        "feedback": "Fatima has been caring for our newborn for 6 months now and we couldn't be happier. She's punctual, professional, and most importantly, our baby adores her!"
+      },
+      {
+        "parent": "Ahmed Khan",
+        "location": "Karachi",
+        "rating": 5,
+        "feedback": "We've worked with many babysitters over the years, but Fatima stands out. Her Montessori background shows in how she engages with our toddler through educational play."
+      },
+      {
+        "parent": "Sana Khan",
+        "location": "Karachi",
+        "rating": 5,
+        "feedback": "Fatima cared for our twins from 3 months to 2 years old. She handled two babies with such ease and patience. We still call her for date nights because the kids miss her!"
+      }
+    ]
+  },
+  "babysitter13": {
+    "id": "NC-ISB-003",
+    "name": "Farah Malik",
+    "profile_picture": "./images/farah.jpg",
+    "location": "Islamabad, Pakistan",
+    "experience_years": 3,
+    "rate_per_hour": 380,
+    "rating": 4.0,
+    "total_reviews": 16,
+    "quick_details": {
+      "age": 25,
+      "languages": ["Urdu"],
+      "marital_status": "Single",
+      "smoker": "No",
+      "preferred_location": "At Home",
+      "verified": true
+    },
+    "certifications": [
+      "Early Childhood Development",
+      "Play Therapy Training",
+      "Child Safety Certification",
+      "First Aid Training"
+    ],
+    "skills": [
+      "Toddler Care",
+      "Developmental Play",
+      "Creative Activities",
+      "Musical Play",
+      "Storytelling",
+      "Milestone Tracking"
+    ],
+    "about": "Hello! I'm Farah, a creative play specialist with 3 years of experience focusing on toddler and preschooler development. I provide care in Urdu, creating a comfortable environment where children can learn through play. My approach combines structured activities with free play, all designed to support developmental milestones. I specialize in creating engaging, age-appropriate activities that help children develop their motor, cognitive, and social skills while having fun. I believe in nurturing each child's unique personality and developmental pace, providing a safe and stimulating environment where they can explore and learn through creative play.",
+    "experience": [
+      {
+        "title": "Play Specialist",
+        "location": "Islamabad",
+        "duration": "2020 - Present",
+        "responsibilities": [
+          "Designed and implemented play-based learning activities",
+          "Focused on developmental milestones for ages 1-5",
+          "Created personalized play plans for each child"
+        ]
+      },
+      {
+        "title": "Preschool Assistant",
+        "location": "Islamabad",
+        "duration": "2018 - 2020",
+        "responsibilities": [
+          "Assisted in toddler and preschool classrooms",
+          "Developed sensory play activities",
+          "Supported children in developing social skills"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "title": "Diploma in Early Childhood Education",
+        "institution": "Islamabad College for Women",
+        "duration": "2016 - 2018"
+      },
+      {
+        "title": "Child Development Workshop",
+        "institution": "Islamabad Child Development Center",
+        "duration": "2019"
+      },
+      {
+        "title": "Play Therapy Certification",
+        "institution": "Pakistan Association for Child Development",
+        "duration": "2020"
+      }
+    ],
+    "age_specialization": [
+      {
+        "category": "Toddlers (1-3 years)",
+        "experience": "3 years"
+      },
+      {
+        "category": "Preschoolers (3-5 years)",
+        "experience": "2 years"
+      },
+      {
+        "category": "Developmental Play",
+        "experience": "3 years"
+      },
+      {
+        "category": "Milestone Support",
+        "experience": "2 years"
+      }
+    ],
+    "reviews": [
+      {
+        "parent": "Ayesha Khan",
+        "location": "Islamabad",
+        "rating": 4,
+        "feedback": "Farah's creative play activities have helped our toddler develop so many skills. She has a natural way with children and keeps them engaged for hours."
+      },
+      {
+        "parent": "Usman Malik",
+        "location": "Islamabad",
+        "rating": 4,
+        "feedback": "Our preschooler looks forward to Farah's visits. Her play-based learning approach has helped our daughter develop important social and cognitive skills."
+      },
+      {
+        "parent": "Sara Ahmed",
+        "location": "Islamabad",
+        "rating": 4,
+        "feedback": "Farah's understanding of developmental milestones is impressive. She creates activities that are perfectly suited to our son's current stage of development."
+      }
+    ]
+  },
+  "babysitter14": {
+    "id": "NC-LHR-001",
+    "name": "Hina Shah",
+    "profile_picture": "./images/hina.jpg",
+    "location": "Lahore, Pakistan",
+    "experience_years": 6,
+    "rate_per_hour": 400,
+    "rating": 4.8,
+    "total_reviews": 41,
+    "quick_details": {
+      "age": 32,
+      "languages": ["Urdu", "English"],
+      "marital_status": "Married",
+      "smoker": "No",
+      "preferred_location": "At Home",
+      "verified": true
+    },
+    "certifications": [
+      "Montessori Teaching Diploma",
+      "Early Childhood Education",
+      "First Aid & CPR Certified",
+      "Bilingual Education Training"
+    ],
+    "skills": [
+      "Toddler Care",
+      "Preschool Education",
+      "Bilingual Teaching",
+      "Creative Activities",
+      "Early Literacy",
+      "Musical Learning"
+    ],
+    "about": "Hello! I'm Hina, a Montessori-trained early childhood educator with 6 years of experience working with toddlers and preschoolers. My approach combines Montessori principles with creative learning techniques to foster independence and curiosity in young children. Fluent in both Urdu and English, I provide bilingual education that helps children develop language skills naturally through play and daily activities. I believe in creating a nurturing environment where children can explore, discover, and learn at their own pace. My goal is to help children develop foundational skills while maintaining their natural love for learning. I specialize in creating hands-on, engaging activities that promote cognitive, social, and emotional development.",
+    "experience": [
+      {
+        "title": "Montessori Preschool Teacher",
+        "location": "Lahore",
+        "duration": "2018 - Present",
+        "responsibilities": [
+          "Implemented Montessori curriculum for children 2-5 years",
+          "Created bilingual learning materials and activities",
+          "Conducted developmental assessments and progress reports"
+        ]
+      },
+      {
+        "title": "Early Childhood Educator",
+        "location": "Lahore",
+        "duration": "2015 - 2018",
+        "responsibilities": [
+          "Developed age-appropriate learning activities",
+          "Facilitated social-emotional development programs",
+          "Collaborated with parents on developmental goals"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "title": "Bachelor's in Early Childhood Education",
+        "institution": "University of Punjab",
+        "duration": "2011 - 2015"
+      },
+      {
+        "title": "Montessori Teaching Certification",
+        "institution": "Pakistan Montessori Council",
+        "duration": "2016"
+      },
+      {
+        "title": "Bilingual Education Workshop",
+        "institution": "Lahore Education Foundation",
+        "duration": "2017"
+      }
+    ],
+    "age_specialization": [
+      {
+        "category": "Toddlers (1-3 years)",
+        "experience": "6 years"
+      },
+      {
+        "category": "Preschoolers (3-5 years)",
+        "experience": "5 years"
+      },
+      {
+        "category": "Bilingual Education",
+        "experience": "4 years"
+      },
+      {
+        "category": "Creative Learning",
+        "experience": "6 years"
+      }
+    ],
+    "reviews": [
+      {
+        "parent": "Ali Raza",
+        "location": "Lahore",
+        "rating": 5,
+        "feedback": "Hina's Montessori approach has done wonders for our 3-year-old. She's become so independent and confident! The bilingual aspect is an added bonus we didn't even realize we needed."
+      },
+      {
+        "parent": "Fatima Khan",
+        "location": "Lahore",
+        "rating": 4.5,
+        "feedback": "We were amazed at how quickly our daughter started counting and recognizing letters in both English and Urdu with Hina's creative teaching methods. She makes learning so much fun!"
+      },
+      {
+        "parent": "Ahmed Malik",
+        "location": "Lahore",
+        "rating": 5,
+        "feedback": "Hina transformed our shy toddler into a confident preschooler ready for school. Her patience and creative activities helped our son develop socially while learning important skills."
+      }
+    ]
+  },
+  "babysitter15": {
+    "id": "NC-LHR-005",
+    "name": "Fariha Iqbal",
+    "profile_picture": "./images/fariha.jpg",
+    "location": "Lahore, Pakistan",
+    "experience_years": 4,
+    "rate_per_hour": 450,
+    "rating": 5.0,
+    "total_reviews": 19,
+    "quick_details": {
+      "age": 27,
+      "languages": ["Urdu", "English"],
+      "marital_status": "Single",
+      "smoker": "No",
+      "preferred_location": "On-Site",
+      "verified": true
+    },
+    "certifications": [
+      "Teaching Certification",
+      "Child Psychology Course",
+      "First Aid Training",
+      "Educational Support Specialist"
+    ],
+    "skills": [
+      "Homework Assistance",
+      "Academic Support",
+      "Bilingual Tutoring",
+      "Cognitive Development",
+      "Time Management",
+      "Teaching Methods"
+    ],
+    "about": "Hello! I'm Fariha, an experienced educational support specialist with 4 years of experience helping school-age children with their academic needs. I'm fluent in both Urdu and English, which allows me to effectively support children in both languages. My approach focuses on making learning enjoyable while ensuring children understand their schoolwork thoroughly. I specialize in creating personalized learning plans that cater to each child's unique learning style and academic needs. I believe in fostering a positive learning environment that builds children's confidence in their academic abilities while helping them develop strong study habits and time management skills.",
+    "experience": [
+      {
+        "title": "Academic Support Specialist",
+        "location": "Lahore",
+        "duration": "2019 - Present",
+        "responsibilities": [
+          "Provided homework assistance and academic support for children aged 6-12",
+          "Developed customized learning plans based on school curriculum",
+          "Helped students improve study habits and time management skills"
+        ]
+      },
+      {
+        "title": "Private Tutor",
+        "location": "Lahore",
+        "duration": "2017 - 2019",
+        "responsibilities": [
+          "Tutored primary school students in core subjects",
+          "Created engaging learning materials to supplement schoolwork",
+          "Worked with parents to track academic progress"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "title": "Bachelor's in Education",
+        "institution": "University of Punjab",
+        "duration": "2013 - 2017"
+      },
+      {
+        "title": "Child Psychology Certification",
+        "institution": "Lahore School of Psychology",
+        "duration": "2018"
+      },
+      {
+        "title": "Modern Teaching Methods Workshop",
+        "institution": "Teachers Development Center",
+        "duration": "2019"
+      }
+    ],
+    "age_specialization": [
+      {
+        "category": "School Age (6-12 years)",
+        "experience": "4 years"
+      },
+      {
+        "category": "Homework Assistance",
+        "experience": "4 years"
+      },
+      {
+        "category": "Bilingual Support",
+        "experience": "4 years"
+      },
+      {
+        "category": "Cognitive Development",
+        "experience": "3 years"
+      }
+    ],
+    "reviews": [
+      {
+        "parent": "Ali Raza",
+        "location": "Lahore",
+        "rating": 5,
+        "feedback": "Fariha has been instrumental in improving our son's grades. Her patience and teaching methods have made homework time stress-free for our whole family."
+      },
+      {
+        "parent": "Sadia Khan",
+        "location": "Lahore",
+        "rating": 5,
+        "feedback": "Our daughter went from struggling in math to being at the top of her class thanks to Fariha's tutoring. She makes learning fun and engaging."
+      },
+      {
+        "parent": "Bilal Ahmed",
+        "location": "Lahore",
+        "rating": 5,
+        "feedback": "Fariha's bilingual support has been invaluable for our children attending an English-medium school. She bridges the gap perfectly between school and home learning."
+      }
+    ]
+  },
+  "babysitter16": {
+    "id": "NC-LHR-002",
+    "name": "Mehak Ali",
+    "profile_picture": "./images/mehak.jpg",
+    "location": "Lahore, Pakistan",
+    "experience_years": 4,
+    "rate_per_hour": 450,
+    "rating": 5.0,
+    "total_reviews": 23,
+    "quick_details": {
+      "age": 28,
+      "languages": ["English"],
+      "marital_status": "Single",
+      "smoker": "No",
+      "preferred_location": "On-Site",
+      "verified": true
+    },
+    "certifications": [
+      "Child Development Certification",
+      "Creative Learning Specialist",
+      "First Aid & CPR Certified",
+      "Homework Assistance Training"
+    ],
+    "skills": [
+      "School-age Care",
+      "Homework Help",
+      "Creative Projects",
+      "Educational Games",
+      "Musical Activities",
+      "STEM Activities"
+    ],
+    "about": "Hello! I'm Mehak, a dedicated childcare professional specializing in school-age children. With 4 years of experience, I focus on creating engaging, educational activities that complement school learning while making after-school time fun and productive. My approach combines academic support with creative enrichment, helping children develop both intellectually and socially. I'm fluent in English and particularly skilled at making learning enjoyable through hands-on projects, educational games, and interactive activities. I believe in fostering independence and curiosity in school-age children while providing the guidance and support they need to thrive academically and socially.",
+    "experience": [
+      {
+        "title": "After-School Care Specialist",
+        "location": "Lahore",
+        "duration": "2019 - Present",
+        "responsibilities": [
+          "Provided care and academic support for children 5-12 years",
+          "Developed creative learning activities to reinforce school concepts",
+          "Assisted with homework and school projects"
+        ]
+      },
+      {
+        "title": "Elementary School Tutor",
+        "location": "Lahore",
+        "duration": "2017 - 2019",
+        "responsibilities": [
+          "Provided one-on-one tutoring in core subjects",
+          "Created customized learning plans for each child",
+          "Developed engaging educational games and activities"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "title": "Bachelor's in Education",
+        "institution": "University of Punjab",
+        "duration": "2013 - 2017"
+      },
+      {
+        "title": "Child Development Certification",
+        "institution": "Lahore Childcare Institute",
+        "duration": "2018"
+      },
+      {
+        "title": "Creative Learning Workshop",
+        "institution": "Education Innovation Center",
+        "duration": "2019"
+      }
+    ],
+    "age_specialization": [
+      {
+        "category": "School Age (5-12 years)",
+        "experience": "4 years"
+      },
+      {
+        "category": "Homework Assistance",
+        "experience": "4 years"
+      },
+      {
+        "category": "STEM Activities",
+        "experience": "3 years"
+      },
+      {
+        "category": "Creative Projects",
+        "experience": "4 years"
+      }
+    ],
+    "reviews": [
+      {
+        "parent": "Ayesha Raza",
+        "location": "Lahore",
+        "rating": 5,
+        "feedback": "Mehak has been incredible with our 8-year-old. She not only helps with homework but makes learning fun through creative projects. Our daughter's grades have improved significantly since Mehak started working with her."
+      },
+      {
+        "parent": "Bilal Ahmed",
+        "location": "Lahore",
+        "rating": 5,
+        "feedback": "Our son was struggling with math until Mehak started using games and real-world examples to explain concepts. She has a gift for making schoolwork engaging and relevant to kids."
+      },
+      {
+        "parent": "Farah Malik",
+        "location": "Lahore",
+        "rating": 5,
+        "feedback": "Mehak's STEM activities have sparked a love for science in our 10-year-old. She goes beyond homework help to create truly enriching experiences. We feel lucky to have found her!"
+      }
+    ]
+  },
+  "babysitter17": {
+    "id": "NC-ISB-006",
+    "name": "Laiba Khan",
+    "profile_picture": "./images/laiba.jpg",
+    "location": "Islamabad, Pakistan",
+    "experience_years": 5,
+    "rate_per_hour": 500,
+    "rating": 4.7,
+    "total_reviews": 38,
+    "quick_details": {
+      "age": 29,
+      "languages": ["English"],
+      "marital_status": "Single",
+      "smoker": "No",
+      "preferred_location": "On-Site",
+      "verified": true
+    },
+    "certifications": [
+      "STEM Educator Certification",
+      "First Aid Training",
+      "Child Safety Course",
+      "After-School Program Specialist"
+    ],
+    "skills": [
+      "STEM Activities",
+      "Homework Help",
+      "Robotics",
+      "Coding Basics",
+      "Science Experiments",
+      "Educational Games"
+    ],
+    "about": "Hello! I'm Laiba, an after-school program specialist with 5 years of experience working with school-age children. I focus on creating engaging STEM activities that make learning fun while helping children develop critical thinking skills. My approach combines educational activities with creative play, ensuring children are both intellectually stimulated and having fun. I'm fluent in English, which allows me to effectively communicate with children and help with their schoolwork. I'm passionate about inspiring children to explore science, technology, engineering, and math through hands-on activities. My goal is to make after-school time both productive and enjoyable for your children.",
+    "experience": [
+      {
+        "title": "After-School Program Coordinator",
+        "location": "Islamabad",
+        "duration": "2019 - Present",
+        "responsibilities": [
+          "Developed and implemented STEM-based after-school activities",
+          "Supervised homework help sessions for elementary students",
+          "Organized science fairs and robotics workshops"
+        ]
+      },
+      {
+        "title": "Private Tutor & Babysitter",
+        "location": "Islamabad",
+        "duration": "2017 - 2019",
+        "responsibilities": [
+          "Provided after-school care for multiple school-age children",
+          "Assisted with homework and project preparation",
+          "Created educational games and activities"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "title": "Bachelor's in Education",
+        "institution": "Quaid-i-Azam University",
+        "duration": "2013 - 2017"
+      },
+      {
+        "title": "STEM Education Certification",
+        "institution": "Pakistan Science Foundation",
+        "duration": "2018"
+      },
+      {
+        "title": "Child Psychology Workshop",
+        "institution": "Islamabad Child Development Center",
+        "duration": "2019"
+      }
+    ],
+    "age_specialization": [
+      {
+        "category": "School Age (5-10 years)",
+        "experience": "5 years"
+      },
+      {
+        "category": "Educational Games",
+        "experience": "4 years"
+      },
+      {
+        "category": "STEM Activities",
+        "experience": "4 years"
+      },
+      {
+        "category": "Homework Help",
+        "experience": "5 years"
+      }
+    ],
+    "reviews": [
+      {
+        "parent": "Ahmed Raza",
+        "location": "Islamabad",
+        "rating": 4.5,
+        "feedback": "Laiba has transformed my son's attitude toward homework. Her STEM activities make learning so engaging that he doesn't even realize he's studying!"
+      },
+      {
+        "parent": "Sana Malik",
+        "location": "Islamabad",
+        "rating": 4.5,
+        "feedback": "My daughter's science grades improved dramatically after working with Laiba. Her ability to explain complex concepts simply is remarkable."
+      },
+      {
+        "parent": "Farhan Khan",
+        "location": "Islamabad",
+        "rating": 5,
+        "feedback": "We've had many babysitters, but none who could engage our tech-savvy kids like Laiba. Her robotics projects keep them fascinated for hours."
+      }
+    ]
+  },
+  "babysitter18": {
+    "id": "NC-ISB-007",
+    "name": "Hira Malik",
+    "profile_picture": "./images/hira.jpg",
+    "location": "Islamabad, Pakistan",
+    "experience_years": 4,
+    "rate_per_hour": 400,
+    "rating": 4.1,
+    "total_reviews": 21,
+    "quick_details": {
+      "age": 27,
+      "languages": ["Urdu"],
+      "marital_status": "Single",
+      "smoker": "No",
+      "preferred_location": "At Home",
+      "verified": true
+    },
+    "certifications": [
+      "Early Childhood Education",
+      "First Aid Training",
+      "Creative Play Specialist",
+      "Child Development Workshop"
+    ],
+    "skills": [
+      "Toddler Care",
+      "Preschool Activities",
+      "Arts & Crafts",
+      "Musical Activities",
+      "Storytelling",
+      "Educational Games"
+    ],
+    "about": "Hello! I'm Hira, a creative play and early learning specialist with 4 years of experience working with toddlers and preschoolers. I specialize in creating engaging, developmentally appropriate activities that make learning fun. My approach focuses on nurturing children's natural curiosity through play-based learning. I'm fluent in Urdu, which allows me to connect deeply with children and help them develop their language skills. I believe every child learns best when they're having fun. My goal is to provide a warm, stimulating environment where children can explore, create, and grow while their parents have peace of mind.",
+    "experience": [
+      {
+        "title": "Preschool Teacher",
+        "location": "Islamabad",
+        "duration": "2020 - Present",
+        "responsibilities": [
+          "Planned and implemented creative activities for toddlers and preschoolers",
+          "Developed sensory play and art projects",
+          "Created a nurturing classroom environment"
+        ]
+      },
+      {
+        "title": "Private Babysitter",
+        "location": "Islamabad",
+        "duration": "2018 - 2020",
+        "responsibilities": [
+          "Provided care for multiple toddlers simultaneously",
+          "Developed personalized learning through play activities",
+          "Maintained daily routines and schedules"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "title": "Diploma in Early Childhood Education",
+        "institution": "Islamabad College",
+        "duration": "2016 - 2018"
+      },
+      {
+        "title": "Creative Play Specialist Certification",
+        "institution": "Child Development Institute",
+        "duration": "2019"
+      },
+      {
+        "title": "Art Therapy for Children Workshop",
+        "institution": "Pakistan Art Council",
+        "duration": "2020"
+      }
+    ],
+    "age_specialization": [
+      {
+        "category": "Toddlers (1-3 years)",
+        "experience": "4 years"
+      },
+      {
+        "category": "Preschoolers (3-5 years)",
+        "experience": "3 years"
+      },
+      {
+        "category": "Creative Arts",
+        "experience": "4 years"
+      },
+      {
+        "category": "Musical Activities",
+        "experience": "3 years"
+      }
+    ],
+    "reviews": [
+      {
+        "parent": "Amina Khan",
+        "location": "Islamabad",
+        "rating": 4,
+        "feedback": "Hira has been wonderful with my 2-year-old. Her creative play activities keep him engaged for hours and he's learned so much through their play sessions."
+      },
+      {
+        "parent": "Bilal Ahmed",
+        "location": "Islamabad",
+        "rating": 4,
+        "feedback": "My daughter looks forward to Hira's visits. The art projects they do together are not just fun but also educational. Our fridge is covered in her masterpieces!"
+      },
+      {
+        "parent": "Fatima Shah",
+        "location": "Islamabad",
+        "rating": 4.5,
+        "feedback": "Hira's ability to connect with children through play is amazing. My son's vocabulary has expanded tremendously since she started working with him."
+      }
+    ]
+  },
+  "babysitter19": {
+    "id": "NC-KHI-006",
+    "name": "Nadia Hussain",
+    "profile_picture": "./images/nadia.jpg",
+    "location": "Karachi, Pakistan",
+    "experience_years": 5,
+    "rate_per_hour": 380,
+    "rating": 4.0,
+    "total_reviews": 35,
+    "quick_details": {
+      "age": 31,
+      "languages": ["English"],
+      "marital_status": "Single",
+      "smoker": "No",
+      "preferred_location": "On-Site",
+      "verified": true
+    },
+    "certifications": [
+      "Early Childhood Education",
+      "Creative Learning Specialist",
+      "First Aid Certified",
+      "Play Therapy Training"
+    ],
+    "skills": [
+      "Toddler Care",
+      "Preschool Activities",
+      "Arts & Crafts",
+      "Musical Activities",
+      "Storytelling",
+      "Educational Games"
+    ],
+    "about": "Hello! I'm Nadia, a creative learning specialist with 5 years of experience working with toddlers and preschoolers. I believe in learning through play and creating engaging activities that stimulate young minds while having fun. My approach combines structured learning with creative freedom, allowing children to explore their interests while developing important skills. I'm fluent in English and focus on language development through interactive storytelling, songs, and games. I specialize in creating age-appropriate activities that promote cognitive, social, and emotional development while keeping children engaged and excited about learning new things every day.",
+    "experience": [
+      {
+        "title": "Preschool Activity Specialist",
+        "location": "Karachi",
+        "duration": "2018 - Present",
+        "responsibilities": [
+          "Developed and implemented creative learning programs for children 2-5 years",
+          "Created themed activity plans incorporating arts, music, and movement",
+          "Assessed developmental progress through play-based observations"
+        ]
+      },
+      {
+        "title": "Toddler Playgroup Facilitator",
+        "location": "Karachi",
+        "duration": "2016 - 2018",
+        "responsibilities": [
+          "Led structured play sessions for toddlers (1-3 years)",
+          "Designed sensory play and fine motor skill activities",
+          "Facilitated social skill development in group settings"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "title": "Bachelor's in Child Development",
+        "institution": "Karachi University",
+        "duration": "2012 - 2016"
+      },
+      {
+        "title": "Creative Learning Methods Certification",
+        "institution": "Early Education Institute",
+        "duration": "2017"
+      },
+      {
+        "title": "Play Therapy Workshop",
+        "institution": "Child Development Center",
+        "duration": "2018"
+      }
+    ],
+    "age_specialization": [
+      {
+        "category": "Toddlers (1-3 years)",
+        "experience": "5 years"
+      },
+      {
+        "category": "Preschoolers (3-5 years)",
+        "experience": "4 years"
+      },
+      {
+        "category": "Creative Arts",
+        "experience": "5 years"
+      },
+      {
+        "category": "Music & Movement",
+        "experience": "4 years"
+      }
+    ],
+    "reviews": [
+      {
+        "parent": "Ayesha Raza",
+        "location": "Karachi",
+        "rating": 4,
+        "feedback": "Nadia's creative activities have made my 3-year-old excited about learning. She comes up with the most imaginative projects that keep him engaged for hours while developing his fine motor skills."
+      },
+      {
+        "parent": "Farhan Ali",
+        "location": "Karachi",
+        "rating": 4,
+        "feedback": "We wanted our daughter to improve her English before starting school. Nadia's playful approach to language learning has worked wonders - our 4-year-old is now speaking in full sentences!"
+      },
+      {
+        "parent": "Sana Khan",
+        "location": "Karachi",
+        "rating": 4,
+        "feedback": "Nadia transformed our shy toddler into a confident preschooler. Her group activities helped our son develop social skills while having fun. The arts and crafts projects are always the highlight of his week!"
+      }
+    ]
+  },
+  "babysitter20": {
+    "id": "NC-ISB-001",
+    "name": "Maria Khan",
+    "profile_picture": "./images/maria.jpg",
+    "location": "Islamabad, Pakistan",
+    "experience_years": 7,
+    "rate_per_hour": 450,
+    "rating": 4.9,
+    "total_reviews": 18,
+    "quick_details": {
+      "age": 29,
+      "languages": ["English"],
+      "marital_status": "Single",
+      "smoker": "No",
+      "preferred_location": "At Home",
+      "verified": true
+    },
+    "certifications": [
+      "Montessori Teaching Diploma",
+      "Infant CPR Certified",
+      "Early Childhood Development",
+      "Toddler Nutrition Specialist"
+    ],
+    "skills": [
+      "Infant Care",
+      "Toddler Development",
+      "Montessori Methods",
+      "Meal Preparation",
+      "Early Literacy",
+      "Sensory Play"
+    ],
+    "about": "Hello! I'm Maria, a Montessori-trained childcare specialist with 7 years of experience focusing on infant and toddler development. I'm fluent in English and passionate about creating nurturing environments that support early childhood growth. My approach combines Montessori principles with gentle, responsive care tailored to each child's developmental stage. I specialize in creating engaging sensory experiences and age-appropriate activities that promote cognitive, emotional, and physical development. I believe in fostering independence and curiosity from the earliest stages, while ensuring a safe and loving environment where children can thrive.",
+    "experience": [
+      {
+        "title": "Montessori Infant/Toddler Guide",
+        "location": "Islamabad",
+        "duration": "2016 - Present",
+        "responsibilities": [
+          "Provided specialized care for children aged 0-3 years",
+          "Implemented Montessori curriculum for infants and toddlers",
+          "Created individualized developmental plans"
+        ]
+      },
+      {
+        "title": "Private Nanny",
+        "location": "Islamabad",
+        "duration": "2014 - 2016",
+        "responsibilities": [
+          "Cared for infants and toddlers in family homes",
+          "Developed early learning activities",
+          "Maintained detailed developmental records"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "title": "Montessori Infant/Toddler Certification",
+        "institution": "Association Montessori Internationale",
+        "duration": "2014"
+      },
+      {
+        "title": "Bachelor's in Child Development",
+        "institution": "Quaid-i-Azam University",
+        "duration": "2010 - 2014"
+      },
+      {
+        "title": "Infant Mental Health Workshop",
+        "institution": "Islamabad Child Development Center",
+        "duration": "2017"
+      }
+    ],
+    "age_specialization": [
+      {
+        "category": "Infants (0-12 months)",
+        "experience": "5 years"
+      },
+      {
+        "category": "Toddlers (1-3 years)",
+        "experience": "7 years"
+      },
+      {
+        "category": "Montessori Education",
+        "experience": "6 years"
+      },
+      {
+        "category": "Sensory Development",
+        "experience": "5 years"
+      }
+    ],
+    "reviews": [
+      {
+        "parent": "Ayesha Malik",
+        "location": "Islamabad",
+        "rating": 5,
+        "feedback": "Maria has been caring for our newborn since he was 3 months old. Her Montessori approach to infant care is remarkable - our baby is so engaged and happy during their time together."
+      },
+      {
+        "parent": "Omar Khan",
+        "location": "Islamabad",
+        "rating": 4.5,
+        "feedback": "Our toddler has flourished under Maria's care. Her English immersion approach combined with Montessori methods has helped our daughter develop incredible language skills."
+      },
+      {
+        "parent": "Fatima Ahmed",
+        "location": "Islamabad",
+        "rating": 5,
+        "feedback": "Maria's expertise with infants is unparalleled. She helped establish healthy sleep routines and introduced wonderful sensory activities that kept our baby engaged and developing."
+      }
+    ]
+  }
+}
+
+
