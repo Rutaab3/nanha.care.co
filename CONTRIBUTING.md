@@ -1,65 +1,28 @@
-# Contributing to NanhaCare
 
-Thanks for contributing to NanhaCare.
+# Contributing to the Project
 
-## Before You Start
+First off, thank you for considering contributing to this project! It's people like you that make the open-source community such an amazing place to learn, inspire, and create.
 
-- Review the existing page structure and naming conventions before making changes.
-- Keep edits focused and easy to review.
-- If you are changing content, confirm that all linked images, profile pages, and PDFs still resolve correctly.
+## Our Contributors
 
-## Recommended Workflow
+Below is a list of the core contributors to this project.
 
-1. Create a branch for your work.
-2. Make small, focused changes.
-3. Preview the site locally in a browser.
-4. Check for broken links, missing assets, and layout regressions.
-5. Submit your changes with a clear description.
+| Name | Contact Email | Role |
+| :--- | :--- | :--- |
+| Muhammad Rutaab Ali | [rutaabali3@gmail.com](mailto:rutaabali3@gmail.com) | Owner |
+| Syed Muhammed faraz | [muhammedfaraz875@gmail.com](mailto:muhammedfaraz875@gmail.com) | Contributor |
+| Muhammad Shiraz | [muhammadshiraz2412c1@gmail.com](mailto:muhammadshiraz2412c1@gmail.com) | Contributor |
+| Ahad Mirza | [ahadmirza1604@gmail.com](mailto:ahadmirza1604@gmail.com) | Contributor |
 
-## Local Preview
+## How to Contribute
 
-Run a simple static server from the project folder:
+1. **Fork the Repository**: Create your own copy of the project.
+2. **Clone the Project**: `git clone https://github.com/your-username/project-name.git`
+3. **Create a Branch**: `git checkout -b feature/AmazingFeature`
+4. **Commit Changes**: `git commit -m 'Add some AmazingFeature'`
+5. **Push to Branch**: `git push origin feature/AmazingFeature`
+6. **Open a Pull Request**: Submit your changes for review.
 
-```bash
-python -m http.server 8000
-```
+## Reporting Issues
 
-Then open `http://localhost:8000/`.
-
-## Contribution Standards
-
-- Use clear, consistent HTML formatting.
-- Keep file and folder names predictable.
-- Prefer relative paths for internal links and assets.
-- Reuse existing styles and patterns unless the change is intentionally introducing a new direction.
-- Keep external dependencies minimal.
-
-## Content Changes
-
-When updating content:
-
-- Check spelling, grammar, and consistency of tone.
-- Verify location names, profile information, prices, and resource titles carefully.
-- Confirm that every new asset is added to the correct folder.
-- Update related pages when a shared label, URL, or asset changes.
-
-## Design and Frontend Changes
-
-- Test changes on desktop and mobile viewport sizes.
-- Avoid introducing layout shift, overflow, or broken spacing.
-- Make sure buttons, navigation, and calls to action remain usable.
-- Preserve accessibility basics such as meaningful alt text and readable contrast.
-
-## Pull Request Checklist
-
-- The site opens locally without errors.
-- Updated pages render correctly.
-- Links and image paths are valid.
-- New assets are included in the repository.
-- The change summary explains what was updated and why.
-
-## Code of Collaboration
-
-- Be respectful and constructive in feedback.
-- Prefer clear explanations over broad rewrites.
-- Raise questions early when a change affects shared structure or content.
+If you find a bug or have a suggestion for improving the project, please open an issue in the repository. Provide as much detail as possible, including steps to reproduce the issue and the expected outcome.
