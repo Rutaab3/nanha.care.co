@@ -1,0 +1,1086 @@
+<html><head>
+<title>plan.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Night Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+.hljs-comment,
+.hljs-quote {
+	color: #969896;
+}
+
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #cc6666;
+}
+
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #de935f;
+}
+
+.hljs-attribute {
+	color: #f0c674;
+}
+
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #b5bd68;
+}
+
+.hljs-title,
+.hljs-section {
+	color: #81a2be;
+}
+
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #b294bb;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #c5c8c6;
+	background: #1d1f21;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS - Dark Mode
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+	background-color: #1e1e1e;
+	color: #d4d4d4;
+}
+
+a {
+	color: #3794ff;
+}
+
+pre {
+	background-color: #1e1e1e;
+	border: 1px solid #404040;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(255, 255, 255, 0.05);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #ce9178;
+	background-color: rgba(255, 255, 255, 0.1);
+	padding: 2px 4px;
+	border-radius: 4px;
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body class="vscode-dark">
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<center><img src="https://rutaab3.github.io/nanha.care.co/images/logo4.webp" alt="logo" width="300px"></center>
+<p><strong><code>NanhaCare</code>— a Pakistan-focused childcare platform. The app connects parents with verified babysitters, hosts a baby product marketplace, and provides doctor-written parenting blog. The platform is in English with Urdu support planned.</strong></p>
+<h2 id="-brand--design-system">🎨 BRAND &amp; DESIGN SYSTEM</h2>
+<ul>
+<li><strong>Brand Name:</strong> <code>NanhaCare</code></li>
+<li><strong>Logo:</strong> <code>Text-based logo with a mother and a baby</code></li>
+<li><strong>Color Palette:</strong></li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-selector-pseudo">:root</span> {
+    <span class="hljs-attr">--sky-blue</span>: <span class="hljs-number">#7EB8DA</span>;
+    <span class="hljs-attr">--baby-pink</span>: <span class="hljs-number">#F8B1C8</span>;
+    <span class="hljs-attr">--mint-green</span>: <span class="hljs-number">#C6F3D3</span>;
+    <span class="hljs-attr">--off-white</span>: <span class="hljs-number">#FFF9F2</span>;
+    <span class="hljs-attr">--sunshine-yellow</span>: <span class="hljs-number">#FFE97F</span>;
+    <span class="hljs-attr">--slate-grey</span>: <span class="hljs-number">#AAAAAA</span>;
+    <span class="hljs-attr">--dark-text</span>: <span class="hljs-number">#555555</span>;
+}
+</div></code></pre>
+<ul>
+<li><strong>Typography:</strong></li>
+</ul>
+<pre class="hljs"><code><div>Poppins (headings) 
+Inter (body)
+</div></code></pre>
+<ul>
+<li><strong>Style:</strong></li>
+</ul>
+<pre class="hljs"><code><div>Clean, modern, family-friendly. 
+Cards with soft shadows, rounded corners, warm imagery placeholders.
+</div></code></pre>
+<h2 id="-public-pages-no-login-required">🌐 PUBLIC PAGES (No Login Required)</h2>
+<blockquote>
+<p><strong>HOME PAGE</strong></p>
+</blockquote>
+<ul>
+<li><code>Hero section:</code> "Find Trusted &amp; Verified Babysitters in Pakistan" with two CTAs: "Find a Babysitter" and "Become a Babysitter"</li>
+<li><code>Safety Features section:</code> Triple-Verified, Ratings &amp; Reviews, Emergency Response System (3 feature cards)</li>
+<li><code>How It Works:</code> 3-step visual (Search → Verify → Book)</li>
+<li><code>Verification Process:</code> 4-step cards (CNIC, Police Clearance, Interview, Training &amp; Certification)</li>
+<li><code>Featured Babysitters:</code> horizontal scroll card grid showing name, city, experience, hourly rate (PKR), rating, specialization</li>
+<li><code>Coming Soon features:</code> Background Checks, Activity Reports, Parent Community, Live GPS Tracking, Video Profiles, Multilingual Platform</li>
+<li><code>Testimonials:</code> 3 parent quotes with name and city</li>
+<li><code>Footer:</code> Quick Links, More Links, Product Categories, Terms of Service, Privacy Policy, Sitemap</li>
+</ul>
+<blockquote>
+<p><strong>BABYSITTERS LISTING PAGE</strong></p>
+</blockquote>
+<ul>
+<li><code>Filter by:</code> City (Karachi, Lahore, Islamabad, etc.), Experience level, Hourly rate range, Specialization, Availability (Today, This Week, Custom)</li>
+<li><code>Sort by:</code> Rating, Price (low/high), Experience, Reviews count</li>
+<li><code>Each card:</code> Profile photo, Verification badge (NC-CITY-ID), Name, City, Experience, Star rating + review count, Specialization tags, Hourly rate in PKR, "View Profile" button</li>
+<li><code>Babysitter detail profile page:</code> Full bio, certifications, photo, working hours, all reviews, booking calendar widget</li>
+</ul>
+<blockquote>
+<p><strong>PRODUCTS MARKETPLACE PAGE</strong></p>
+</blockquote>
+<ul>
+<li><code>Category filters:</code> Newborns (0–12M), Toddlers (1–3Y), Preschoolers (3–5Y), School Age (5–10Y), All Products</li>
+<li><code>Product card:</code> Image, name, price (PKR), shop name, rating, "Add to Cart" button</li>
+<li><code>Product detail page:</code> Image gallery, description, seller info, reviews, related products</li>
+<li><code>Cart:</code> Add/remove items, quantity, total, checkout flow</li>
+<li><code>Checkout:</code> Shipping address (Pakistan cities), order summary, payment method placeholder (Cash on Delivery + Card)</li>
+</ul>
+<blockquote>
+<p><strong>BLOG PAGE</strong></p>
+</blockquote>
+<ul>
+<li><code>Published doctor</code>-written articles listed in card grid</li>
+<li><code>Each card:</code> Cover image, title, author (doctor name + photo), specialty, publish date, read time, category tag, short excerpt</li>
+<li><code>Blog detail page:</code> Full article, author bio box, related articles, comment section (for logged-in parents)</li>
+<li><code>Categories:</code> Newborn Care, Infant Nutrition, Sleep Training, Child Development (0–12 years), Vaccinations, Mental Health</li>
+</ul>
+<blockquote>
+<p><strong>ABOUT PAGE</strong></p>
+</blockquote>
+<ul>
+<li><code>Mission statement</code></li>
+<li><code>values</code></li>
+<li><code>team section</code></li>
+<li><code>Pakistan-specific trust signals</code> <strong>(NADRA integration mention, local police clearance)</strong></li>
+</ul>
+<blockquote>
+<p><strong>CONTACT PAGE</strong></p>
+</blockquote>
+<ul>
+<li><code>Contact form:</code> name, email, phone, subject (dropdown), message</li>
+<li>FAQ accordion section</li>
+<li>Emergency numbers prominently shown</li>
+</ul>
+<blockquote>
+<p><strong>PRICING PAGE</strong></p>
+</blockquote>
+<ul>
+<li>Subscription tiers for <code>parents</code> <strong>(Free, Basic, Premium)</strong></li>
+<li><code>Shop owner</code> listing packages</li>
+</ul>
+<blockquote>
+<p><strong>TRAINING PAGE</strong></p>
+</blockquote>
+<ul>
+<li>Info for aspiring babysitters about:
+<ul>
+<li>The training program steps.</li>
+<li>Requirements.</li>
+<li>What to expect.</li>
+<li>Apply button</li>
+</ul>
+</li>
+</ul>
+<h2 id="-auth-system">🔐 AUTH SYSTEM</h2>
+<blockquote>
+<p><strong>Register</strong></p>
+</blockquote>
+<ul>
+<li><code>Admin</code> is assigned by system.</li>
+<li>Single / register page for Parent | <code>Babysitter</code> | <code>Shop Owner</code> | <code>Doctor</code> | <code>Moderator</code> | <code>Support Agent</code></li>
+<li><code>Moderator</code> | <code>Support Agent</code> (assigned by <code>Admin</code> only)</li>
+<li>Parent | <code>Babysitter</code> | <code>Shop Owner</code> | <code>Doctor</code> (choose from dropown)</li>
+<li><code>Fields:</code> Full name, email, password, phone number, city, role</li>
+<li>Role-specific onboarding after registration:
+<ul>
+<li><code>Babysitter</code>: CNIC number, experience, specialization,
+certifications upload, hourly rate, availability</li>
+<li><code>Shop Owner:</code> Business name, shop category, CNIC/NTN,
+bank details</li>
+<li><code>Doctor:</code>  Medical license number, specialization,
+hospital/clinic affiliation, profile photo</li>
+<li><code>Parent:</code> Number of children, age ranges</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><strong>Login</strong></p>
+</blockquote>
+<ul>
+<li><code>Login page:</code> email + password, forgot password link</li>
+<li><code>Email verification</code> for the 1st time before dashboard access</li>
+<li><code>After login,</code> redirect based on role to respective dashboard</li>
+</ul>
+<h2 id="-dashboard-1--admin">👤 DASHBOARD 1 — ADMIN</h2>
+<ul>
+<li><code>Route</code>: /dashboard/admin</li>
+<li><code>Access</code>: Admin role only (cannot self-register, assigned by system)</li>
+</ul>
+<blockquote>
+<p><strong>Sidebar Sections:</strong></p>
+</blockquote>
+<ul>
+<li>Overview</li>
+<li>User Management</li>
+<li>Role Assignment</li>
+<li>Moderation Oversight</li>
+<li>Reports &amp; Analytics</li>
+<li>Platform Settings</li>
+<li>Announcements</li>
+</ul>
+<blockquote>
+<p><strong>Overview Panel:</strong></p>
+</blockquote>
+<ul>
+<li><code>Stats cards:</code> Total Users, Total Bookings, Active Listings, Pending Reviews, Revenue (this month), Open Support Tickets</li>
+<li><code>Recent activity feed:</code> last 20 platform events with timestamps</li>
+<li><code>Platform health status:</code> (uptime, DB status)</li>
+</ul>
+<blockquote>
+<p><strong>User Management:</strong></p>
+</blockquote>
+<ul>
+<li><code>Full searchable:</code> filterable table of ALL users (all roles)</li>
+<li><code>Columns:</code> Name, Email, Role, City, Join Date, Status, Actions</li>
+<li><code>Admin can:</code> View profile, Suspend account, Ban account (permanent), Restore account, Delete account</li>
+<li><code>Ban system:</code> Requires ban reason + duration selection (Temporary: 7/30/90 days | Permanent). Banned users see a "Your account has been suspended" screen on login.</li>
+<li><code>Filters:</code> By role, city, status (active/suspended/banned/pending)</li>
+</ul>
+<blockquote>
+<p><strong>Role Assignment (EXCLUSIVE to Admin):</strong></p>
+</blockquote>
+<ul>
+<li><code>Search</code> any user by name or email</li>
+<li><code>Assign or change</code> their role from a dropdown: Parent | Babysitter | Shop Owner | Doctor | Moderator | Support Agent | Admin</li>
+<li><code>All role changes</code> are logged with timestamp + admin name</li>
+<li><code>Cannot demote another</code> Admin without superadmin flag</li>
+</ul>
+<blockquote>
+<p><strong>Moderation Oversight:</strong></p>
+</blockquote>
+<ul>
+<li><code>View all Moderator actions</code> (approvals, rejections, flags)</li>
+<li><code>Override any Moderator decision</code> (approve a rejected item, reject an approved item)</li>
+<li><code>Assign specific moderators</code> to categories (e.g., Mod A handles Blogs, Mod B handles Shop listings)</li>
+<li><code>Moderator performance table:</code> items reviewed, avg review time, approval rate</li>
+</ul>
+<blockquote>
+<p><strong>Reports &amp; Analytics:</strong></p>
+</blockquote>
+<ul>
+<li><code>Charts:</code> New users per week, bookings per day, top selling products, most read blogs, city-wise usage</li>
+<li><code>Export reports as CSV.</code></li>
+<li><code>Revenue breakdown:</code> subscription fees, listing fees, transaction percentages</li>
+<li><code>Flagged content report:</code> how many items flagged, resolved, still pending</li>
+</ul>
+<blockquote>
+<p><strong>Platform Settings:</strong></p>
+</blockquote>
+<ul>
+<li><code>Commission</code> percentage per sale.</li>
+<li><code>Babysitter booking fee</code> settings.</li>
+<li><code>Subscription plan management.</code> (edit pricing tiers)</li>
+<li><code>Platform maintenance mode</code> toggle.</li>
+<li><code>Email notification templates editor.</code></li>
+<li><code>Terms of Service &amp; Privacy Policy editor.</code> (rich text)</li>
+</ul>
+<blockquote>
+<p><strong>Announcements:</strong></p>
+</blockquote>
+<ul>
+<li><code>Send platform-wide notifications</code> to all users or specific roles</li>
+<li><code>Scheduled announcements</code> (set future publish time)</li>
+</ul>
+<h2 id="-dashboard-2--moderator">👤 DASHBOARD 2 — MODERATOR</h2>
+<ul>
+<li><code>Route:</code> /dashboard/moderator</li>
+<li><code>Access:</code> Assigned by Admin only</li>
+</ul>
+<blockquote>
+<p><strong>Sidebar Sections:</strong></p>
+</blockquote>
+<ul>
+<li>Review Queue</li>
+<li>Published Content</li>
+<li>Flagged Items</li>
+<li>User Reports</li>
+<li>My Activity Log</li>
+</ul>
+<blockquote>
+<p><strong>Review Queue (Core function):</strong></p>
+</blockquote>
+<ul>
+<li><code>Two tabs:</code> "Shop Listings" | "Blog Posts"</li>
+<li><code>Each item in queue shows:</code> Submitted by, submission date, content preview, category</li>
+<li><code>Action buttons:</code> "Approve &amp; Publish" | "Reject with Reason" | "Request Revision" (sends message to submitter)</li>
+<li><code>Rejection requires a mandatory reason</code> from a dropdown (Inappropriate Content, Incomplete Information, Low Quality, Policy Violation, Other) + optional text note</li>
+<li><code>Approved items go LIVE</code> immediately on the public site</li>
+<li><code>Rejected items notify</code> the submitter with reason</li>
+</ul>
+<blockquote>
+<p><strong>Published Content:</strong></p>
+</blockquote>
+<ul>
+<li><code>Table of all currently live listings and blogs.</code></li>
+<li><code>Can unpublish any item</code> (moves back to review or archives)</li>
+<li><code>Search and filter</code> by category, author, date</li>
+</ul>
+<blockquote>
+<p><strong>Flagged Items:</strong></p>
+</blockquote>
+<ul>
+<li><code>Items reported by parents</code> (inappropriate product, misleading blog, spam)</li>
+<li><code>Each flag shows:</code> Who flagged, reason, date, content preview</li>
+<li><code>Actions:</code> Dismiss flag, Unpublish content, Escalate to Admin, Warn user, Ban user (ban button → sends request to Admin for final approval)</li>
+</ul>
+<blockquote>
+<p><strong>User Reports:</strong></p>
+</blockquote>
+<ul>
+<li><code>Reports filed against babysitters or shop owners by parents.</code></li>
+<li><code>See full report detail</code>, link to user profiles</li>
+<li><code>Take action:</code> Warn, Suspend (sends to Admin for approval), Mark Resolved, Dismiss</li>
+</ul>
+<blockquote>
+<p><strong>My Activity Log:</strong></p>
+</blockquote>
+<ul>
+<li><code>Personal history of all actions taken with timestamps</code></li>
+</ul>
+<h2 id="-dashboard-3--babysitter">👤 DASHBOARD 3 — BABYSITTER</h2>
+<ul>
+<li><code>Route:</code> /dashboard/babysitter</li>
+<li><code>Access:</code> Verified babysitter accounts</li>
+</ul>
+<blockquote>
+<p><strong>Sidebar Sections:</strong></p>
+</blockquote>
+<ul>
+<li>My Overview</li>
+<li>Bookings</li>
+<li>My Profile</li>
+<li>Earnings</li>
+<li>Reviews</li>
+<li>Notifications</li>
+</ul>
+<blockquote>
+<p><strong>My Overview:</strong></p>
+</blockquote>
+<ul>
+<li><code>Status card:</code> Profile Verified ✅ / Pending Verification ⏳ / Rejected ❌ (with reason shown if rejected)</li>
+<li><code>Stats:</code> Total bookings, Active bookings, Completed sessions, Average rating, Total earnings (PKR)</li>
+<li><code>Upcoming booking countdown card</code></li>
+</ul>
+<blockquote>
+<p><strong>Bookings Tab:</strong></p>
+</blockquote>
+<ul>
+<li><code>Tabs:</code> Pending Requests | Confirmed | Completed | Cancelled</li>
+<li><code>Each booking card shows:</code> Parent name, child age(s), date &amp; time, duration, location (city/area), total fee, notes from parent</li>
+<li><code>Actions on Pending:</code> Accept | Decline (with reason)</li>
+<li><code>Actions on Confirmed:</code> Mark Complete | Report Issue</li>
+<li><code>History:</code> Full paginated table of all past bookings</li>
+</ul>
+<blockquote>
+<p><strong>My Profile:</strong></p>
+</blockquote>
+<ul>
+<li><code>Edit all profile fields:</code> bio, photo, specializations (multi-select tags: Newborn Care, Toddler Activities, Montessori, First Aid, etc.), certifications upload, hourly rate (PKR), languages spoken, working hours (day + time range availability calendar)</li>
+<li><code>Profile completion progress bar</code> (e.g., 78% complete)</li>
+<li><code>Public profile preview button</code> (see how parents see it)</li>
+</ul>
+<blockquote>
+<p><strong>Earnings Tab:</strong></p>
+</blockquote>
+<ul>
+<li><code>Monthly earnings chart</code> (bar graph)</li>
+<li><code>Table:</code> booking date, parent, duration, amount, payment status (Paid/Pending)</li>
+<li><code>Payout request button</code> (minimum threshold)</li>
+<li><code>Bank account</code> / <code>JazzCash</code> / <code>EasyPaisa details management</code></li>
+</ul>
+<blockquote>
+<p><strong>Reviews Tab:</strong></p>
+</blockquote>
+<ul>
+<li><code>All reviews</code> left by parents. (star rating + comment)</li>
+<li><code>Reply to review</code> option. (public reply visible on profile)</li>
+<li><code>Flag inappropriate review option.</code></li>
+</ul>
+<h2 id="-dashboard-4--parent-simple-user">👤 DASHBOARD 4 — PARENT (Simple User)</h2>
+<ul>
+<li><code>Route:</code> /dashboard/parent</li>
+<li><code>Access:</code> Registered parents</li>
+</ul>
+<blockquote>
+<p><strong>Sidebar Sections:</strong></p>
+</blockquote>
+<ul>
+<li>Home</li>
+<li>My Bookings</li>
+<li>My Orders</li>
+<li>Saved Babysitters</li>
+<li>Blog Reads / Bookmarks</li>
+<li>My Children Profiles</li>
+<li>Reviews I've Left</li>
+<li>Account Settings</li>
+</ul>
+<blockquote>
+<p><strong>Home:</strong></p>
+</blockquote>
+<ul>
+<li><code>Welcome card</code>, <code>subscription plan badge</code></li>
+<li><code>Quick action buttons:</code> "Book a Babysitter", "Browse Products", "Read Latest Blogs"</li>
+<li><code>Upcoming booking(s) summary card</code></li>
+<li><code>Recommended babysitters</code> based on city</li>
+<li>Featured <code>new blog posts</code></li>
+</ul>
+<blockquote>
+<p><strong>My Bookings:</strong></p>
+</blockquote>
+<ul>
+<li><code>Tabs:</code> Upcoming | Active | Completed | Cancelled</li>
+<li><code>Full booking detail</code> per card</li>
+<li><code>"Leave a Review"</code> button on completed bookings</li>
+<li><code>"Report Issue"</code> button</li>
+<li><code>Rebook a previous</code> babysitter shortcut</li>
+</ul>
+<blockquote>
+<p><strong>My Orders:</strong></p>
+</blockquote>
+<ul>
+<li><code>Order list from marketplace:</code> order ID, date, items, total, status (Processing/Shipped/Delivered/Returned)</li>
+<li><code>Order detail page</code> with item breakdown and tracking status</li>
+<li><code>Return/Refund</code> request button</li>
+</ul>
+<blockquote>
+<p><strong>My Children Profiles:</strong></p>
+</blockquote>
+<ul>
+<li><code>Add child:</code> name, date of birth (age auto-calculated), gender, any allergies or special needs (text field)</li>
+<li><code>These profiles are shared with babysitter when booking</code></li>
+</ul>
+<blockquote>
+<p><strong>Saved Babysitters:</strong></p>
+</blockquote>
+<ul>
+<li><code>Shortlist of bookmarked</code> babysitter profiles</li>
+<li><code>Quick-book from this list</code></li>
+</ul>
+<blockquote>
+<p><strong>Blog Bookmarks:</strong></p>
+</blockquote>
+<ul>
+<li><code>Saved blog articles list</code></li>
+</ul>
+<blockquote>
+<p><strong>Account Settings:</strong></p>
+</blockquote>
+<ul>
+<li><code>Edit profile:</code> name, phone, city, profile photo</li>
+<li><code>Change password</code></li>
+<li><code>Notification preferences</code> (email/SMS/in-app)</li>
+<li><code>Delete account request</code> (requires Admin approval to process)</li>
+</ul>
+<h2 id="-dashboard-5--shop-owner">👤 DASHBOARD 5 — SHOP OWNER</h2>
+<ul>
+<li><code>Route:</code> /dashboard/shop-owner</li>
+<li><code>Access:</code> Registered shop owners (profile pending Moderator review
+before going live)</li>
+</ul>
+<blockquote>
+<p><strong>Sidebar Sections:</strong></p>
+</blockquote>
+<ul>
+<li>Shop Overview</li>
+<li>My Products</li>
+<li>Add New Product</li>
+<li>Orders Management</li>
+<li>Earnings &amp; Payouts</li>
+<li>Shop Profile</li>
+<li>Reviews &amp; Ratings</li>
+</ul>
+<blockquote>
+<p><strong>Shop Overview:</strong></p>
+</blockquote>
+<ul>
+<li><code>Stats:</code> Total products listed, Live products, Pending review,
+Total orders, Revenue this month, Avg product rating</li>
+<li><code>Best-selling products chart</code></li>
+<li><code>Pending orders</code> alert card</li>
+</ul>
+<blockquote>
+<p><strong>My Products:</strong></p>
+</blockquote>
+<ul>
+<li><code>Table:</code> Product image, name, category, price, stock qty, status (Draft | Under Review | Live | Rejected), actions</li>
+<li><code>Status badge with color coding</code></li>
+<li><code>Edit</code>, <code>Duplicate</code>, <code>Archive</code>, <code>Delete</code> actions</li>
+<li><code>Filter</code> by status, category</li>
+</ul>
+<blockquote>
+<p><strong>Add New Product (Submit for Review):</strong></p>
+</blockquote>
+<ul>
+<li><code>Form:</code>
+<ul>
+<li>Product name</li>
+<li>description (rich text)</li>
+<li>price (PKR)</li>
+<li>sale price (optional)</li>
+<li>stock quantity</li>
+<li>category (Newborns/Toddlers/Preschoolers/School Age)</li>
+<li>age-appropriateness tags up to 5</li>
+<li>product images upload</li>
+<li>weight (for shipping) is_featured checkbox</li>
+</ul>
+</li>
+<li><code>Submit button</code> → <code>status becomes</code> "Under Review" → <code>Moderator sees it in queue</code></li>
+<li><code>Draft save option</code></li>
+</ul>
+<blockquote>
+<p><strong>Orders Management:</strong></p>
+</blockquote>
+<ul>
+<li><code>Incoming orders table:</code>
+<ul>
+<li>order ID</li>
+<li>buyer (parent name)</li>
+<li>product</li>
+<li>qty</li>
+<li>date</li>
+<li>status</li>
+<li>total</li>
+</ul>
+</li>
+<li><code>Update order status:</code> Processing → Shipped → Delivered</li>
+<li><code>Cancel order</code> (with reason, triggers refund flow)</li>
+</ul>
+<blockquote>
+<p><strong>Earnings &amp; Payouts:</strong></p>
+</blockquote>
+<ul>
+<li><code>Revenue chart</code> by week/month</li>
+<li><code>Platform commission</code> deducted breakdown</li>
+<li><code>Payout</code> to <code>bank</code>/<code>JazzCash</code>/<code>EasyPaisa</code></li>
+<li><code>Transaction history table</code></li>
+</ul>
+<blockquote>
+<p><strong>Shop Profile:</strong></p>
+</blockquote>
+<ul>
+<li><code>Shop name</code>, <code>logo</code>, <code>banner image</code>, <code>description</code>, <code>contact info</code>,<code> return policy text</code></li>
+<li><code>Shop URL slug</code> (nanhacare.com/shop/your-shop-name)</li>
+</ul>
+<h2 id="-dashboard-6--doctor">👤 DASHBOARD 6 — DOCTOR</h2>
+<ul>
+<li><code>Route:</code> /dashboard/doctor</li>
+<li><code>Access:</code> Registered and verified doctors</li>
+</ul>
+<blockquote>
+<p><strong>Sidebar Sections:</strong></p>
+</blockquote>
+<ul>
+<li>Overview</li>
+<li>My Blog Posts</li>
+<li>Write New Post</li>
+<li>Comments</li>
+<li>My Profile</li>
+<li>Analytics</li>
+</ul>
+<blockquote>
+<p><strong>Overview:</strong></p>
+</blockquote>
+<ul>
+<li><code>Stats:</code> Total articles written, Published, Under Review, Total reads, Total likes, Comments to respond to</li>
+<li><code>Most read article card</code></li>
+<li><code>Notification</code> if a post was rejected (with reason)</li>
+</ul>
+<blockquote>
+<p><strong>My Blog Posts:</strong></p>
+</blockquote>
+<ul>
+<li><code>Table:</code> Title, category, submitted date, status (Draft | Under Review | Published | Rejected), views, likes, actions</li>
+<li><code>Edit</code> draft, <code>View</code> live article, <code>Delete</code> draft</li>
+</ul>
+<blockquote>
+<p><strong>Write New Post:</strong></p>
+</blockquote>
+<ul>
+<li><code>Rich text editor</code> (with formatting: H1/H2, bold, italic,
+bullet lists, image insertion, blockquotes)</li>
+<li><code>Fields:</code>
+<ul>
+<li>Title</li>
+<li>Slug (auto-generated from title)</li>
+<li>Cover image upload,</li>
+<li>Category (dropdown: Newborn Care, Infant Nutrition, Sleep Training, Child Development, Vaccinations, Mental Health, etc.),</li>
+<li>Tags (multi-input), Estimated read time (auto-calc), Summary/Excerpt (max 200 chars)</li>
+</ul>
+</li>
+<li><code>Save as Draft</code> | Submit for Review</li>
+<li><code>Submitted posts go to Moderator review queue</code></li>
+</ul>
+<blockquote>
+<p><strong>Comments:</strong></p>
+</blockquote>
+<ul>
+<li><code>All comments</code> on doctor's articles listed with parent name, date, and content.</li>
+<li><code>Reply option</code> (public reply under comment)</li>
+<li><code>Flag/report comment</code></li>
+</ul>
+<blockquote>
+<p><strong>My Profile:</strong></p>
+</blockquote>
+<ul>
+<li><code>Edit:</code>
+<ul>
+<li>Profile photo</li>
+<li>bio</li>
+<li>specialization</li>
+<li>PMDC registration number</li>
+<li>hospital/clinic name and city</li>
+<li>years of experience</li>
+<li>languages spoken</li>
+</ul>
+</li>
+<li><code>Public profile page link</code></li>
+</ul>
+<blockquote>
+<p><strong>Analytics:</strong></p>
+</blockquote>
+<ul>
+<li><code>Per-article</code>
+<ul>
+<li><strong>stats:</strong> views over time, likes, shares</li>
+</ul>
+</li>
+<li><code>Top performing categories</code></li>
+<li><code>Audience city breakdown</code> (where readers are from)</li>
+</ul>
+<h2 id="-dashboard-7--contact--support-agent">👤 DASHBOARD 7 — CONTACT &amp; SUPPORT AGENT</h2>
+<ul>
+<li><code>Route:</code> /dashboard/support</li>
+<li><code>Access:</code> Assigned by Admin only</li>
+</ul>
+<blockquote>
+<p><strong>Sidebar Sections:</strong></p>
+</blockquote>
+<ul>
+<li>Inbox (All Tickets)</li>
+<li>Open Tickets</li>
+<li>Resolved Tickets</li>
+<li>FAQ Management</li>
+<li>Announcements</li>
+<li>Escalation Queue</li>
+</ul>
+<blockquote>
+<p><strong>Inbox:</strong></p>
+</blockquote>
+<ul>
+<li><code>All contact form</code> submissions and in-app support requests</li>
+<li><code>Each ticket:</code>
+<ul>
+<li>Ticket ID</li>
+<li>Sender name + role</li>
+<li>Subject</li>
+<li>Date</li>
+<li>Priority (<code>Low</code>/<code>Medium</code>/<code>High</code>/<code>Urgent</code>),</li>
+<li>Status (<code>New</code>/<code>Open</code>/<code>In Progress</code>/<code>Resolved</code>/<code>Closed</code>)</li>
+</ul>
+</li>
+<li><code>Open ticket:</code> full message thread, reply box (with templates),
+internal notes field (not visible to user),
+assign to another agent</li>
+</ul>
+<blockquote>
+<p><strong>Ticket Management:</strong></p>
+</blockquote>
+<ul>
+<li><code>Filter by:</code>
+<ul>
+<li>status</li>
+<li>priority</li>
+<li>user role</li>
+<li>date range</li>
+</ul>
+</li>
+<li><code>Bulk actions:</code> Close, Reassign, Mark as spam</li>
+<li><code>Auto-assign tickets based on category</code> (Booking Issues → Support Agent A, Shop Disputes → Support Agent B)</li>
+<li><code>SLA timer</code> showing time since ticket opened</li>
+</ul>
+<blockquote>
+<p><strong>Escalation Queue:</strong></p>
+</blockquote>
+<ul>
+<li><code>Tickets escalated</code> to Admin or requiring Moderator action</li>
+<li><code>Flag ticket to Admin</code>, add escalation note</li>
+</ul>
+<blockquote>
+<p><strong>FAQ Management:</strong></p>
+</blockquote>
+<ul>
+<li><code>Add</code>, <code>edit</code>, <code>delete</code> <code>FAQ</code> entries (shown on public <code>FAQ</code> page)</li>
+<li><code>Organize FAQs by category</code> (Bookings, Payments, Accounts, Safety, etc.)</li>
+<li><code>Draft</code> / <code>Published</code> status per <code>FAQ</code> entry</li>
+</ul>
+<h2 id="-notifications-system">🔔 NOTIFICATIONS SYSTEM</h2>
+<ul>
+<li><code>In-app notification bell icon</code> in all dashboards.</li>
+<li><code>Notification types per role:</code>
+<ul>
+<li><code>Parent:</code> Booking confirmed, Order shipped, New blog published</li>
+<li><code>Babysitter:</code> New booking request, Review received, Verification status update</li>
+<li><code>Shop Owner:</code> New order, Product approved/rejected, Review left</li>
+<li><code>Doctor:</code> Blog post approved/rejected, New comment</li>
+<li><code>Moderator:</code> New item in review queue (with count badge)</li>
+<li><code>Support:</code> New support ticket assigned</li>
+<li><code>Admin:</code> User ban requests from Moderators, Critical reports, Revenue milestones</li>
+</ul>
+</li>
+<li><code>Mark as read</code>, Mark all as <code>read</code>, <code>Delete</code> notification</li>
+</ul>
+<h2 id="️-database-schema-supabase">🗄️ DATABASE SCHEMA (Supabase)</h2>
+<blockquote>
+<p><strong>Tables:</strong></p>
+</blockquote>
+<ul>
+<li><strong>users</strong> (<code>id</code>, <code>email</code>, <code>full_name</code>, <code>phone</code>, <code>city</code>, <code>role</code>, <code>status</code>, <code>avatar_url</code>, <code>created_at</code>)</li>
+<li><strong>babysitter_profiles</strong> (<code>user_id</code>, <code>cnic</code>, <code>experience_years</code>, <code>specializations[]</code>, <code>certifications[]</code>, <code>hourly_rate</code>, <code>availability</code>, <code>bio</code>, <code>rating</code>, <code>verified_status</code>, <code>verification_badge_id</code>)</li>
+<li><strong>bookings</strong> (<code>id</code>, <code>parent_id</code>, <code>babysitter_id</code>, <code>children_ids[]</code>, <code>date</code>, <code>start_time</code>, <code>end_time</code>, <code>location</code>, <code>status</code>, <code>total_fee</code>, <code>notes</code>, <code>created_at</code>)</li>
+<li><strong>children</strong> (<code>id</code>, <code>parent_id</code>, <code>name</code>, <code>dob</code>, <code>gender</code>, <code>allergies</code>, <code>special_needs</code>)</li>
+<li><strong>products</strong> (<code>id</code>, <code>shop_owner_id</code>, <code>name</code>, <code>description</code>, <code>price</code>, <code>sale_price</code>, <code>stock</code>, <code>category</code>, <code>age_tags[]</code>, <code>images[]</code>, <code>status</code>, <code>rating</code>, <code>created_at</code>)</li>
+<li><strong>orders</strong> (<code>id</code>, <code>parent_id</code>, <code>items[]</code>, <code>total</code>, <code>shipping_address</code>, <code>status</code>, <code>created_at</code>)</li>
+<li><strong>order_items</strong> (<code>id</code>, <code>order_id</code>, <code>product_id</code>, <code>qty</code>, <code>price</code>)</li>
+<li><strong>shops</strong> (<code>id</code>, <code>owner_id</code>, <code>name</code>, <code>logo</code>, <code>banner</code>, <code>description</code>, <code>slug</code>, <code>return_policy</code>, <code>verified</code>)</li>
+<li><strong>blog_posts</strong> (<code>id</code>, <code>doctor_id</code>, <code>title</code>, <code>slug</code>, <code>content</code>, <code>cover_image</code>, <code>category</code>, <code>tags[]</code>, <code>summary</code>, <code>read_time</code>, <code>status</code>, <code>views</code>, <code>likes</code>, <code>created_at</code>)</li>
+<li><strong>comments</strong> (<code>id</code>, <code>post_id</code>, <code>parent_id</code>, <code>content</code>, <code>created_at</code>, <code>is_flagged</code>)</li>
+<li><strong>reviews_babysitter</strong> (<code>id</code>, <code>booking_id</code>, <code>parent_id</code>, <code>babysitter_id</code>, <code>rating</code>, <code>comment</code>, <code>created_at</code>)</li>
+<li><strong>reviews_product</strong> (<code>id</code>, <code>product_id</code>, <code>parent_id</code>, <code>rating</code>, <code>comment</code>, <code>created_at</code>)</li>
+<li><strong>support_tickets</strong> (<code>id</code>, <code>user_id</code>, <code>subject</code>, <code>category</code>, <code>message</code>, <code>status</code>, <code>priority</code>, <code>assigned_to</code>, <code>created_at</code>)</li>
+<li><strong>ticket_replies</strong> (<code>id</code>, <code>ticket_id</code>, <code>sender_id</code>, <code>message</code>, <code>is_internal_note</code>, <code>created_at</code>)</li>
+<li><strong>notifications</strong> (<code>id</code>, <code>user_id</code>, <code>type</code>, <code>message</code>, <code>is_read</code>, <code>link</code>, <code>created_at</code>)</li>
+<li><strong>moderation_log</strong> (<code>id</code>, <code>moderator_id</code>, <code>action</code>, <code>target_type</code>, <code>target_id</code>, <code>reason</code>, <code>created_at</code>)</li>
+<li><strong>role_assignment_log</strong> (<code>id</code>, <code>admin_id</code>, <code>user_id</code>, <code>old_role</code>, <code>new_role</code>, <code>reason</code>, <code>created_at</code>)</li>
+<li><strong>faqs</strong> (<code>id</code>, <code>question</code>, <code>answer</code>, <code>category</code>, <code>status</code>, <code>order_index</code>, <code>created_at</code>)</li>
+</ul>
+<h2 id="-row-level-security-rules">🔒 ROW LEVEL SECURITY RULES</h2>
+<ul>
+<li><code>Parents</code> <em>can only read/write their own <code>bookings</code>, orders, children, and reviews</em></li>
+<li><code>Babysitters</code> <em>can only read bookings where they are the babysitter_id</em></li>
+<li><code>Shop owners</code> can only CRUD their own products and read orders for their products</li>
+<li><code>Doctors</code> can only CRUD their own blog_posts</li>
+<li><code>Moderators</code> can read all products and blog_posts with status='pending', and update their status</li>
+<li><code>Support agents</code> can read/write support_tickets and ticket_replies</li>
+<li><code>Admins</code> have unrestricted access to all tables</li>
+<li><code>Public</code> (unauthenticated): can read products, blog_posts, and babysitter_profiles where status='published' or verified=true</li>
+</ul>
+<h2 id="-responsive--ux-requirements">📱 RESPONSIVE &amp; UX REQUIREMENTS</h2>
+<ul>
+<li><code>Fully responsive:</code> Mobile-first design</li>
+<li><code>All dashboards:</code> collapsible sidebar on mobile (hamburger menu)</li>
+<li><code>Loading skeletons on all data-fetch operations</code></li>
+<li><code>Toast notifications</code> for all user actions (success, error, warning)</li>
+<li><code>Confirmation modals</code> for destructive actions (ban, delete, cancel booking)</li>
+<li><code>Empty state illustrations</code> for empty tables/lists</li>
+<li><code>Pagination on all tables</code> (10 items per page default)</li>
+<li><code>Search</code> + <code>filter</code> on all listing pages</li>
+<li><code>404</code> / <code>401</code> /<code>500</code> and unauthorized access pages (role tries to access another role's dashboard)</li>
+</ul>
+<center><img src="image.png" alt="logo" width="700px"></center>
+
+
+</body></html>
