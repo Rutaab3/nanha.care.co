@@ -1,0 +1,18 @@
+# robots.txt for NanhaCare
+User-agent: *
+Allow: /
+
+# Internal planning documents - not for the public web
+Disallow: /plan/
+
+# Let AI answer-engine crawlers use the public content
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://rutaabali3.github.io/nanha.care.co/sitemap.xml

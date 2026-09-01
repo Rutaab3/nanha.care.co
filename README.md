@@ -20,6 +20,9 @@ The site includes:
 - Font Awesome via CDN
 - Google Fonts via CDN
 - Chatling widget embed
+- SweetAlert2 via CDN (contact/enrollment forms)
+- JSON-LD structured data (schema.org) embedded in every page
+- Static SEO assets: `robots.txt`, `sitemap.xml` (with image extensions), `404.html`, `llms.txt`
 
 This project does not currently use a build step or package manager. It can be served as a plain static site.
 
