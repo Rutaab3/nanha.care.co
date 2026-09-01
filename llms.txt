@@ -1,0 +1,30 @@
+# NanhaCare
+
+> NanhaCare connects families in Pakistan with trusted, verified babysitters, curated baby & kids products, and free parenting resources. Every caregiver passes CNIC verification, police clearance, an in-person interview, and childcare training.
+
+## Key pages
+
+- [Home](https://rutaabali3.github.io/nanha.care.co/): Service overview, verification process, and featured caregivers
+- [Find Babysitters](https://rutaabali3.github.io/nanha.care.co/babysitters.html): Directory of 21 verified babysitters across Karachi, Lahore, and Islamabad with ratings and hourly rates (Rs 350-500)
+- [Products](https://rutaabali3.github.io/nanha.care.co/products.html): Curated newborn, toddler, preschool, and school-age essentials with Pakistan-friendly prices and retailer links
+- [Parenting Blog](https://rutaabali3.github.io/nanha.care.co/blog.html): 40 free guides and downloadable PDF resources (sleep routines, diapering, vaccination schedules, postpartum care, milestones)
+- [Babysitter Training](https://rutaabali3.github.io/nanha.care.co/training.html): NanhaCare certification training program for caregivers
+- [Become a Babysitter](https://rutaabali3.github.io/nanha.care.co/enroll.html): Caregiver enrollment and verification pathway
+- [Pricing](https://rutaabali3.github.io/nanha.care.co/pricing.html): Basic, Premium, and Elite membership plans for families
+- [FAQs](https://rutaabali3.github.io/nanha.care.co/faq.html): Verification, booking, refund, and emergency-support questions
+- [About](https://rutaabali3.github.io/nanha.care.co/about.html): Company mission and safety commitments
+
+## Babysitter profiles
+
+21 individual profiles under `https://rutaabali3.github.io/nanha.care.co/profiles/<name>.html` (alina, amina, ayesha, bushra, farah, fariha, fatima, hina, hira, laiba, maria, mehak, nadia, rabia, sadia, samina, sana, sarah, zainab, zara, zoya), each with experience, certifications, languages, ratings, and hourly rate.
+
+## Contact
+
+- Email: support@nanhacare.pk
+- UAN: 111-222-333
+- Offices: 123 Main Boulevard, Gulberg III, Lahore - 45 Sea View Road, Clifton, Karachi - 7 Jinnah Avenue, Blue Area, Islamabad
+
+## Notes
+
+- Structured content mirrors JSON-LD (schema.org) on every page: Organization, ChildCare, Person, Product, FAQPage, Blog.
+- Full site index: https://rutaabali3.github.io/nanha.care.co/sitemap.xml

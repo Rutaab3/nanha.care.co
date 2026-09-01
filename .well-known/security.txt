@@ -1,0 +1,6 @@
+Contact: mailto:security@nanhacare.pk
+Contact: https://github.com/rutaabali3/nanha.care.co/security/advisories/new
+Expires: 2027-09-01T23:59:59.000Z
+Preferred-Languages: en, ur
+Canonical: https://rutaabali3.github.io/nanha.care.co/.well-known/security.txt
+Policy: https://rutaabali3.github.io/nanha.care.co/termsofservice.html
